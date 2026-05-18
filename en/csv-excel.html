@@ -1,170 +1,152 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9ZGENFSXWC');</script>
+<!DOCTYPE html><html lang="en"><head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9ZGENFSXWC');</script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
 <meta name="naver-site-verification" content="7396a327607b884b9bef1283dfd3a5c6115a2b50">
 <meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSV to Excel Converter & Excel to CSV - WooaSheet | Free Online</title>
-  <meta name="description" content="Convert CSV files to Excel (.xlsx) or Excel to CSV instantly. No upload required — all processing happens in your browser. Free and private.">
-  <meta name="keywords" content="CSV to Excel converter, Excel to CSV, xlsx converter, online file converter, free CSV tool">
-  <link rel="canonical" href="https://wooasheet.wooahouse.com/en/csv-excel.html">
-  <link rel="alternate" hreflang="ko" href="https://wooasheet.wooahouse.com/csv-excel.html">
-  <link rel="alternate" hreflang="en" href="https://wooasheet.wooahouse.com/en/csv-excel.html">
-  <link rel="alternate" hreflang="x-default" href="https://wooasheet.wooahouse.com/en/csv-excel.html">
-  <meta property="og:title" content="CSV ↔ Excel Converter - WooaSheet">
-  <meta property="og:description" content="Convert CSV to Excel or Excel to CSV instantly in your browser.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://wooasheet.wooahouse.com/en/csv-excel.html">
-  <meta property="og:locale" content="en_US">
-  <link rel="manifest" href="../manifest.json">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
-  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
-  <style>
-    .tab-btns{display:flex;gap:.5rem;margin-bottom:1.5rem;}
-    .tab-btn{background:#1e293b;color:#94a3b8;border:1px solid #334155;padding:.5rem 1.25rem;border-radius:.375rem;cursor:pointer;font-size:.9rem;transition:all .2s;}
-    .tab-btn.active{background:#16A34A;color:#fff;border-color:#16A34A;}
-    .tab-panel{display:none;}
-    .tab-panel.active{display:block;}
-    .file-info-box{background:#1e293b;border:1px solid #334155;border-radius:.5rem;padding:1rem;margin:1rem 0;color:#94a3b8;font-size:.9rem;}
-    .file-info-box strong{color:#4ade80;}
-  </style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSV to Excel Converter & Excel to CSV - Free Online | WooaSheet</title>
+<meta name="description" content="Convert CSV files to Excel (.xlsx) or Excel to CSV instantly in your browser. No upload required — all processing is local. Free online CSV Excel converter.">
+<meta name="keywords" content="CSV to Excel converter, Excel to CSV, xlsx converter, online file converter, free CSV tool, spreadsheet converter">
+<link rel="canonical" href="https://wooasheet.wooahouse.com/en/csv-excel.html">
+<link rel="alternate" hreflang="ko" href="https://wooasheet.wooahouse.com/csv-excel.html">
+<link rel="alternate" hreflang="en" href="https://wooasheet.wooahouse.com/en/csv-excel.html">
+<link rel="alternate" hreflang="x-default" href="https://wooasheet.wooahouse.com/en/csv-excel.html">
+<meta property="og:title" content="CSV ↔ Excel Converter - WooaSheet">
+<meta property="og:description" content="Convert CSV to Excel or Excel to CSV instantly in your browser. Free and private.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://wooasheet.wooahouse.com/en/csv-excel.html">
+<meta property="og:locale" content="en_US">
+<link rel="manifest" href="../manifest.json">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"CSV to Excel Converter","url":"https://wooasheet.wooahouse.com/en/csv-excel.html","applicationCategory":"UtilitiesApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
-</head>
-<body>
-<header class="header">
-  <div class="header-inner">
-    <a href="index.html" class="logo">📊 WooaSheet</a>
-    <nav class="nav">
-      <a href="editor.html">Spreadsheet</a>
-      <a href="csv-excel.html" class="active">CSV↔Excel</a>
-      <a href="chart.html">Chart</a>
-      <a href="deduplicate.html">Deduplicate</a>
-      <a href="merge-csv.html">Merge</a>
-      <a href="split-csv.html">Split</a>
-    </nav>
-    <div class="header-right">
-      <div class="lang-switcher">
-      <a href="../csv-excel.html">KO</a>
-      <span>|</span>
-      <a href="csv-excel.html" class="active">EN</a>
-    </div>
-    </div>
-  </div>
-</header>
-
+<style>
+  .lang-switcher{display:flex;align-items:center;gap:4px;}
+  .lang-switcher a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.8rem;font-weight:600;padding:3px 8px;border-radius:12px;transition:background 0.15s;}
+  .lang-switcher a.active{color:white;background:rgba(255,255,255,0.25);}
+  .lang-switcher a:hover{color:white;background:rgba(255,255,255,0.18);}
+  .lang-switcher span{color:rgba(255,255,255,0.3);font-size:0.75rem;}
+</style>
+</head><body>
+<header class="header"><div class="header-inner"><a href="index.html" class="logo">📊 WooaSheet</a><nav class="nav"><a href="editor.html">📊 Editor</a><a href="csv-excel.html" class="active">🔄 Convert</a><a href="chart.html">📈 Chart</a><a href="deduplicate.html">🧹 Clean</a></nav><div class="header-right"><div class="lang-switcher"><a href="../csv-excel.html">KO</a><span>|</span><a href="csv-excel.html" class="active">EN</a></div></div></div></header>
 <div class="our-sites-bar"><span class="our-sites-label">WooaHouse Services</span><div class="our-sites-links"><a href="https://wooahouse.com/" target="_blank" rel="noopener">🔗 WooaHouse</a><a href="https://pdfkit.wooahouse.com/" target="_blank" rel="noopener">📄 WooaPDF</a><a href="https://imagekit.wooahouse.com/" target="_blank" rel="noopener">🖼️ WooaImage</a><a href="https://colorkit.wooahouse.com/" target="_blank" rel="noopener">🎨 WooaColor</a><a href="https://textkit.wooahouse.com/" target="_blank" rel="noopener">✏️ WooaText</a><a href="https://qrkit.wooahouse.com/" target="_blank" rel="noopener">📱 WooaQR</a><a href="https://calckit.wooahouse.com/" target="_blank" rel="noopener">🧮 WooaCalc</a><a href="https://fontkit.wooahouse.com/" target="_blank" rel="noopener">🔤 WooaFont</a><a href="https://mactools.wooahouse.com/" target="_blank" rel="noopener">🍎 WooaMac</a><a href="https://pctools.wooahouse.com/" target="_blank" rel="noopener">🖥️ WooaPC</a><a href="https://vskit.wooahouse.com/" target="_blank" rel="noopener">💻 WooaVS</a><a href="https://wooaaudio.wooahouse.com/" target="_blank" rel="noopener">🎵 WooaAudio</a><a href="https://wooaviewer.wooahouse.com/" target="_blank" rel="noopener">🔍 WooaViewer</a><a href="https://wooadev.wooahouse.com/" target="_blank" rel="noopener">🛠️ WooaDev</a><a href="https://wooaocr.wooahouse.com/" target="_blank" rel="noopener">🔍 WooaOCR</a><a href="https://wooasheet.wooahouse.com/" target="_blank" rel="noopener" class="active">📊 WooaSheet</a></div></div>
 <div class="mobile-top-ad"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="7080296704" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
 <div class="page-with-sidebar"><div class="tool-page">
   <div class="breadcrumb"><a href="index.html">Home</a><span>›</span>CSV ↔ Excel</div>
-  <div class="tool-header"><div class="tool-icon-lg">🔄</div><div><h1>CSV ↔ Excel Converter</h1><p>Convert CSV to Excel (.xlsx) or Excel to CSV instantly. No upload required.</p></div></div>
-      <div class="panel">
+  <div class="tool-header"><div class="tool-icon-lg">🔄</div><div><h1>CSV ↔ Excel Converter</h1><p>Convert CSV to .xlsx or Excel to .csv instantly in your browser.</p></div></div>
 
-        <div class="tab-btns">
-          <button class="tab-btn active" onclick="switchTab('csv2xl', this)">CSV → Excel</button>
-          <button class="tab-btn" onclick="switchTab('xl2csv', this)">Excel → CSV</button>
-        </div>
+  <div class="tab-bar">
+    <button class="tab-btn active" id="tab1" onclick="switchTab(1)">CSV → Excel</button>
+    <button class="tab-btn" id="tab2" onclick="switchTab(2)">Excel → CSV</button>
+  </div>
 
-        <!-- CSV to Excel -->
-        <div id="csv2xl" class="tab-panel active">
-          <div class="drop-zone" id="dropZone1" onclick="document.getElementById('csvFile').click()">
-            <div class="drop-icon">📄</div>
-            <p>Drop CSV file here or click to select</p>
-            <input type="file" id="csvFile" accept=".csv" style="display:none">
-          </div>
-          <div class="file-info-box" id="csvInfo" style="display:none"></div>
-          <button class="btn btn-primary" id="convertBtn" onclick="csvToExcel()" style="display:none">Convert to Excel</button>
-        </div>
-
-        <!-- Excel to CSV -->
-        <div id="xl2csv" class="tab-panel">
-          <div class="drop-zone" id="dropZone2" onclick="document.getElementById('xlFile').click()">
-            <div class="drop-icon">📊</div>
-            <p>Drop Excel file here or click to select</p>
-            <input type="file" id="xlFile" accept=".xlsx,.xls" style="display:none">
-          </div>
-          <div class="file-info-box" id="xlInfo" style="display:none"></div>
-          <button class="btn btn-primary" id="processBtn" onclick="excelToCsv()" style="display:none">Convert to CSV</button>
-        </div>
-      </div>
+  <div class="panel" id="panel1">
+    <div class="drop-zone" id="dropZone1">
+      <span class="drop-zone-icon">📄</span>
+      <h3>Drop CSV file here</h3>
+      <p>.csv files | Max 20MB</p>
+      <label for="fileInput1" class="btn-select">Select CSV File</label>
+      <input type="file" id="fileInput1" accept=".csv" style="display:none">
     </div>
-    <aside class="tool-sidebar">
-      <div class="sidebar-ad">
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="1419180025" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <div id="info1" class="hidden">
+      <div class="result-box">
+        <div class="stat-row"><span class="stat-label">File Name</span><span class="stat-value" id="fname1"></span></div>
+        <div class="stat-row"><span class="stat-label">Rows</span><span class="stat-value" id="frows1"></span></div>
+        <div class="stat-row"><span class="stat-label">Columns</span><span class="stat-value" id="fcols1"></span></div>
       </div>
-    </aside>
+      <button class="btn btn-primary btn-full" id="downloadBtn" onclick="convertCsvToExcel()">📗 Convert & Download Excel</button>
+    </div>
+  </div>
+
+  <div class="panel hidden" id="panel2">
+    <div class="drop-zone" id="dropZone2">
+      <span class="drop-zone-icon">📗</span>
+      <h3>Drop Excel file here</h3>
+      <p>.xlsx .xls files | Max 20MB</p>
+      <label for="fileInput2" class="btn-select">Select Excel File</label>
+      <input type="file" id="fileInput2" accept=".xlsx,.xls" style="display:none">
+    </div>
+    <div id="info2" class="hidden">
+      <div class="result-box">
+        <div class="stat-row"><span class="stat-label">File Name</span><span class="stat-value" id="fname2"></span></div>
+        <div class="stat-row"><span class="stat-label">Rows</span><span class="stat-value" id="frows2"></span></div>
+        <div class="stat-row"><span class="stat-label">Columns</span><span class="stat-value" id="fcols2"></span></div>
+      </div>
+      <button class="btn btn-primary btn-full" onclick="convertExcelToCsv()">📄 Convert & Download CSV</button>
+    </div>
+  </div>
+
+  <div class="tips-panel"><h3>💡 Tips</h3><ul>
+    <li>CSV → Excel: UTF-8 BOM is automatically applied to ensure proper encoding</li>
+    <li>Excel → CSV: Only the first sheet is converted</li>
+    <li>Formulas are converted to their calculated values</li>
+  </ul></div>
+
+  <div style="margin-top:24px;"><h2 style="font-size:1.1rem;font-weight:700;margin-bottom:16px;">FAQ</h2>
+    <div style="display:flex;flex-direction:column;gap:8px;">
+      <details style="border:1px solid var(--border);border-radius:8px;padding:12px 16px;background:var(--bg2);"><summary style="cursor:pointer;font-weight:600;">Will special characters display correctly?</summary><p style="margin:8px 0 0;color:var(--text-light);font-size:0.88rem;">Yes. UTF-8 BOM is automatically added during CSV conversion so special characters display correctly in Excel.</p></details>
+      <details style="border:1px solid var(--border);border-radius:8px;padding:12px 16px;background:var(--bg2);"><summary style="cursor:pointer;font-weight:600;">What about multi-sheet Excel files?</summary><p style="margin:8px 0 0;color:var(--text-light);font-size:0.88rem;">Only the first sheet is converted to CSV. You can open other sheets using the Spreadsheet Editor.</p></details>
+      <details style="border:1px solid var(--border);border-radius:8px;padding:12px 16px;background:var(--bg2);"><summary style="cursor:pointer;font-weight:600;">Is my file sent to a server?</summary><p style="margin:8px 0 0;color:var(--text-light);font-size:0.88rem;">No. All conversion is processed in your browser. Your file is never sent externally.</p></details>
+    </div>
+  </div>
 </div>
-
+<aside class="tool-sidebar"><div class="ad-card"><ins class="adsbygoogle" style="display:block;width:100%;min-height:250px" data-ad-client="ca-pub-6464921081676309" data-ad-slot="1419180025" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><div class="ad-card"><script src="https://ads-partners.coupang.com/g.js"></script><script>new PartnersCoupang.G({"id":986943,"template":"carousel","trackingCode":"AF5600192","width":"160","height":"200","tsource":""});</script></div></aside>
+</div>
 <footer class="footer"><div class="footer-inner"><div class="footer-top"><div class="footer-col"><h4>📊 WooaSheet</h4><p>Free online spreadsheet tools — edit, convert, chart, deduplicate, merge, and split CSV/Excel files in your browser.</p></div><div class="footer-col"><h4>Tools</h4><a href="editor.html">Spreadsheet Editor</a><a href="csv-excel.html">CSV↔Excel</a><a href="chart.html">Chart Generator</a><a href="deduplicate.html">Deduplicate</a><a href="merge-csv.html">Merge CSV</a><a href="split-csv.html">Split CSV</a></div><div class="footer-col"><h4>WooaHouse Services</h4><a href="https://wooahouse.com/" target="_blank" rel="noopener">🔗 WooaHouse</a><a href="https://pdfkit.wooahouse.com/" target="_blank" rel="noopener">📄 WooaPDF</a><a href="https://imagekit.wooahouse.com/" target="_blank" rel="noopener">🖼️ WooaImage</a><a href="https://colorkit.wooahouse.com/" target="_blank" rel="noopener">🎨 WooaColor</a></div><div class="footer-col"><h4>Info</h4><a href="privacy.html">Privacy Policy</a><a href="about.html">About</a></div></div><div class="footer-bottom"><p>© 2026 WooaSheet by WooaHouse. All rights reserved.</p></div></div></footer>
-
-<script>
-  function switchTab(id, btn) {
-    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
-    btn.classList.add('active');
-  }
-
-  let csvFileData, xlFileData;
-  document.getElementById('csvFile').addEventListener('change', function(e) {
-    const file = e.target.files[0]; if (!file) return;
-    csvFileData = file;
-    document.getElementById('csvInfo').style.display = 'block';
-    document.getElementById('csvInfo').innerHTML = '<strong>' + file.name + '</strong> (' + (file.size/1024).toFixed(1) + ' KB)';
-    document.getElementById('convertBtn').style.display = 'inline-flex';
-  });
-  document.getElementById('xlFile').addEventListener('change', function(e) {
-    const file = e.target.files[0]; if (!file) return;
-    xlFileData = file;
-    document.getElementById('xlInfo').style.display = 'block';
-    document.getElementById('xlInfo').innerHTML = '<strong>' + file.name + '</strong> (' + (file.size/1024).toFixed(1) + ' KB)';
-    document.getElementById('processBtn').style.display = 'inline-flex';
-  });
-
-  function csvToExcel() {
-    if (!csvFileData) return;
-    const reader = new FileReader();
-    reader.onload = function(e) {
-      const wb = XLSX.read(e.target.result, { type: 'string' });
-      const name = csvFileData.name.replace('.csv', '.xlsx');
-      XLSX.writeFile(wb, name);
-    };
-    reader.readAsText(csvFileData);
-  }
-
-  function excelToCsv() {
-    if (!xlFileData) return;
-    const reader = new FileReader();
-    reader.onload = function(e) {
-      const wb = XLSX.read(e.target.result, { type: 'array' });
-      const ws = wb.Sheets[wb.SheetNames[0]];
-      const csv = XLSX.utils.sheet_to_csv(ws);
-      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
-      const a = document.createElement('a');
-      a.href = URL.createObjectURL(blob);
-      a.download = xlFileData.name.replace(/\.xlsx?$/, '.csv');
-      a.click();
-    };
-    reader.readAsArrayBuffer(xlFileData);
-  }
-
-  ['dropZone1','dropZone2'].forEach((id, i) => {
-    const dz = document.getElementById(id);
-    dz.addEventListener('dragover', e => { e.preventDefault(); dz.classList.add('drag-over'); });
-    dz.addEventListener('dragleave', () => dz.classList.remove('drag-over'));
-    dz.addEventListener('drop', e => {
-      e.preventDefault(); dz.classList.remove('drag-over');
-      const file = e.dataTransfer.files[0];
-      if (!file) return;
-      if (i === 0) { document.getElementById('csvFile').files = e.dataTransfer.files; document.getElementById('csvFile').dispatchEvent(new Event('change')); }
-      else { document.getElementById('xlFile').files = e.dataTransfer.files; document.getElementById('xlFile').dispatchEvent(new Event('change')); }
-    });
-  });
-</script>
 <script src="../js/pwa-install.js"></script>
-</body>
-</html>
+<script>
+let wb1=null, wb2=null;
+function switchTab(n) {
+  document.getElementById('tab1').classList.toggle('active', n===1);
+  document.getElementById('tab2').classList.toggle('active', n===2);
+  document.getElementById('panel1').classList.toggle('hidden', n!==1);
+  document.getElementById('panel2').classList.toggle('hidden', n!==2);
+}
+async function readFile(file, infoId, fnameId, rowsId, colsId) {
+  const ab = await file.arrayBuffer();
+  const wb = XLSX.read(ab, {type:'array'});
+  const ws = wb.Sheets[wb.SheetNames[0]];
+  const data = XLSX.utils.sheet_to_json(ws, {header:1, defval:''});
+  document.getElementById(fnameId).textContent = file.name;
+  document.getElementById(rowsId).textContent = data.length + ' rows';
+  document.getElementById(colsId).textContent = (data[0]||[]).length + ' cols';
+  document.getElementById(infoId).classList.remove('hidden');
+  return {wb, data, name: file.name.replace(/\.[^.]+$/,'')};
+}
+document.getElementById('fileInput1').addEventListener('change', async e => {
+  if(!e.target.files[0]) return;
+  wb1 = await readFile(e.target.files[0],'info1','fname1','frows1','fcols1');
+});
+document.getElementById('fileInput2').addEventListener('change', async e => {
+  if(!e.target.files[0]) return;
+  wb2 = await readFile(e.target.files[0],'info2','fname2','frows2','fcols2');
+});
+['dropZone1','dropZone2'].forEach((id,i) => {
+  const dz = document.getElementById(id);
+  dz.addEventListener('dragover', e=>{e.preventDefault();dz.classList.add('drag-over');});
+  dz.addEventListener('dragleave', ()=>dz.classList.remove('drag-over'));
+  dz.addEventListener('drop', async e=>{
+    e.preventDefault(); dz.classList.remove('drag-over');
+    const f=e.dataTransfer.files[0]; if(!f) return;
+    if(i===0){wb1=await readFile(f,'info1','fname1','frows1','fcols1');}
+    else{wb2=await readFile(f,'info2','fname2','frows2','fcols2');}
+  });
+});
+function convertCsvToExcel() {
+  if(!wb1) return;
+  const ws = XLSX.utils.aoa_to_sheet(wb1.data);
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
+  XLSX.writeFile(wb, wb1.name+'.xlsx');
+}
+function convertExcelToCsv() {
+  if(!wb2) return;
+  const ws = wb2.wb.Sheets[wb2.wb.SheetNames[0]];
+  const csv = XLSX.utils.sheet_to_csv(ws);
+  const blob = new Blob(['﻿'+csv], {type:'text/csv;charset=utf-8'});
+  const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=wb2.name+'.csv'; a.click();
+}
+</script>
+</body></html>

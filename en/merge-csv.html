@@ -1,142 +1,117 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9ZGENFSXWC');</script>
+<!DOCTYPE html><html lang="en"><head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9ZGENFSXWC');</script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
 <meta name="naver-site-verification" content="7396a327607b884b9bef1283dfd3a5c6115a2b50">
 <meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSV File Merger - Combine Multiple CSV Files Online | WooaSheet</title>
-  <meta name="description" content="Merge multiple CSV files into one instantly in your browser. Choose whether to keep or skip duplicate headers. Free online CSV merger with no upload required.">
-  <meta name="keywords" content="CSV merger, combine CSV files, merge CSV online, free CSV tool, join CSV files">
-  <link rel="canonical" href="https://wooasheet.wooahouse.com/en/merge-csv.html">
-  <link rel="alternate" hreflang="ko" href="https://wooasheet.wooahouse.com/merge-csv.html">
-  <link rel="alternate" hreflang="en" href="https://wooasheet.wooahouse.com/en/merge-csv.html">
-  <link rel="alternate" hreflang="x-default" href="https://wooasheet.wooahouse.com/en/merge-csv.html">
-  <meta property="og:title" content="CSV File Merger - WooaSheet">
-  <meta property="og:description" content="Combine multiple CSV files into one in your browser. Free and private.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://wooasheet.wooahouse.com/en/merge-csv.html">
-  <meta property="og:locale" content="en_US">
-  <link rel="manifest" href="../manifest.json">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
-  <style>
-    .file-list{background:#1e293b;border:1px solid #334155;border-radius:.5rem;padding:.75rem;margin:1rem 0;max-height:200px;overflow-y:auto;}
-    .file-item{display:flex;justify-content:space-between;align-items:center;padding:.35rem .5rem;color:#e2e8f0;font-size:.85rem;border-bottom:1px solid #334155;}
-    .file-item:last-child{border-bottom:none;}
-    .opt-row{display:flex;align-items:center;gap:.75rem;margin:.75rem 0;}
-    .opt-row label{color:#94a3b8;font-size:.9rem;}
-    .opt-row input[type=radio]{accent-color:#4ade80;}
-    .result-info{background:#1e3a2a;border:1px solid #16A34A;border-radius:.5rem;padding:.75rem 1rem;color:#4ade80;margin-top:1rem;font-size:.9rem;display:none;}
-  </style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSV File Merger - Combine Multiple CSV Files Online Free | WooaSheet</title>
+<meta name="description" content="Merge multiple CSV files into one instantly in your browser. Choose whether to keep or skip duplicate headers. Free online CSV merger — no server upload required.">
+<meta name="keywords" content="CSV merger, combine CSV files, merge CSV online, free CSV tool, join CSV files, merge spreadsheets">
+<link rel="canonical" href="https://wooasheet.wooahouse.com/en/merge-csv.html">
+<link rel="alternate" hreflang="ko" href="https://wooasheet.wooahouse.com/merge-csv.html">
+<link rel="alternate" hreflang="en" href="https://wooasheet.wooahouse.com/en/merge-csv.html">
+<link rel="alternate" hreflang="x-default" href="https://wooasheet.wooahouse.com/en/merge-csv.html">
+<meta property="og:title" content="CSV File Merger - WooaSheet">
+<meta property="og:description" content="Combine multiple CSV files into one in your browser. Free and private.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://wooasheet.wooahouse.com/en/merge-csv.html">
+<meta property="og:locale" content="en_US">
+<link rel="manifest" href="../manifest.json">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"CSV File Merger","url":"https://wooasheet.wooahouse.com/en/merge-csv.html","applicationCategory":"UtilitiesApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
-</head>
-<body>
-<header class="header">
-  <div class="header-inner">
-    <a href="index.html" class="logo">📊 WooaSheet</a>
-    <nav class="nav">
-      <a href="editor.html">Spreadsheet</a>
-      <a href="csv-excel.html">CSV↔Excel</a>
-      <a href="chart.html">Chart</a>
-      <a href="deduplicate.html">Deduplicate</a>
-      <a href="merge-csv.html" class="active">Merge</a>
-      <a href="split-csv.html">Split</a>
-    </nav>
-    <div class="header-right">
-      <div class="lang-switcher">
-      <a href="../merge-csv.html">KO</a>
-      <span>|</span>
-      <a href="merge-csv.html" class="active">EN</a>
-    </div>
-    </div>
-  </div>
-</header>
-
+<style>
+  .lang-switcher{display:flex;align-items:center;gap:4px;}
+  .lang-switcher a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.8rem;font-weight:600;padding:3px 8px;border-radius:12px;transition:background 0.15s;}
+  .lang-switcher a.active{color:white;background:rgba(255,255,255,0.25);}
+  .lang-switcher a:hover{color:white;background:rgba(255,255,255,0.18);}
+  .lang-switcher span{color:rgba(255,255,255,0.3);font-size:0.75rem;}
+</style>
+</head><body>
+<header class="header"><div class="header-inner"><a href="index.html" class="logo">📊 WooaSheet</a><nav class="nav"><a href="editor.html">📊 Editor</a><a href="csv-excel.html">🔄 Convert</a><a href="chart.html">📈 Chart</a><a href="deduplicate.html">🧹 Clean</a></nav><div class="header-right"><div class="lang-switcher"><a href="../merge-csv.html">KO</a><span>|</span><a href="merge-csv.html" class="active">EN</a></div></div></div></header>
 <div class="our-sites-bar"><span class="our-sites-label">WooaHouse Services</span><div class="our-sites-links"><a href="https://wooahouse.com/" target="_blank" rel="noopener">🔗 WooaHouse</a><a href="https://pdfkit.wooahouse.com/" target="_blank" rel="noopener">📄 WooaPDF</a><a href="https://imagekit.wooahouse.com/" target="_blank" rel="noopener">🖼️ WooaImage</a><a href="https://colorkit.wooahouse.com/" target="_blank" rel="noopener">🎨 WooaColor</a><a href="https://textkit.wooahouse.com/" target="_blank" rel="noopener">✏️ WooaText</a><a href="https://qrkit.wooahouse.com/" target="_blank" rel="noopener">📱 WooaQR</a><a href="https://calckit.wooahouse.com/" target="_blank" rel="noopener">🧮 WooaCalc</a><a href="https://fontkit.wooahouse.com/" target="_blank" rel="noopener">🔤 WooaFont</a><a href="https://mactools.wooahouse.com/" target="_blank" rel="noopener">🍎 WooaMac</a><a href="https://pctools.wooahouse.com/" target="_blank" rel="noopener">🖥️ WooaPC</a><a href="https://vskit.wooahouse.com/" target="_blank" rel="noopener">💻 WooaVS</a><a href="https://wooaaudio.wooahouse.com/" target="_blank" rel="noopener">🎵 WooaAudio</a><a href="https://wooaviewer.wooahouse.com/" target="_blank" rel="noopener">🔍 WooaViewer</a><a href="https://wooadev.wooahouse.com/" target="_blank" rel="noopener">🛠️ WooaDev</a><a href="https://wooaocr.wooahouse.com/" target="_blank" rel="noopener">🔍 WooaOCR</a><a href="https://wooasheet.wooahouse.com/" target="_blank" rel="noopener" class="active">📊 WooaSheet</a></div></div>
 <div class="mobile-top-ad"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="7080296704" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
 <div class="page-with-sidebar"><div class="tool-page">
   <div class="breadcrumb"><a href="index.html">Home</a><span>›</span>Merge CSV</div>
-  <div class="tool-header"><div class="tool-icon-lg">📎</div><div><h1>CSV File Merger</h1><p>Combine multiple CSV files into one. Choose how to handle duplicate headers.</p></div></div>
-      <div class="panel">
+  <div class="tool-header"><div class="tool-icon-lg">📂</div><div><h1>CSV File Merger</h1><p>Combine multiple CSV or Excel files into one merged file.</p></div></div>
 
-        <div class="drop-zone" onclick="document.getElementById('fileInput').click()">
-          <div class="drop-icon">📂</div>
-          <p>Drop CSV files or click to select (multi-select allowed)</p>
-          <input type="file" id="fileInput" accept=".csv" multiple style="display:none">
-        </div>
-
-        <div id="fileListWrap" style="display:none">
-          <div class="file-list" id="fileList"></div>
-
-          <div class="opt-row">
-            <label>Header handling:</label>
-            <label><input type="radio" name="header" value="first" checked> Keep first file's header only</label>
-            <label><input type="radio" name="header" value="all"> Keep all headers</label>
-          </div>
-
-          <button class="btn btn-primary" id="mergeBtn" onclick="mergeFiles()">Merge & Download CSV</button>
-        </div>
-
-        <div class="result-info" id="resultInfo"></div>
-      </div>
+  <div class="panel">
+    <div class="drop-zone" id="dropZone">
+      <span class="drop-zone-icon">📂</span>
+      <h3>Drop CSV files here</h3>
+      <p>Multiple files supported | .csv .xlsx</p>
+      <label for="fileInput" class="btn-select">Select Files (Multiple)</label>
+      <input type="file" id="fileInput" accept=".csv,.xlsx,.xls" multiple style="display:none">
     </div>
-    <aside class="tool-sidebar">
-      <div class="sidebar-ad">
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="1419180025" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  </div>
+
+  <div id="configPanel" class="hidden">
+    <div class="panel">
+      <div class="form-group">
+        <label>Header Handling</label>
+        <select id="headerMode">
+          <option value="first">Use header from first file only</option>
+          <option value="none">No header (include all rows)</option>
+        </select>
       </div>
-    </aside>
+      <div id="fileList" style="margin-bottom:16px;"></div>
+      <button class="btn btn-primary btn-full" id="downloadBtn" onclick="mergeFiles()">📂 Merge & Download</button>
+    </div>
+  </div>
+
+  <div class="tips-panel"><h3>💡 Tips</h3><ul>
+    <li>Files are merged in the order they were selected</li>
+    <li>With "first file header" mode, the first row of subsequent files is skipped</li>
+    <li>Files with different column counts can still be merged</li>
+  </ul></div>
+
+  <div style="margin-top:24px;"><h2 style="font-size:1.1rem;font-weight:700;margin-bottom:16px;">FAQ</h2>
+    <div style="display:flex;flex-direction:column;gap:8px;">
+      <details style="border:1px solid var(--border);border-radius:8px;padding:12px 16px;background:var(--bg2);"><summary style="cursor:pointer;font-weight:600;">How many files can I merge?</summary><p style="margin:8px 0 0;color:var(--text-light);font-size:0.88rem;">As many as your browser's memory allows. We recommend up to 20MB per file for best performance.</p></details>
+      <details style="border:1px solid var(--border);border-radius:8px;padding:12px 16px;background:var(--bg2);"><summary style="cursor:pointer;font-weight:600;">Can I merge files with different column counts?</summary><p style="margin:8px 0 0;color:var(--text-light);font-size:0.88rem;">Yes. Files with fewer columns will have empty values in the remaining columns.</p></details>
+      <details style="border:1px solid var(--border);border-radius:8px;padding:12px 16px;background:var(--bg2);"><summary style="cursor:pointer;font-weight:600;">Can I change the order of files?</summary><p style="margin:8px 0 0;color:var(--text-light);font-size:0.88rem;">Files are merged in selection order. To change the order, reselect the files in the desired sequence.</p></details>
+    </div>
+  </div>
 </div>
-
+<aside class="tool-sidebar"><div class="ad-card"><ins class="adsbygoogle" style="display:block;width:100%;min-height:250px" data-ad-client="ca-pub-6464921081676309" data-ad-slot="1419180025" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><div class="ad-card"><script src="https://ads-partners.coupang.com/g.js"></script><script>new PartnersCoupang.G({"id":986943,"template":"carousel","trackingCode":"AF5600192","width":"160","height":"200","tsource":""});</script></div></aside>
+</div>
 <footer class="footer"><div class="footer-inner"><div class="footer-top"><div class="footer-col"><h4>📊 WooaSheet</h4><p>Free online spreadsheet tools — edit, convert, chart, deduplicate, merge, and split CSV/Excel files in your browser.</p></div><div class="footer-col"><h4>Tools</h4><a href="editor.html">Spreadsheet Editor</a><a href="csv-excel.html">CSV↔Excel</a><a href="chart.html">Chart Generator</a><a href="deduplicate.html">Deduplicate</a><a href="merge-csv.html">Merge CSV</a><a href="split-csv.html">Split CSV</a></div><div class="footer-col"><h4>WooaHouse Services</h4><a href="https://wooahouse.com/" target="_blank" rel="noopener">🔗 WooaHouse</a><a href="https://pdfkit.wooahouse.com/" target="_blank" rel="noopener">📄 WooaPDF</a><a href="https://imagekit.wooahouse.com/" target="_blank" rel="noopener">🖼️ WooaImage</a><a href="https://colorkit.wooahouse.com/" target="_blank" rel="noopener">🎨 WooaColor</a></div><div class="footer-col"><h4>Info</h4><a href="privacy.html">Privacy Policy</a><a href="about.html">About</a></div></div><div class="footer-bottom"><p>© 2026 WooaSheet by WooaHouse. All rights reserved.</p></div></div></footer>
-
-<script>
-  let selectedFiles = [];
-
-  document.getElementById('fileInput').addEventListener('change', function(e) {
-    selectedFiles = [...e.target.files];
-    const list = document.getElementById('fileList');
-    list.innerHTML = selectedFiles.map((f,i) => `
-      <div class="file-item">
-        <span>${i+1}. ${f.name}</span>
-        <span style="color:#64748b">${(f.size/1024).toFixed(1)} KB</span>
-      </div>`).join('');
-    document.getElementById('fileListWrap').style.display = 'block';
-  });
-
-  function mergeFiles() {
-    if (selectedFiles.length === 0) return;
-    const mode = document.querySelector('input[name="header"]:checked').value;
-    const readers = selectedFiles.map(f => new Promise(res => {
-      const r = new FileReader();
-      r.onload = ev => res(ev.target.result);
-      r.readAsText(f);
-    }));
-    Promise.all(readers).then(contents => {
-      let merged = '';
-      let totalRows = 0;
-      contents.forEach((text, i) => {
-        const lines = text.trim().split('\n');
-        if (i === 0) { merged += lines.join('\n'); totalRows += lines.length - 1; }
-        else {
-          const dataLines = mode === 'first' ? lines.slice(1) : lines;
-          merged += '\n' + dataLines.join('\n');
-          totalRows += dataLines.length;
-        }
-      });
-      const blob = new Blob([merged], { type: 'text/csv;charset=utf-8;' });
-      const a = document.createElement('a');
-      a.href = URL.createObjectURL(blob);
-      a.download = 'merged.csv'; a.click();
-      const info = document.getElementById('resultInfo');
-      info.style.display = 'block';
-      info.textContent = `✅ Merged ${selectedFiles.length} files · ${totalRows} data rows · downloaded as merged.csv`;
-    });
-  }
-</script>
 <script src="../js/pwa-install.js"></script>
-</body>
-</html>
+<script>
+let filesData = [];
+async function loadFiles(files) {
+  filesData = [];
+  const list = document.getElementById('fileList');
+  list.innerHTML = '';
+  for(const file of files) {
+    const ab = await file.arrayBuffer();
+    const wb = XLSX.read(ab, {type:'array'});
+    const ws = wb.Sheets[wb.SheetNames[0]];
+    const data = XLSX.utils.sheet_to_json(ws, {header:1, defval:''});
+    filesData.push({name:file.name, data});
+    list.innerHTML += '<div class="stat-row"><span class="stat-label">'+file.name+'</span><span class="stat-value">'+data.length+' rows</span></div>';
+  }
+  document.getElementById('configPanel').classList.remove('hidden');
+}
+async function mergeFiles() {
+  if(!filesData.length) return;
+  const mode = document.getElementById('headerMode').value;
+  let merged = [];
+  filesData.forEach((f, i) => {
+    const rows = mode==='first' && i>0 ? f.data.slice(1) : f.data;
+    merged = merged.concat(rows);
+  });
+  const ws = XLSX.utils.aoa_to_sheet(merged);
+  const csv = XLSX.utils.sheet_to_csv(ws);
+  const blob = new Blob(['﻿'+csv], {type:'text/csv;charset=utf-8'});
+  const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='merged.csv'; a.click();
+}
+const dz=document.getElementById('dropZone');
+dz.addEventListener('dragover',e=>{e.preventDefault();dz.classList.add('drag-over');});
+dz.addEventListener('dragleave',()=>dz.classList.remove('drag-over'));
+dz.addEventListener('drop',e=>{e.preventDefault();dz.classList.remove('drag-over');if(e.dataTransfer.files.length)loadFiles(Array.from(e.dataTransfer.files));});
+document.getElementById('fileInput').addEventListener('change',e=>{if(e.target.files.length)loadFiles(Array.from(e.target.files));});
+</script>
+</body></html>
