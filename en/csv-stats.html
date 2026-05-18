@@ -1,0 +1,128 @@
+<!DOCTYPE html><html lang="en"><head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9ZGENFSXWC');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="naver-site-verification" content="7396a327607b884b9bef1283dfd3a5c6115a2b50">
+<meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSV Statistics Analyzer Free Online — Sum, Average, Min, Max per Column | WooaSheet</title>
+<meta name="description" content="Automatically analyze CSV statistics per column: sum, average, min, max, unique count, and empty count. Free browser-based data profiling tool.">
+<meta name="keywords" content="CSV statistics,CSV column stats,CSV data analysis,CSV sum average,CSV min max,CSV data profiling online">
+<link rel="canonical" href="https://wooasheet.wooahouse.com/en/csv-stats.html">
+<link rel="alternate" hreflang="ko" href="https://wooasheet.wooahouse.com/csv-stats.html">
+<link rel="alternate" hreflang="en" href="https://wooasheet.wooahouse.com/en/csv-stats.html">
+<link rel="alternate" hreflang="x-default" href="https://wooasheet.wooahouse.com/en/csv-stats.html">
+<meta property="og:title" content="CSV Statistics Analyzer - WooaSheet">
+<meta property="og:description" content="Auto-analyze CSV column stats: sum, avg, min, max. Works in your browser.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://wooasheet.wooahouse.com/en/csv-stats.html">
+<meta property="og:locale" content="en_US">
+<link rel="manifest" href="../manifest.json">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"CSV Statistics Analyzer","url":"https://wooasheet.wooahouse.com/en/csv-stats.html","applicationCategory":"UtilitiesApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<style>
+  .lang-switcher{display:flex;align-items:center;gap:4px;}
+  .lang-switcher a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.8rem;font-weight:600;padding:3px 8px;border-radius:12px;transition:background 0.15s;}
+  .lang-switcher a.active{color:white;background:rgba(255,255,255,0.25);}
+  .lang-switcher a:hover{color:white;background:rgba(255,255,255,0.18);}
+  .lang-switcher span{color:rgba(255,255,255,0.3);font-size:0.75rem;}
+  .stats-wrap{overflow-x:auto;margin-top:16px;}
+  .stats-table{width:100%;border-collapse:collapse;font-size:0.84rem;}
+  .stats-table th{background:var(--primary);color:#fff;padding:8px 12px;text-align:left;white-space:nowrap;}
+  .stats-table td{padding:7px 12px;border-bottom:1px solid var(--border);white-space:nowrap;}
+  .stats-table tr:hover td{background:var(--bg2);}
+  .tag-num{background:#16A34A22;color:#4ADE80;padding:2px 7px;border-radius:4px;font-size:0.75rem;}
+  .tag-txt{background:#3B82F622;color:#93C5FD;padding:2px 7px;border-radius:4px;font-size:0.75rem;}
+</style>
+</head><body>
+<header class="header"><div class="header-inner"><a href="../index.html" class="logo">📊 WooaSheet</a><nav class="nav"><a href="../editor.html">📊 Editor</a><a href="../csv-excel.html">🔄 Convert</a><a href="../chart.html">📈 Chart</a><a href="../deduplicate.html">🧹 Clean</a></nav><div class="header-right"><div class="lang-switcher"><a href="../csv-stats.html">KO</a><span>|</span><a href="csv-stats.html" class="active">EN</a></div></div></div></header>
+<div class="our-sites-bar"><span class="our-sites-label">WooaHouse Services</span><div class="our-sites-links"><a href="https://wooahouse.com/" target="_blank" rel="noopener">🔗 WooaHouse</a><a href="https://pdfkit.wooahouse.com/" target="_blank" rel="noopener">📄 WooaPDF</a><a href="https://imagekit.wooahouse.com/" target="_blank" rel="noopener">🖼️ WooaImage</a><a href="https://colorkit.wooahouse.com/" target="_blank" rel="noopener">🎨 WooaColor</a><a href="https://textkit.wooahouse.com/" target="_blank" rel="noopener">✏️ WooaText</a><a href="https://qrkit.wooahouse.com/" target="_blank" rel="noopener">📱 WooaQR</a><a href="https://calckit.wooahouse.com/" target="_blank" rel="noopener">🧮 WooaCalc</a><a href="https://fontkit.wooahouse.com/" target="_blank" rel="noopener">🔤 WooaFont</a><a href="https://mactools.wooahouse.com/" target="_blank" rel="noopener">🍎 WooaMac</a><a href="https://pctools.wooahouse.com/" target="_blank" rel="noopener">🖥️ WooaPC</a><a href="https://vskit.wooahouse.com/" target="_blank" rel="noopener">💻 WooaVS</a><a href="https://wooaaudio.wooahouse.com/" target="_blank" rel="noopener">🎵 WooaAudio</a><a href="https://wooaviewer.wooahouse.com/" target="_blank" rel="noopener">🔍 WooaViewer</a><a href="https://wooadev.wooahouse.com/" target="_blank" rel="noopener">🛠️ WooaDev</a><a href="https://wooaocr.wooahouse.com/" target="_blank" rel="noopener">🔍 WooaOCR</a><a href="https://wooasheet.wooahouse.com/" target="_blank" rel="noopener" class="active">📊 WooaSheet</a></div></div>
+<div class="mobile-top-ad"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="7080296704" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+<div class="page-with-sidebar"><div class="tool-page">
+  <div class="breadcrumb"><a href="../index.html">Home</a><span>›</span>CSV Statistics</div>
+  <div class="tool-header"><div class="tool-icon-lg">📊</div><div><h1>CSV Statistics Analyzer</h1><p>Automatically analyze basic statistics for each column in your CSV file.</p></div></div>
+
+  <div class="panel">
+    <div class="drop-zone" id="dropZone">
+      <span class="drop-zone-icon">📊</span>
+      <h3>Drop your CSV or Excel file here</h3>
+      <p>.csv .xlsx files | Max 50MB</p>
+      <label for="fileInput" class="btn-select">Choose File</label>
+      <input type="file" id="fileInput" accept=".csv,.xlsx,.xls" style="display:none">
+    </div>
+  </div>
+
+  <div id="statsPanel" class="hidden">
+    <div class="panel">
+      <div class="result-box" style="margin-bottom:12px;">
+        <div class="stat-row"><span class="stat-label">File Name</span><span class="stat-value" id="statFile"></span></div>
+        <div class="stat-row"><span class="stat-label">Total Rows</span><span class="stat-value" id="statRows"></span></div>
+        <div class="stat-row"><span class="stat-label">Total Columns</span><span class="stat-value" id="statCols"></span></div>
+      </div>
+      <div class="stats-wrap">
+        <table class="stats-table" id="statsTable"></table>
+      </div>
+    </div>
+  </div>
+
+  <div class="tips-panel"><h3>💡 Tips</h3><ul>
+    <li>🔢 Numeric type: a column is detected as numeric if ≥80% of non-empty values are numbers</li>
+    <li>Sum, average, min, and max are only shown for numeric columns</li>
+    <li>Unique count: the number of distinct values in each column</li>
+  </ul></div>
+
+  <div style="margin-top:24px;"><h2 style="font-size:1.1rem;font-weight:700;margin-bottom:16px;">FAQ</h2>
+    <div style="display:flex;flex-direction:column;gap:8px;">
+      <details style="border:1px solid var(--border);border-radius:8px;padding:12px 16px;background:var(--bg2);"><summary style="cursor:pointer;font-weight:600;">Where can I see the median?</summary><p style="margin:8px 0 0;color:var(--text-light);font-size:0.88rem;">Currently only the mean (average) is provided. Use the MEDIAN function in the Spreadsheet Editor for the median.</p></details>
+      <details style="border:1px solid var(--border);border-radius:8px;padding:12px 16px;background:var(--bg2);"><summary style="cursor:pointer;font-weight:600;">Can I save the statistics results?</summary><p style="margin:8px 0 0;color:var(--text-light);font-size:0.88rem;">Use your browser's Print (Ctrl+P) function to save as PDF, or copy the table manually.</p></details>
+      <details style="border:1px solid var(--border);border-radius:8px;padding:12px 16px;background:var(--bg2);"><summary style="cursor:pointer;font-weight:600;">Is my file sent to a server?</summary><p style="margin:8px 0 0;color:var(--text-light);font-size:0.88rem;">No. All analysis happens entirely in your browser — nothing is uploaded.</p></details>
+    </div>
+  </div>
+</div>
+<aside class="tool-sidebar"><div class="ad-card"><ins class="adsbygoogle" style="display:block;width:100%;min-height:250px" data-ad-client="ca-pub-6464921081676309" data-ad-slot="1419180025" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><div class="ad-card"><script src="https://ads-partners.coupang.com/g.js"></script><script>new PartnersCoupang.G({"id":986943,"template":"carousel","trackingCode":"AF5600192","width":"160","height":"200","tsource":""});</script></div></aside>
+</div>
+<footer class="footer"><div class="footer-inner"><div class="footer-top"><div class="footer-col"><h4>📊 WooaSheet</h4><p>Free online tools to edit, convert, and visualize CSV &amp; Excel files directly in your browser.</p></div><div class="footer-col"><h4>Tools</h4><a href="../editor.html">Spreadsheet Editor</a><a href="../csv-excel.html">CSV↔Excel Convert</a><a href="../chart.html">Chart Generator</a><a href="../deduplicate.html">Remove Duplicates</a><a href="../merge-csv.html">Merge CSV</a><a href="../split-csv.html">Split CSV</a><a href="../csv-json.html">CSV↔JSON</a><a href="../filter-csv.html">CSV Filter</a><a href="../sort-csv.html">Sort CSV</a><a href="../trim-csv.html">Trim Empty Rows</a><a href="../column-picker.html">Column Picker</a><a href="../csv-stats.html">CSV Statistics</a><a href="../encoding-csv.html">Encoding Convert</a></div><div class="footer-col"><h4>WooaHouse Services</h4><a href="https://wooahouse.com/" target="_blank" rel="noopener">🔗 WooaHouse</a><a href="https://pdfkit.wooahouse.com/" target="_blank" rel="noopener">📄 WooaPDF</a><a href="https://imagekit.wooahouse.com/" target="_blank" rel="noopener">🖼️ WooaImage</a><a href="https://colorkit.wooahouse.com/" target="_blank" rel="noopener">🎨 WooaColor</a><a href="https://textkit.wooahouse.com/" target="_blank" rel="noopener">✏️ WooaText</a><a href="https://qrkit.wooahouse.com/" target="_blank" rel="noopener">📱 WooaQR</a><a href="https://calckit.wooahouse.com/" target="_blank" rel="noopener">🧮 WooaCalc</a><a href="https://fontkit.wooahouse.com/" target="_blank" rel="noopener">🔤 WooaFont</a><a href="https://wooaaudio.wooahouse.com/" target="_blank" rel="noopener">🎵 WooaAudio</a><a href="https://wooaviewer.wooahouse.com/" target="_blank" rel="noopener">🔍 WooaViewer</a><a href="https://wooadev.wooahouse.com/" target="_blank" rel="noopener">🛠️ WooaDev</a></div><div class="footer-col"><h4>Info</h4><a href="../about.html">About</a><a href="../privacy.html">Privacy Policy</a></div></div><div class="footer-bottom"><p>© 2026 WooaSheet by WooaHouse. All rights reserved.</p></div><p class="coupang-notice">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p></div></footer>
+<script src="../js/pwa-install.js"></script>
+<script>
+async function loadFile(file) {
+  const ab = await file.arrayBuffer();
+  const wb = XLSX.read(ab, {type:'array'});
+  const ws = wb.Sheets[wb.SheetNames[0]];
+  const data = XLSX.utils.sheet_to_json(ws, {header:1, defval:''});
+  const headers = data[0] || [];
+  const rows = data.slice(1);
+  document.getElementById('statFile').textContent = file.name;
+  document.getElementById('statRows').textContent = rows.length + ' rows';
+  document.getElementById('statCols').textContent = headers.length + ' cols';
+  const tbody = headers.map((h, ci) => {
+    const vals = rows.map(r => r[ci]);
+    const nonEmpty = vals.filter(v => v!==''&&v!==null&&v!==undefined);
+    const numVals = nonEmpty.map(v=>parseFloat(v)).filter(n=>!isNaN(n));
+    const isNum = numVals.length>0 && numVals.length>=nonEmpty.length*0.8;
+    const unique = new Set(nonEmpty.map(String)).size;
+    let min='-', max='-', mean='-', sum='-';
+    if(isNum && numVals.length) {
+      min = Math.min(...numVals).toLocaleString();
+      max = Math.max(...numVals).toLocaleString();
+      const s = numVals.reduce((a,b)=>a+b,0);
+      sum = s.toLocaleString();
+      mean = (s/numVals.length).toFixed(2);
+    }
+    const typeTag = isNum
+      ? '<span class="tag-num">🔢 Number</span>'
+      : '<span class="tag-txt">📝 Text</span>';
+    return `<tr><td><strong>${h||'Col'+(ci+1)}</strong></td><td>${typeTag}</td><td>${nonEmpty.length}</td><td>${vals.length-nonEmpty.length}</td><td>${unique}</td><td>${min}</td><td>${max}</td><td>${mean}</td><td>${sum}</td></tr>`;
+  }).join('');
+  document.getElementById('statsTable').innerHTML =
+    `<thead><tr><th>Column</th><th>Type</th><th>Values</th><th>Empty</th><th>Unique</th><th>Min</th><th>Max</th><th>Mean</th><th>Sum</th></tr></thead><tbody>${tbody}</tbody>`;
+  document.getElementById('statsPanel').classList.remove('hidden');
+}
+const dz=document.getElementById('dropZone');
+dz.addEventListener('dragover',e=>{e.preventDefault();dz.classList.add('drag-over');});
+dz.addEventListener('dragleave',()=>dz.classList.remove('drag-over'));
+dz.addEventListener('drop',e=>{e.preventDefault();dz.classList.remove('drag-over');if(e.dataTransfer.files[0])loadFile(e.dataTransfer.files[0]);});
+document.getElementById('fileInput').addEventListener('change',e=>{if(e.target.files[0])loadFile(e.target.files[0]);});
+</script>
+</body></html>

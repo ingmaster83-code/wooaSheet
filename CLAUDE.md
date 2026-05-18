@@ -26,6 +26,13 @@
 | deduplicate.html | CSV/Excel 중복 행 제거 |
 | merge-csv.html | 여러 CSV 병합 |
 | split-csv.html | CSV 분할 → ZIP 다운로드 |
+| csv-json.html | CSV ↔ JSON 변환 (개발자 도구) |
+| filter-csv.html | 조건 기반 행 필터링 (10가지 조건) |
+| sort-csv.html | 열 기준 오름차순/내림차순 정렬 (텍스트/숫자) |
+| trim-csv.html | 빈 행/열/앞뒤 공백 제거 |
+| column-picker.html | 열 선택 및 드래그 순서 변경 |
+| csv-stats.html | 열별 기초 통계 자동 분석 (합계/평균/최대/최소/고유값) |
+| encoding-csv.html | EUC-KR ↔ UTF-8/CP949 인코딩 변환 |
 
 ## 작업 규칙
 - 새 도구 추가 시: index.html 카드 + sitemap.xml + en/ 영문 페이지 + footer 링크

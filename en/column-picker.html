@@ -1,0 +1,150 @@
+<!DOCTYPE html><html lang="en"><head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9ZGENFSXWC');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="naver-site-verification" content="7396a327607b884b9bef1283dfd3a5c6115a2b50">
+<meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSV Column Picker Free Online — Select &amp; Reorder CSV Columns | WooaSheet</title>
+<meta name="description" content="Select specific columns from a CSV file and reorder them by drag-and-drop. Download only the columns you need. Free, browser-based, no upload.">
+<meta name="keywords" content="CSV column picker,select CSV columns,reorder CSV columns,extract CSV columns,CSV column extractor,remove CSV columns">
+<link rel="canonical" href="https://wooasheet.wooahouse.com/en/column-picker.html">
+<link rel="alternate" hreflang="ko" href="https://wooasheet.wooahouse.com/column-picker.html">
+<link rel="alternate" hreflang="en" href="https://wooasheet.wooahouse.com/en/column-picker.html">
+<link rel="alternate" hreflang="x-default" href="https://wooasheet.wooahouse.com/en/column-picker.html">
+<meta property="og:title" content="CSV Column Picker - WooaSheet">
+<meta property="og:description" content="Pick and reorder CSV columns with drag-and-drop. Download only what you need.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://wooasheet.wooahouse.com/en/column-picker.html">
+<meta property="og:locale" content="en_US">
+<link rel="manifest" href="../manifest.json">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"CSV Column Picker","url":"https://wooasheet.wooahouse.com/en/column-picker.html","applicationCategory":"UtilitiesApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<style>
+  .lang-switcher{display:flex;align-items:center;gap:4px;}
+  .lang-switcher a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.8rem;font-weight:600;padding:3px 8px;border-radius:12px;transition:background 0.15s;}
+  .lang-switcher a.active{color:white;background:rgba(255,255,255,0.25);}
+  .lang-switcher a:hover{color:white;background:rgba(255,255,255,0.18);}
+  .lang-switcher span{color:rgba(255,255,255,0.3);font-size:0.75rem;}
+  #colList{display:flex;flex-direction:column;gap:6px;margin:12px 0;}
+  .col-item{display:flex;align-items:center;gap:10px;padding:8px 12px;background:var(--bg2);border:1px solid var(--border);border-radius:8px;cursor:grab;user-select:none;}
+  .col-item.dragging{opacity:0.4;}
+  .col-item.drag-over{border-color:var(--primary);background:var(--bg);}
+  .drag-handle{color:var(--text-light);font-size:1.1rem;cursor:grab;}
+  .col-item input[type=checkbox]{width:16px;height:16px;accent-color:var(--primary);cursor:pointer;}
+  .col-item label{cursor:pointer;flex:1;font-size:0.9rem;}
+  .col-actions{display:flex;gap:8px;margin-bottom:8px;}
+</style>
+</head><body>
+<header class="header"><div class="header-inner"><a href="../index.html" class="logo">📊 WooaSheet</a><nav class="nav"><a href="../editor.html">📊 Editor</a><a href="../csv-excel.html">🔄 Convert</a><a href="../chart.html">📈 Chart</a><a href="../deduplicate.html">🧹 Clean</a></nav><div class="header-right"><div class="lang-switcher"><a href="../column-picker.html">KO</a><span>|</span><a href="column-picker.html" class="active">EN</a></div></div></div></header>
+<div class="our-sites-bar"><span class="our-sites-label">WooaHouse Services</span><div class="our-sites-links"><a href="https://wooahouse.com/" target="_blank" rel="noopener">🔗 WooaHouse</a><a href="https://pdfkit.wooahouse.com/" target="_blank" rel="noopener">📄 WooaPDF</a><a href="https://imagekit.wooahouse.com/" target="_blank" rel="noopener">🖼️ WooaImage</a><a href="https://colorkit.wooahouse.com/" target="_blank" rel="noopener">🎨 WooaColor</a><a href="https://textkit.wooahouse.com/" target="_blank" rel="noopener">✏️ WooaText</a><a href="https://qrkit.wooahouse.com/" target="_blank" rel="noopener">📱 WooaQR</a><a href="https://calckit.wooahouse.com/" target="_blank" rel="noopener">🧮 WooaCalc</a><a href="https://fontkit.wooahouse.com/" target="_blank" rel="noopener">🔤 WooaFont</a><a href="https://mactools.wooahouse.com/" target="_blank" rel="noopener">🍎 WooaMac</a><a href="https://pctools.wooahouse.com/" target="_blank" rel="noopener">🖥️ WooaPC</a><a href="https://vskit.wooahouse.com/" target="_blank" rel="noopener">💻 WooaVS</a><a href="https://wooaaudio.wooahouse.com/" target="_blank" rel="noopener">🎵 WooaAudio</a><a href="https://wooaviewer.wooahouse.com/" target="_blank" rel="noopener">🔍 WooaViewer</a><a href="https://wooadev.wooahouse.com/" target="_blank" rel="noopener">🛠️ WooaDev</a><a href="https://wooaocr.wooahouse.com/" target="_blank" rel="noopener">🔍 WooaOCR</a><a href="https://wooasheet.wooahouse.com/" target="_blank" rel="noopener" class="active">📊 WooaSheet</a></div></div>
+<div class="mobile-top-ad"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="7080296704" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+<div class="page-with-sidebar"><div class="tool-page">
+  <div class="breadcrumb"><a href="../index.html">Home</a><span>›</span>Column Picker</div>
+  <div class="tool-header"><div class="tool-icon-lg">🗂️</div><div><h1>CSV Column Picker &amp; Reorder</h1><p>Select the columns you want and drag to reorder, then download your custom CSV.</p></div></div>
+
+  <div class="panel">
+    <div class="drop-zone" id="dropZone">
+      <span class="drop-zone-icon">🗂️</span>
+      <h3>Drop your CSV or Excel file here</h3>
+      <p>.csv .xlsx files | Max 50MB</p>
+      <label for="fileInput" class="btn-select">Choose File</label>
+      <input type="file" id="fileInput" accept=".csv,.xlsx,.xls" style="display:none">
+    </div>
+  </div>
+
+  <div id="configPanel" class="hidden">
+    <div class="panel">
+      <div class="col-actions">
+        <button class="btn btn-secondary" onclick="selectAll()">Select All</button>
+        <button class="btn btn-secondary" onclick="deselectAll()">Deselect All</button>
+      </div>
+      <p style="font-size:0.82rem;color:var(--text-light);margin-bottom:4px;">⠿ Drag to reorder columns</p>
+      <div id="colList"></div>
+      <button class="btn btn-primary btn-full" id="downloadBtn" onclick="downloadResult()">⬇️ Download Selected Columns as CSV</button>
+    </div>
+  </div>
+
+  <div class="tips-panel"><h3>💡 Tips</h3><ul>
+    <li>Check the columns you want to include, then drag to change their order</li>
+    <li>Great for extracting only the columns you need from large CSV files</li>
+    <li>Column headers are saved in the order you set</li>
+  </ul></div>
+
+  <div style="margin-top:24px;"><h2 style="font-size:1.1rem;font-weight:700;margin-bottom:16px;">FAQ</h2>
+    <div style="display:flex;flex-direction:column;gap:8px;">
+      <details style="border:1px solid var(--border);border-radius:8px;padding:12px 16px;background:var(--bg2);"><summary style="cursor:pointer;font-weight:600;">Can I rename column headers?</summary><p style="margin:8px 0 0;color:var(--text-light);font-size:0.88rem;">Renaming is not supported here. Use the Spreadsheet Editor to edit column names directly.</p></details>
+      <details style="border:1px solid var(--border);border-radius:8px;padding:12px 16px;background:var(--bg2);"><summary style="cursor:pointer;font-weight:600;">What if I select no columns?</summary><p style="margin:8px 0 0;color:var(--text-light);font-size:0.88rem;">At least one column must be selected to download.</p></details>
+      <details style="border:1px solid var(--border);border-radius:8px;padding:12px 16px;background:var(--bg2);"><summary style="cursor:pointer;font-weight:600;">Is the original file modified?</summary><p style="margin:8px 0 0;color:var(--text-light);font-size:0.88rem;">No. Your original file is never changed.</p></details>
+    </div>
+  </div>
+</div>
+<aside class="tool-sidebar"><div class="ad-card"><ins class="adsbygoogle" style="display:block;width:100%;min-height:250px" data-ad-client="ca-pub-6464921081676309" data-ad-slot="1419180025" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><div class="ad-card"><script src="https://ads-partners.coupang.com/g.js"></script><script>new PartnersCoupang.G({"id":986943,"template":"carousel","trackingCode":"AF5600192","width":"160","height":"200","tsource":""});</script></div></aside>
+</div>
+<footer class="footer"><div class="footer-inner"><div class="footer-top"><div class="footer-col"><h4>📊 WooaSheet</h4><p>Free online tools to edit, convert, and visualize CSV &amp; Excel files directly in your browser.</p></div><div class="footer-col"><h4>Tools</h4><a href="../editor.html">Spreadsheet Editor</a><a href="../csv-excel.html">CSV↔Excel Convert</a><a href="../chart.html">Chart Generator</a><a href="../deduplicate.html">Remove Duplicates</a><a href="../merge-csv.html">Merge CSV</a><a href="../split-csv.html">Split CSV</a><a href="../csv-json.html">CSV↔JSON</a><a href="../filter-csv.html">CSV Filter</a><a href="../sort-csv.html">Sort CSV</a><a href="../trim-csv.html">Trim Empty Rows</a><a href="../column-picker.html">Column Picker</a><a href="../csv-stats.html">CSV Statistics</a><a href="../encoding-csv.html">Encoding Convert</a></div><div class="footer-col"><h4>WooaHouse Services</h4><a href="https://wooahouse.com/" target="_blank" rel="noopener">🔗 WooaHouse</a><a href="https://pdfkit.wooahouse.com/" target="_blank" rel="noopener">📄 WooaPDF</a><a href="https://imagekit.wooahouse.com/" target="_blank" rel="noopener">🖼️ WooaImage</a><a href="https://colorkit.wooahouse.com/" target="_blank" rel="noopener">🎨 WooaColor</a><a href="https://textkit.wooahouse.com/" target="_blank" rel="noopener">✏️ WooaText</a><a href="https://qrkit.wooahouse.com/" target="_blank" rel="noopener">📱 WooaQR</a><a href="https://calckit.wooahouse.com/" target="_blank" rel="noopener">🧮 WooaCalc</a><a href="https://fontkit.wooahouse.com/" target="_blank" rel="noopener">🔤 WooaFont</a><a href="https://wooaaudio.wooahouse.com/" target="_blank" rel="noopener">🎵 WooaAudio</a><a href="https://wooaviewer.wooahouse.com/" target="_blank" rel="noopener">🔍 WooaViewer</a><a href="https://wooadev.wooahouse.com/" target="_blank" rel="noopener">🛠️ WooaDev</a></div><div class="footer-col"><h4>Info</h4><a href="../about.html">About</a><a href="../privacy.html">Privacy Policy</a></div></div><div class="footer-bottom"><p>© 2026 WooaSheet by WooaHouse. All rights reserved.</p></div><p class="coupang-notice">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p></div></footer>
+<script src="../js/pwa-install.js"></script>
+<script>
+let allData = [], headers = [], fileName = '';
+async function loadFile(file) {
+  fileName = file.name.replace(/\.[^.]+$/, '');
+  const ab = await file.arrayBuffer();
+  const wb = XLSX.read(ab, {type:'array'});
+  const ws = wb.Sheets[wb.SheetNames[0]];
+  const data = XLSX.utils.sheet_to_json(ws, {header:1, defval:''});
+  headers = data[0] || [];
+  allData = data.slice(1);
+  renderColList();
+  document.getElementById('configPanel').classList.remove('hidden');
+}
+function renderColList() {
+  const list = document.getElementById('colList');
+  list.innerHTML = headers.map((h,i) =>
+    `<div class="col-item" draggable="true" data-idx="${i}">
+      <span class="drag-handle">⠿</span>
+      <input type="checkbox" id="col${i}" checked>
+      <label for="col${i}">${h||'(Col '+(i+1)+')'}</label>
+    </div>`
+  ).join('');
+  initDrag();
+}
+function initDrag() {
+  const list = document.getElementById('colList');
+  let dragSrc = null;
+  list.querySelectorAll('.col-item').forEach(item => {
+    item.addEventListener('dragstart', ()=>{dragSrc=item;item.classList.add('dragging');});
+    item.addEventListener('dragend', ()=>item.classList.remove('dragging'));
+    item.addEventListener('dragover', e=>{e.preventDefault();item.classList.add('drag-over');});
+    item.addEventListener('dragleave', ()=>item.classList.remove('drag-over'));
+    item.addEventListener('drop', e=>{
+      e.preventDefault(); item.classList.remove('drag-over');
+      if(dragSrc&&dragSrc!==item) {
+        const items=[...list.children];
+        const si=items.indexOf(dragSrc), di=items.indexOf(item);
+        if(si<di) list.insertBefore(dragSrc,item.nextSibling);
+        else list.insertBefore(dragSrc,item);
+      }
+    });
+  });
+}
+function selectAll(){document.querySelectorAll('#colList input[type=checkbox]').forEach(c=>c.checked=true);}
+function deselectAll(){document.querySelectorAll('#colList input[type=checkbox]').forEach(c=>c.checked=false);}
+function downloadResult() {
+  const items=[...document.querySelectorAll('#colList .col-item')];
+  const selected=items.filter(it=>it.querySelector('input').checked).map(it=>parseInt(it.dataset.idx));
+  if(!selected.length){alert('Please select at least one column.');return;}
+  const newH=selected.map(i=>headers[i]);
+  const newD=allData.map(r=>selected.map(i=>r[i]??''));
+  const ws=XLSX.utils.aoa_to_sheet([newH,...newD]);
+  const csv=XLSX.utils.sheet_to_csv(ws);
+  const blob=new Blob(['﻿'+csv],{type:'text/csv;charset=utf-8'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=fileName+'_columns.csv';a.click();
+}
+const dz=document.getElementById('dropZone');
+dz.addEventListener('dragover',e=>{e.preventDefault();dz.classList.add('drag-over');});
+dz.addEventListener('dragleave',()=>dz.classList.remove('drag-over'));
+dz.addEventListener('drop',e=>{e.preventDefault();dz.classList.remove('drag-over');if(e.dataTransfer.files[0])loadFile(e.dataTransfer.files[0]);});
+document.getElementById('fileInput').addEventListener('change',e=>{if(e.target.files[0])loadFile(e.target.files[0]);});
+</script>
+</body></html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html><html lang="ko"><head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9ZGENFSXWC');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="naver-site-verification" content="7396a327607b884b9bef1283dfd3a5c6115a2b50">
+<meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSV 통계 분석 무료 온라인 — 열별 합계·평균·최대·최솟값 | WooaSheet</title>
+<meta name="description" content="CSV 파일의 열별 통계를 자동 분석. 합계·평균·최대·최솟값·고유값 수 등 기초 통계. 브라우저에서 바로, 서버 업로드 없음.">
+<meta name="keywords" content="CSV 통계,CSV 분석,CSV 열 통계,CSV stats,CSV 평균 합계,데이터 분석">
+<link rel="canonical" href="https://wooasheet.wooahouse.com/csv-stats.html">
+<link rel="alternate" hreflang="ko" href="https://wooasheet.wooahouse.com/csv-stats.html">
+<link rel="alternate" hreflang="en" href="https://wooasheet.wooahouse.com/en/csv-stats.html">
+<link rel="alternate" hreflang="x-default" href="https://wooasheet.wooahouse.com/en/csv-stats.html">
+<meta property="og:title" content="CSV 통계 분석 - WooaSheet">
+<meta property="og:description" content="CSV 열별 합계·평균·최대·최소 등 기초 통계. 브라우저에서 바로.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://wooasheet.wooahouse.com/csv-stats.html">
+<meta property="og:locale" content="ko_KR">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"CSV 통계 분석","url":"https://wooasheet.wooahouse.com/csv-stats.html","applicationCategory":"UtilitiesApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
+<style>
+  .lang-switcher{display:flex;align-items:center;gap:4px;}
+  .lang-switcher a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.8rem;font-weight:600;padding:3px 8px;border-radius:12px;transition:background 0.15s;}
+  .lang-switcher a.active{color:white;background:rgba(255,255,255,0.25);}
+  .lang-switcher a:hover{color:white;background:rgba(255,255,255,0.18);}
+  .lang-switcher span{color:rgba(255,255,255,0.3);font-size:0.75rem;}
+  .stats-wrap{overflow-x:auto;margin-top:16px;}
+  .stats-table{width:100%;border-collapse:collapse;font-size:0.84rem;}
+  .stats-table th{background:var(--primary);color:#fff;padding:8px 12px;text-align:left;white-space:nowrap;}
+  .stats-table td{padding:7px 12px;border-bottom:1px solid var(--border);white-space:nowrap;}
+  .stats-table tr:hover td{background:var(--bg2);}
+  .tag-num{background:#16A34A22;color:#4ADE80;padding:2px 7px;border-radius:4px;font-size:0.75rem;}
+  .tag-txt{background:#3B82F622;color:#93C5FD;padding:2px 7px;border-radius:4px;font-size:0.75rem;}
+</style>
+</head><body>
+<header class="header"><div class="header-inner"><a href="index.html" class="logo">📊 WooaSheet</a><nav class="nav"><a href="editor.html">📊 편집기</a><a href="csv-excel.html">🔄 변환</a><a href="chart.html">📈 차트</a><a href="deduplicate.html">🧹 정리</a></nav><div class="header-right"><div class="lang-switcher"><a href="csv-stats.html" class="active">KO</a><span>|</span><a href="en/csv-stats.html">EN</a></div></div></div></header>
+<div class="our-sites-bar"><span class="our-sites-label">WooaHouse Services</span><div class="our-sites-links"><a href="https://wooahouse.com/" target="_blank" rel="noopener">🔗 WooaHouse</a><a href="https://pdfkit.wooahouse.com/" target="_blank" rel="noopener">📄 WooaPDF</a><a href="https://imagekit.wooahouse.com/" target="_blank" rel="noopener">🖼️ WooaImage</a><a href="https://colorkit.wooahouse.com/" target="_blank" rel="noopener">🎨 WooaColor</a><a href="https://textkit.wooahouse.com/" target="_blank" rel="noopener">✏️ WooaText</a><a href="https://qrkit.wooahouse.com/" target="_blank" rel="noopener">📱 WooaQR</a><a href="https://calckit.wooahouse.com/" target="_blank" rel="noopener">🧮 WooaCalc</a><a href="https://fontkit.wooahouse.com/" target="_blank" rel="noopener">🔤 WooaFont</a><a href="https://mactools.wooahouse.com/" target="_blank" rel="noopener">🍎 WooaMac</a><a href="https://pctools.wooahouse.com/" target="_blank" rel="noopener">🖥️ WooaPC</a><a href="https://vskit.wooahouse.com/" target="_blank" rel="noopener">💻 WooaVS</a><a href="https://wooaaudio.wooahouse.com/" target="_blank" rel="noopener">🎵 WooaAudio</a><a href="https://wooaviewer.wooahouse.com/" target="_blank" rel="noopener">🔍 WooaViewer</a><a href="https://wooadev.wooahouse.com/" target="_blank" rel="noopener">🛠️ WooaDev</a><a href="https://wooaocr.wooahouse.com/" target="_blank" rel="noopener">🔍 WooaOCR</a><a href="https://wooasheet.wooahouse.com/" target="_blank" rel="noopener" class="active">📊 WooaSheet</a></div></div>
+<div class="mobile-top-ad"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="7080296704" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+<div class="page-with-sidebar"><div class="tool-page">
+  <div class="breadcrumb"><a href="index.html">홈</a><span>›</span>CSV 통계</div>
+  <div class="tool-header"><div class="tool-icon-lg">📊</div><div><h1>CSV 기초 통계</h1><p>CSV 파일의 각 열에 대한 기초 통계를 자동으로 분석합니다.</p></div></div>
+
+  <div class="panel">
+    <div class="drop-zone" id="dropZone">
+      <span class="drop-zone-icon">📊</span>
+      <h3>CSV 또는 Excel 파일을 여기에 놓으세요</h3>
+      <p>.csv .xlsx 파일 | 최대 50MB</p>
+      <label for="fileInput" class="btn-select">파일 선택</label>
+      <input type="file" id="fileInput" accept=".csv,.xlsx,.xls" style="display:none">
+    </div>
+  </div>
+
+  <div id="statsPanel" class="hidden">
+    <div class="panel">
+      <div class="result-box" style="margin-bottom:12px;">
+        <div class="stat-row"><span class="stat-label">파일명</span><span class="stat-value" id="statFile"></span></div>
+        <div class="stat-row"><span class="stat-label">총 행 수</span><span class="stat-value" id="statRows"></span></div>
+        <div class="stat-row"><span class="stat-label">총 열 수</span><span class="stat-value" id="statCols"></span></div>
+      </div>
+      <div class="stats-wrap">
+        <table class="stats-table" id="statsTable"></table>
+      </div>
+    </div>
+  </div>
+
+  <div class="tips-panel"><h3>💡 사용 팁</h3><ul>
+    <li>🔢 숫자 타입: 80% 이상의 값이 숫자인 열을 숫자로 판별합니다</li>
+    <li>합계·평균·최댓값·최솟값은 숫자 타입 열에만 표시됩니다</li>
+    <li>고유값 수: 해당 열에서 서로 다른 값의 수를 나타냅니다</li>
+  </ul></div>
+
+  <div style="margin-top:24px;"><h2 style="font-size:1.1rem;font-weight:700;margin-bottom:16px;">FAQ</h2>
+    <div style="display:flex;flex-direction:column;gap:8px;">
+      <details style="border:1px solid var(--border);border-radius:8px;padding:12px 16px;background:var(--bg2);"><summary style="cursor:pointer;font-weight:600;">중앙값(Median)은 어디서 확인하나요?</summary><p style="margin:8px 0 0;color:var(--text-light);font-size:0.88rem;">현재 버전에서는 평균(Mean)만 제공됩니다. 중앙값은 스프레드시트 편집기에서 MEDIAN 함수로 확인하세요.</p></details>
+      <details style="border:1px solid var(--border);border-radius:8px;padding:12px 16px;background:var(--bg2);"><summary style="cursor:pointer;font-weight:600;">통계 결과를 저장할 수 있나요?</summary><p style="margin:8px 0 0;color:var(--text-light);font-size:0.88rem;">브라우저의 인쇄(Ctrl+P) 기능으로 저장하거나 복사해서 사용하세요.</p></details>
+      <details style="border:1px solid var(--border);border-radius:8px;padding:12px 16px;background:var(--bg2);"><summary style="cursor:pointer;font-weight:600;">파일이 서버에 전송되나요?</summary><p style="margin:8px 0 0;color:var(--text-light);font-size:0.88rem;">아니요. 모든 분석은 브라우저에서만 처리됩니다.</p></details>
+    </div>
+  </div>
+</div>
+<aside class="tool-sidebar"><div class="ad-card"><ins class="adsbygoogle" style="display:block;width:100%;min-height:250px" data-ad-client="ca-pub-6464921081676309" data-ad-slot="1419180025" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><div class="ad-card"><script src="https://ads-partners.coupang.com/g.js"></script><script>new PartnersCoupang.G({"id":986943,"template":"carousel","trackingCode":"AF5600192","width":"160","height":"200","tsource":""});</script></div></aside>
+</div>
+<footer class="footer"><div class="footer-inner"><div class="footer-top"><div class="footer-col"><h4>📊 WooaSheet</h4><p>CSV·Excel 파일을 브라우저에서 바로 편집·변환·시각화하는 무료 온라인 도구</p></div><div class="footer-col"><h4>도구</h4><a href="editor.html">스프레드시트 편집기</a><a href="csv-excel.html">CSV↔Excel 변환</a><a href="chart.html">차트 생성기</a><a href="deduplicate.html">중복 행 제거</a><a href="merge-csv.html">CSV 합치기</a><a href="split-csv.html">CSV 분할</a><a href="csv-json.html">CSV↔JSON</a><a href="filter-csv.html">CSV 필터</a><a href="sort-csv.html">CSV 정렬</a><a href="trim-csv.html">빈 행 제거</a><a href="column-picker.html">열 선택</a><a href="csv-stats.html">CSV 통계</a><a href="encoding-csv.html">인코딩 변환</a></div><div class="footer-col"><h4>WooaHouse Services</h4><a href="https://wooahouse.com/" target="_blank" rel="noopener">🔗 WooaHouse</a><a href="https://pdfkit.wooahouse.com/" target="_blank" rel="noopener">📄 WooaPDF</a><a href="https://imagekit.wooahouse.com/" target="_blank" rel="noopener">🖼️ WooaImage</a><a href="https://colorkit.wooahouse.com/" target="_blank" rel="noopener">🎨 WooaColor</a><a href="https://textkit.wooahouse.com/" target="_blank" rel="noopener">✏️ WooaText</a><a href="https://qrkit.wooahouse.com/" target="_blank" rel="noopener">📱 WooaQR</a><a href="https://calckit.wooahouse.com/" target="_blank" rel="noopener">🧮 WooaCalc</a><a href="https://fontkit.wooahouse.com/" target="_blank" rel="noopener">🔤 WooaFont</a><a href="https://wooaaudio.wooahouse.com/" target="_blank" rel="noopener">🎵 WooaAudio</a><a href="https://wooaviewer.wooahouse.com/" target="_blank" rel="noopener">🔍 WooaViewer</a><a href="https://wooadev.wooahouse.com/" target="_blank" rel="noopener">🛠️ WooaDev</a></div><div class="footer-col"><h4>정보</h4><a href="about.html">서비스 소개</a><a href="privacy.html">개인정보처리방침</a></div></div><div class="footer-bottom"><p>© 2026 WooaSheet by WooaHouse. 모든 권리 보유.</p></div><p class="coupang-notice">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p></div></footer>
+<script src="js/pwa-install.js"></script>
+<script>
+async function loadFile(file) {
+  const ab = await file.arrayBuffer();
+  const wb = XLSX.read(ab, {type:'array'});
+  const ws = wb.Sheets[wb.SheetNames[0]];
+  const data = XLSX.utils.sheet_to_json(ws, {header:1, defval:''});
+  const headers = data[0] || [];
+  const rows = data.slice(1);
+  document.getElementById('statFile').textContent = file.name;
+  document.getElementById('statRows').textContent = rows.length + '행';
+  document.getElementById('statCols').textContent = headers.length + '열';
+  const tbody = headers.map((h, ci) => {
+    const vals = rows.map(r => r[ci]);
+    const nonEmpty = vals.filter(v => v!==''&&v!==null&&v!==undefined);
+    const numVals = nonEmpty.map(v=>parseFloat(v)).filter(n=>!isNaN(n));
+    const isNum = numVals.length>0 && numVals.length>=nonEmpty.length*0.8;
+    const unique = new Set(nonEmpty.map(String)).size;
+    let min='-', max='-', mean='-', sum='-';
+    if(isNum && numVals.length) {
+      min = Math.min(...numVals).toLocaleString();
+      max = Math.max(...numVals).toLocaleString();
+      const s = numVals.reduce((a,b)=>a+b,0);
+      sum = s.toLocaleString();
+      mean = (s/numVals.length).toFixed(2);
+    }
+    const typeTag = isNum
+      ? '<span class="tag-num">🔢 숫자</span>'
+      : '<span class="tag-txt">📝 텍스트</span>';
+    return `<tr><td><strong>${h||'열'+(ci+1)}</strong></td><td>${typeTag}</td><td>${nonEmpty.length}</td><td>${vals.length-nonEmpty.length}</td><td>${unique}</td><td>${min}</td><td>${max}</td><td>${mean}</td><td>${sum}</td></tr>`;
+  }).join('');
+  document.getElementById('statsTable').innerHTML =
+    `<thead><tr><th>열 이름</th><th>타입</th><th>값 수</th><th>빈 값</th><th>고유값</th><th>최솟값</th><th>최댓값</th><th>평균</th><th>합계</th></tr></thead><tbody>${tbody}</tbody>`;
+  document.getElementById('statsPanel').classList.remove('hidden');
+}
+const dz=document.getElementById('dropZone');
+dz.addEventListener('dragover',e=>{e.preventDefault();dz.classList.add('drag-over');});
+dz.addEventListener('dragleave',()=>dz.classList.remove('drag-over'));
+dz.addEventListener('drop',e=>{e.preventDefault();dz.classList.remove('drag-over');if(e.dataTransfer.files[0])loadFile(e.dataTransfer.files[0]);});
+document.getElementById('fileInput').addEventListener('change',e=>{if(e.target.files[0])loadFile(e.target.files[0]);});
+</script>
+</body></html>
