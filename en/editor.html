@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="naver-site-verification" content="7396a327607b884b9bef1283dfd3a5c6115a2b50">
+<meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Spreadsheet Editor - WooaSheet | Free Excel-like Tool with Formulas</title>
+  <meta name="description" content="Edit spreadsheets online with formula support (SUM, IF, VLOOKUP, etc.). Import CSV or Excel files, edit cells, and download as CSV or Excel. Free and private.">
+  <meta name="keywords" content="online spreadsheet editor, excel formulas browser, CSV editor, free spreadsheet, Handsontable, HyperFormula">
+  <link rel="canonical" href="https://wooasheet.wooahouse.com/en/editor.html">
+  <link rel="alternate" hreflang="ko" href="https://wooasheet.wooahouse.com/editor.html">
+  <link rel="alternate" hreflang="en" href="https://wooasheet.wooahouse.com/en/editor.html">
+  <link rel="alternate" hreflang="x-default" href="https://wooasheet.wooahouse.com/en/editor.html">
+  <meta property="og:title" content="Online Spreadsheet Editor with Formulas - WooaSheet">
+  <meta property="og:description" content="Excel-like editor with formula support, right in your browser. Free and private.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wooasheet.wooahouse.com/en/editor.html">
+  <meta property="og:locale" content="en_US">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+  <!-- Handsontable -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/handsontable@14/dist/handsontable.full.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/handsontable@14/dist/handsontable.full.min.js"></script>
+  <!-- HyperFormula -->
+  <script src="https://cdn.jsdelivr.net/npm/hyperformula@2.6.0/dist/hyperformula.full.min.js"></script>
+  <!-- SheetJS -->
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <style>
+    .editor-toolbar{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem;align-items:center;}
+    .editor-toolbar button{background:#1e293b;color:#e2e8f0;border:1px solid #334155;padding:.4rem .8rem;border-radius:.375rem;cursor:pointer;font-size:.85rem;transition:background .2s;}
+    .editor-toolbar button:hover{background:#16A34A;border-color:#16A34A;}
+    .editor-toolbar .sep{width:1px;height:24px;background:#334155;margin:0 .25rem;}
+    #spreadsheet-container{width:100%;overflow:auto;border:1px solid #334155;border-radius:.5rem;}
+    .htCore td,.htCore th{background:#1e293b!important;color:#e2e8f0!important;border-color:#334155!important;}
+    .htCore .htSelected td{background:#16A34A22!important;}
+    .wtBorder.current{border-color:#4ade80!important;}
+    .file-info{color:#64748b;font-size:.85rem;margin-top:.5rem;}
+  </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Spreadsheet Editor","url":"https://wooasheet.wooahouse.com/en/editor.html","applicationCategory":"UtilitiesApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">📊 WooaSheet</a>
+    <nav>
+      <a href="editor.html" class="active">Spreadsheet</a>
+      <a href="csv-excel.html">CSV↔Excel</a>
+      <a href="chart.html">Chart</a>
+      <a href="deduplicate.html">Deduplicate</a>
+      <a href="merge-csv.html">Merge</a>
+      <a href="split-csv.html">Split</a>
+    </nav>
+    <div class="header-right">
+      <a href="../editor.html" class="lang-btn">🌐 KO</a>
+    </div>
+  </div>
+</header>
+
+<div class="our-sites-bar">
+  <span class="our-sites-label">WooaHouse Services</span>
+  <div class="our-sites-links">
+    <a href="https://wooahouse.com/" target="_blank" rel="noopener">🔗 WooaHouse</a>
+    <a href="https://pdfkit.wooahouse.com/" target="_blank" rel="noopener">📄 WooaPDF</a>
+    <a href="https://imagekit.wooahouse.com/" target="_blank" rel="noopener">🖼️ WooaImage</a>
+    <a href="https://colorkit.wooahouse.com/" target="_blank" rel="noopener">🎨 WooaColor</a>
+    <a href="https://textkit.wooahouse.com/" target="_blank" rel="noopener">✏️ WooaText</a>
+    <a href="https://qrkit.wooahouse.com/" target="_blank" rel="noopener">📱 WooaQR</a>
+    <a href="https://calckit.wooahouse.com/" target="_blank" rel="noopener">🧮 WooaCalc</a>
+    <a href="https://fontkit.wooahouse.com/" target="_blank" rel="noopener">🔤 WooaFont</a>
+    <a href="https://mactools.wooahouse.com/" target="_blank" rel="noopener">🍎 WooaMac</a>
+    <a href="https://pctools.wooahouse.com/" target="_blank" rel="noopener">🖥️ WooaPC</a>
+    <a href="https://vskit.wooahouse.com/" target="_blank" rel="noopener">💻 WooaVS</a>
+    <a href="https://wooaaudio.wooahouse.com/" target="_blank" rel="noopener">🎵 WooaAudio</a>
+    <a href="https://wooaviewer.wooahouse.com/" target="_blank" rel="noopener">🔍 WooaViewer</a>
+    <a href="https://wooadev.wooahouse.com/" target="_blank" rel="noopener">🛠️ WooaDev</a>
+    <a href="https://wooaocr.wooahouse.com/" target="_blank" rel="noopener">🔍 WooaOCR</a>
+    <a href="https://wooasheet.wooahouse.com/" target="_blank" rel="noopener" class="active">📊 WooaSheet</a>
+  </div>
+</div>
+
+<div class="tool-section">
+  <div class="page-with-sidebar">
+    <div class="tool-main">
+      <div class="panel">
+        <h1 class="panel-title">📝 Spreadsheet Editor</h1>
+        <p class="panel-desc">Edit spreadsheets with Excel-like formulas directly in your browser. Import CSV/Excel, edit, and download.</p>
+
+        <div class="editor-toolbar">
+          <label class="btn btn-secondary" style="cursor:pointer;">
+            📂 Open File <input type="file" id="fileInput" accept=".csv,.xlsx,.xls" style="display:none">
+          </label>
+          <div class="sep"></div>
+          <button onclick="addRow()">+ Row</button>
+          <button onclick="addCol()">+ Col</button>
+          <button onclick="delRow()">− Row</button>
+          <button onclick="delCol()">− Col</button>
+          <div class="sep"></div>
+          <button onclick="downloadCSV()" id="downloadBtn">⬇ CSV</button>
+          <button onclick="downloadExcel()">⬇ Excel</button>
+          <button onclick="clearAll()">🗑 Clear</button>
+        </div>
+        <p class="file-info" id="fileInfo">No file loaded — starting with an empty grid</p>
+
+        <div id="spreadsheet-container"></div>
+      </div>
+    </div>
+    <aside class="tool-sidebar">
+      <div class="sidebar-ad">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="1419180025" data-ad-format="auto" data-full-width-responsive="true"></ins>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <p>&copy; 2026 WooaSheet by WooaHouse. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9ZGENFSXWC');
+</script>
+<script>
+  let hot;
+  const container = document.getElementById('spreadsheet-container');
+
+  function generateEmptyData(rows, cols) {
+    return Array.from({length: rows}, () => Array(cols).fill(''));
+  }
+
+  function initHot(data) {
+    if (hot) hot.destroy();
+    const hf = HyperFormula.buildEmpty({ licenseKey: 'gpl-v3' });
+    hot = new Handsontable(container, {
+      data: data || generateEmptyData(50, 26),
+      formulas: { engine: hf },
+      licenseKey: 'non-commercial-and-evaluation',
+      contextMenu: true,
+      manualColumnResize: true,
+      manualRowResize: true,
+      rowHeaders: true,
+      colHeaders: true,
+      stretchH: 'all',
+      minRows: 50,
+      minCols: 26,
+      height: 'auto',
+      maxHeight: 600,
+    });
+  }
+
+  initHot();
+
+  document.getElementById('fileInput').addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+    document.getElementById('fileInfo').textContent = 'Loaded: ' + file.name;
+    const reader = new FileReader();
+    if (file.name.endsWith('.csv')) {
+      reader.onload = ev => {
+        const wb = XLSX.read(ev.target.result, { type: 'string' });
+        const ws = wb.Sheets[wb.SheetNames[0]];
+        initHot(XLSX.utils.sheet_to_json(ws, { header: 1 }));
+      };
+      reader.readAsText(file);
+    } else {
+      reader.onload = ev => {
+        const wb = XLSX.read(ev.target.result, { type: 'array' });
+        const ws = wb.Sheets[wb.SheetNames[0]];
+        initHot(XLSX.utils.sheet_to_json(ws, { header: 1 }));
+      };
+      reader.readAsArrayBuffer(file);
+    }
+  });
+
+  function addRow() { hot.alter('insert_row_below'); }
+  function addCol() { hot.alter('insert_col_end'); }
+  function delRow() { const r = hot.getSelected(); hot.alter('remove_row', r ? r[0][0] : hot.countRows()-1); }
+  function delCol() { const s = hot.getSelected(); hot.alter('remove_col', s ? s[0][1] : hot.countCols()-1); }
+  function clearAll() { if(confirm('Clear all data?')) initHot(); }
+
+  function downloadCSV() {
+    const data = hot.getData();
+    const ws = XLSX.utils.aoa_to_sheet(data);
+    const csv = XLSX.utils.sheet_to_csv(ws);
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    const a = document.createElement('a'); a.href = URL.createObjectURL(blob);
+    a.download = 'wooasheet.csv'; a.click();
+  }
+
+  function downloadExcel() {
+    const data = hot.getData();
+    const ws = XLSX.utils.aoa_to_sheet(data);
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
+    XLSX.writeFile(wb, 'wooasheet.xlsx');
+  }
+</script>
+<script src="../js/pwa-install.js"></script>
+</body>
+</html>

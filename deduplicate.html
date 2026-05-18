@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-9ZGENFSXWC");</script><meta name="naver-site-verification" content="7396a327607b884b9bef1283dfd3a5c6115a2b50"><meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms"><meta name="viewport" content="width=device-width, initial-scale=1.0"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script><link rel="manifest" href="/manifest.json"><link rel="stylesheet" href="css/style.css">
+<title>CSV 중복 제거 — 중복 행 자동 삭제 무료 | WooaSheet</title>
+<meta name="description" content="CSV·Excel 파일에서 중복 행을 자동으로 찾아 삭제합니다. 중복 기준 열을 직접 선택할 수 있으며 결과를 CSV·Excel로 즉시 다운로드 가능. 무료 온라인 데이터 정제 도구.">
+<link rel="canonical" href="https://wooasheet.wooahouse.com/deduplicate.html">
+<link rel="alternate" hreflang="ko" href="https://wooasheet.wooahouse.com/deduplicate.html">
+<link rel="alternate" hreflang="en" href="https://wooasheet.wooahouse.com/en/deduplicate.html">
+<link rel="alternate" hreflang="x-default" href="https://wooasheet.wooahouse.com/en/deduplicate.html">
+<meta name="keywords" content="CSV 중복 제거,엑셀 중복 삭제,중복 행 제거,데이터 정제,무료 CSV 정리 도구">
+<meta property="og:title" content="CSV 중복 행 제거 - WooaSheet">
+<meta property="og:description" content="CSV·Excel 파일에서 중복 행을 자동으로 찾아 삭제. 기준 열 직접 선택 가능. 결과를 CSV·Excel로 즉시 다운로드. 무료 온라인 데이터 정제 도구.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://wooasheet.wooahouse.com/deduplicate.html">
+<meta property="og:locale" content="ko_KR">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"CSV 중복 행 제거","url":"https://wooasheet.wooahouse.com/deduplicate.html","applicationCategory":"UtilitiesApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
+<script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
+</head><body>
+<div class="our-sites-bar"><span class="our-sites-label">WooaHouse Services</span><div class="our-sites-links"><a href="https://wooahouse.com/" target="_blank" rel="noopener">🔗 WooaHouse</a><a href="https://pdfkit.wooahouse.com/" target="_blank" rel="noopener">📄 WooaPDF</a><a href="https://imagekit.wooahouse.com/" target="_blank" rel="noopener">🖼️ WooaImage</a><a href="https://colorkit.wooahouse.com/" target="_blank" rel="noopener">🎨 WooaColor</a><a href="https://textkit.wooahouse.com/" target="_blank" rel="noopener">✏️ WooaText</a><a href="https://qrkit.wooahouse.com/" target="_blank" rel="noopener">📱 WooaQR</a><a href="https://calckit.wooahouse.com/" target="_blank" rel="noopener">🧮 WooaCalc</a><a href="https://fontkit.wooahouse.com/" target="_blank" rel="noopener">🔤 WooaFont</a><a href="https://mactools.wooahouse.com/" target="_blank" rel="noopener">🍎 WooaMac</a><a href="https://pctools.wooahouse.com/" target="_blank" rel="noopener">🖥️ WooaPC</a><a href="https://vskit.wooahouse.com/" target="_blank" rel="noopener">💻 WooaVS</a><a href="https://wooaaudio.wooahouse.com/" target="_blank" rel="noopener">🎵 WooaAudio</a><a href="https://wooaviewer.wooahouse.com/" target="_blank" rel="noopener">🔍 WooaViewer</a><a href="https://wooadev.wooahouse.com/" target="_blank" rel="noopener">🛠️ WooaDev</a><a href="https://wooaocr.wooahouse.com/" target="_blank" rel="noopener">🔍 WooaOCR</a><a href="https://wooasheet.wooahouse.com/" rel="noopener" class="active">📊 WooaSheet</a></div></div>
+<header class="header"><div class="header-inner"><a href="/" class="logo">📊 WooaSheet</a><nav class="nav"><a href="/editor.html">📊 편집기</a><a href="/csv-excel.html">🔄 변환</a><a href="/chart.html">📈 차트</a><a href="/deduplicate.html">🧹 정리</a></nav></div></header>
+<div class="mobile-top-ad"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="7080296704" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+<div class="page-with-sidebar"><div class="tool-page">
+  <div class="breadcrumb"><a href="/">홈</a><span>›</span>중복 행 제거</div>
+  <div class="tool-header"><div class="tool-icon-lg">🧹</div><div><h1>중복 행 제거</h1><p>CSV·Excel 파일에서 중복 데이터를 자동으로 감지하고 삭제합니다.</p></div></div>
+
+  <div class="panel">
+    <div class="drop-zone" id="dropZone">
+      <span class="drop-zone-icon">🗂️</span>
+      <h3>CSV 또는 Excel 파일을 여기에 끌어다 놓으세요</h3>
+      <p>.csv .xlsx 파일 | 최대 20MB</p>
+      <label for="fileInput" class="btn-select">파일 선택</label>
+      <input type="file" id="fileInput" accept=".csv,.xlsx,.xls" style="display:none">
+    </div>
+  </div>
+
+  <div id="configPanel" class="hidden">
+    <div class="panel">
+      <div class="form-group">
+        <label>중복 기준</label>
+        <select id="dedupMode">
+          <option value="all">모든 열이 동일한 행 제거</option>
+          <option value="col">특정 열 기준으로 제거</option>
+        </select>
+      </div>
+      <div class="form-group" id="colSelectWrap" style="display:none;">
+        <label>기준 열 선택</label>
+        <select id="dedupCol"></select>
+      </div>
+      <button class="btn btn-primary btn-full" onclick="deduplicate()">🧹 중복 행 제거</button>
+    </div>
+
+    <div id="resultPanel" class="hidden">
+      <div class="result-box">
+        <div class="stat-row"><span class="stat-label">원본 행 수</span><span class="stat-value" id="origCount"></span></div>
+        <div class="stat-row"><span class="stat-label">중복 행 수</span><span class="stat-value" id="dupCount" style="color:#FCA5A5;"></span></div>
+        <div class="stat-row"><span class="stat-label">결과 행 수</span><span class="stat-value" id="resultCount"></span></div>
+      </div>
+      <div style="margin-top:12px;">
+        <p style="font-size:0.85rem;color:var(--text-light);margin-bottom:8px;">미리보기 (상위 10행)</p>
+        <div style="overflow-x:auto;"><table class="preview-table" id="previewTable"></table></div>
+      </div>
+      <div style="display:flex;gap:8px;margin-top:12px;">
+        <button class="btn btn-primary" id="downloadBtn" onclick="downloadResult('csv')" style="flex:1;">📄 CSV 저장</button>
+        <button class="btn btn-secondary" onclick="downloadResult('xlsx')" style="flex:1;">📗 Excel 저장</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="tips-panel"><h3>💡 사용 팁</h3><ul>
+    <li>첫 행은 헤더로 인식됩니다</li>
+    <li>"모든 열" 기준: 완전히 동일한 행만 제거</li>
+    <li>"특정 열" 기준: 해당 열 값이 같으면 이후 행 제거</li>
+  </ul></div>
+
+  <div style="margin-top:24px;"><h2 style="font-size:1.1rem;font-weight:700;margin-bottom:16px;">자주 묻는 질문</h2>
+    <div style="display:flex;flex-direction:column;gap:8px;">
+      <details style="border:1px solid var(--border);border-radius:8px;padding:12px 16px;background:var(--bg2);"><summary style="cursor:pointer;font-weight:600;">어떤 행이 남나요?</summary><p style="margin:8px 0 0;color:var(--text-light);font-size:0.88rem;">중복 행 중 첫 번째로 나타나는 행이 유지되고 이후 중복 행이 삭제됩니다.</p></details>
+      <details style="border:1px solid var(--border);border-radius:8px;padding:12px 16px;background:var(--bg2);"><summary style="cursor:pointer;font-weight:600;">대소문자도 구분하나요?</summary><p style="margin:8px 0 0;color:var(--text-light);font-size:0.88rem;">네, 대소문자를 구분합니다. "Apple"과 "apple"은 다른 값으로 처리됩니다.</p></details>
+      <details style="border:1px solid var(--border);border-radius:8px;padding:12px 16px;background:var(--bg2);"><summary style="cursor:pointer;font-weight:600;">원본 파일은 변경되나요?</summary><p style="margin:8px 0 0;color:var(--text-light);font-size:0.88rem;">아니요. 원본 파일은 그대로 유지됩니다. 결과는 새 파일로 다운로드됩니다.</p></details>
+    </div>
+  </div>
+</div>
+<aside class="tool-sidebar"><div class="ad-card"><ins class="adsbygoogle" style="display:block;width:100%;min-height:250px" data-ad-client="ca-pub-6464921081676309" data-ad-slot="1419180025" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><div class="ad-card"><script src="https://ads-partners.coupang.com/g.js"></script><script>new PartnersCoupang.G({"id":986943,"template":"carousel","trackingCode":"AF5600192","width":"160","height":"200","tsource":""});</script></div></aside>
+</div>
+<footer class="footer"><div class="footer-inner"><div class="footer-top"><div class="footer-col"><h4>📊 WooaSheet</h4><p>CSV·Excel 파일을 브라우저에서 바로 편집·변환·시각화하는 무료 온라인 도구</p></div><div class="footer-col"><h4>도구</h4><a href="/editor.html">스프레드시트 편집기</a><a href="/csv-excel.html">CSV↔Excel 변환</a><a href="/chart.html">차트 생성기</a><a href="/deduplicate.html">중복 행 제거</a><a href="/merge-csv.html">CSV 합치기</a><a href="/split-csv.html">CSV 분할</a></div><div class="footer-col"><h4>WooaHouse</h4><a href="https://pdfkit.wooahouse.com/" target="_blank">📄 WooaPDF</a><a href="https://imagekit.wooahouse.com/" target="_blank">🖼️ WooaImage</a><a href="https://textkit.wooahouse.com/" target="_blank">✏️ WooaText</a></div><div class="footer-col"><h4>정보</h4><a href="/privacy.html">개인정보처리방침</a></div></div><div class="footer-bottom"><p>© 2026 WooaSheet by WooaHouse.</p></div><p class="coupang-notice">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p></div></footer>
+<script src="js/pwa-install.js"></script>
+<script>
+let origData = [], headers = [], resultData = [], fileName = '';
+document.getElementById('dedupMode').addEventListener('change', function() {
+  document.getElementById('colSelectWrap').style.display = this.value==='col' ? 'block' : 'none';
+});
+async function loadFile(file) {
+  fileName = file.name.replace(/\.[^.]+$/,'');
+  const ab = await file.arrayBuffer();
+  const wb = XLSX.read(ab, {type:'array'});
+  const ws = wb.Sheets[wb.SheetNames[0]];
+  const data = XLSX.utils.sheet_to_json(ws, {header:1, defval:''});
+  headers = data[0] || [];
+  origData = data.slice(1);
+  const colSel = document.getElementById('dedupCol');
+  colSel.innerHTML = headers.map((h,i)=>'<option value="'+i+'">'+h+'</option>').join('');
+  document.getElementById('configPanel').classList.remove('hidden');
+  document.getElementById('resultPanel').classList.add('hidden');
+}
+function deduplicate() {
+  const mode = document.getElementById('dedupMode').value;
+  const colIdx = parseInt(document.getElementById('dedupCol').value);
+  const seen = new Set();
+  resultData = origData.filter(row => {
+    const key = mode==='all' ? JSON.stringify(row) : String(row[colIdx]);
+    if(seen.has(key)) return false;
+    seen.add(key); return true;
+  });
+  const dupCount = origData.length - resultData.length;
+  document.getElementById('origCount').textContent = origData.length + '행';
+  document.getElementById('dupCount').textContent = dupCount + '행';
+  document.getElementById('resultCount').textContent = resultData.length + '행';
+  const preview = [headers, ...resultData.slice(0,10)];
+  const tbl = document.getElementById('previewTable');
+  tbl.innerHTML = preview.map((row,i) => '<tr>'+ row.map(c=>(i===0?'<th>':'<td>')+c+(i===0?'</th>':'</td>')).join('') +'</tr>').join('');
+  document.getElementById('resultPanel').classList.remove('hidden');
+}
+function downloadResult(fmt) {
+  const data = [headers, ...resultData];
+  const ws = XLSX.utils.aoa_to_sheet(data);
+  if(fmt==='csv') {
+    const csv = XLSX.utils.sheet_to_csv(ws);
+    const blob = new Blob(['﻿'+csv],{type:'text/csv;charset=utf-8'});
+    const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=fileName+'_dedup.csv';a.click();
+  } else {
+    const wb=XLSX.utils.book_new();XLSX.utils.book_append_sheet(wb,ws,'Sheet1');XLSX.writeFile(wb,fileName+'_dedup.xlsx');
+  }
+}
+const dz=document.getElementById('dropZone');
+dz.addEventListener('dragover',e=>{e.preventDefault();dz.classList.add('drag-over');});
+dz.addEventListener('dragleave',()=>dz.classList.remove('drag-over'));
+dz.addEventListener('drop',e=>{e.preventDefault();dz.classList.remove('drag-over');if(e.dataTransfer.files[0])loadFile(e.dataTransfer.files[0]);});
+document.getElementById('fileInput').addEventListener('change',e=>{if(e.target.files[0])loadFile(e.target.files[0]);});
+</script>
+</body></html>

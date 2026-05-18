@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="naver-site-verification" content="7396a327607b884b9bef1283dfd3a5c6115a2b50">
+<meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSV File Splitter - Split Large CSV Files Online | WooaSheet</title>
+  <meta name="description" content="Split large CSV files into smaller chunks by row count. Download all parts as a ZIP file. Free browser-based CSV splitter — no server upload required.">
+  <meta name="keywords" content="CSV splitter, split CSV file, large CSV tool, divide CSV, CSV chunks, free online tool">
+  <link rel="canonical" href="https://wooasheet.wooahouse.com/en/split-csv.html">
+  <link rel="alternate" hreflang="ko" href="https://wooasheet.wooahouse.com/split-csv.html">
+  <link rel="alternate" hreflang="en" href="https://wooasheet.wooahouse.com/en/split-csv.html">
+  <link rel="alternate" hreflang="x-default" href="https://wooasheet.wooahouse.com/en/split-csv.html">
+  <meta property="og:title" content="CSV File Splitter - WooaSheet">
+  <meta property="og:description" content="Split large CSV files into smaller parts, download as ZIP. Free and private.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wooasheet.wooahouse.com/en/split-csv.html">
+  <meta property="og:locale" content="en_US">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+  <style>
+    .info-box{background:#1e293b;border:1px solid #334155;border-radius:.5rem;padding:1rem;margin:1rem 0;color:#94a3b8;font-size:.9rem;display:none;}
+    .info-box strong{color:#4ade80;}
+    .row-input-wrap{display:flex;align-items:center;gap:.75rem;margin:1rem 0;}
+    .row-input-wrap label{color:#94a3b8;font-size:.9rem;white-space:nowrap;}
+    .row-input-wrap input{background:#1e293b;color:#e2e8f0;border:1px solid #334155;padding:.5rem .75rem;border-radius:.375rem;font-size:.9rem;width:120px;}
+    .result-info{background:#1e3a2a;border:1px solid #16A34A;border-radius:.5rem;padding:.75rem 1rem;color:#4ade80;margin-top:1rem;font-size:.9rem;display:none;}
+  </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"CSV File Splitter","url":"https://wooasheet.wooahouse.com/en/split-csv.html","applicationCategory":"UtilitiesApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">📊 WooaSheet</a>
+    <nav>
+      <a href="editor.html">Spreadsheet</a>
+      <a href="csv-excel.html">CSV↔Excel</a>
+      <a href="chart.html">Chart</a>
+      <a href="deduplicate.html">Deduplicate</a>
+      <a href="merge-csv.html">Merge</a>
+      <a href="split-csv.html" class="active">Split</a>
+    </nav>
+    <div class="header-right">
+      <a href="../split-csv.html" class="lang-btn">🌐 KO</a>
+    </div>
+  </div>
+</header>
+
+<div class="our-sites-bar">
+  <span class="our-sites-label">WooaHouse Services</span>
+  <div class="our-sites-links">
+    <a href="https://wooahouse.com/" target="_blank" rel="noopener">🔗 WooaHouse</a>
+    <a href="https://pdfkit.wooahouse.com/" target="_blank" rel="noopener">📄 WooaPDF</a>
+    <a href="https://imagekit.wooahouse.com/" target="_blank" rel="noopener">🖼️ WooaImage</a>
+    <a href="https://colorkit.wooahouse.com/" target="_blank" rel="noopener">🎨 WooaColor</a>
+    <a href="https://textkit.wooahouse.com/" target="_blank" rel="noopener">✏️ WooaText</a>
+    <a href="https://qrkit.wooahouse.com/" target="_blank" rel="noopener">📱 WooaQR</a>
+    <a href="https://calckit.wooahouse.com/" target="_blank" rel="noopener">🧮 WooaCalc</a>
+    <a href="https://fontkit.wooahouse.com/" target="_blank" rel="noopener">🔤 WooaFont</a>
+    <a href="https://mactools.wooahouse.com/" target="_blank" rel="noopener">🍎 WooaMac</a>
+    <a href="https://pctools.wooahouse.com/" target="_blank" rel="noopener">🖥️ WooaPC</a>
+    <a href="https://vskit.wooahouse.com/" target="_blank" rel="noopener">💻 WooaVS</a>
+    <a href="https://wooaaudio.wooahouse.com/" target="_blank" rel="noopener">🎵 WooaAudio</a>
+    <a href="https://wooaviewer.wooahouse.com/" target="_blank" rel="noopener">🔍 WooaViewer</a>
+    <a href="https://wooadev.wooahouse.com/" target="_blank" rel="noopener">🛠️ WooaDev</a>
+    <a href="https://wooaocr.wooahouse.com/" target="_blank" rel="noopener">🔍 WooaOCR</a>
+    <a href="https://wooasheet.wooahouse.com/" target="_blank" rel="noopener" class="active">📊 WooaSheet</a>
+  </div>
+</div>
+
+<div class="tool-section">
+  <div class="page-with-sidebar">
+    <div class="tool-main">
+      <div class="panel">
+        <h1 class="panel-title">✂️ CSV File Splitter</h1>
+        <p class="panel-desc">Split a large CSV file into smaller files by row count. All parts are packaged in a ZIP file for easy download.</p>
+
+        <div class="drop-zone" onclick="document.getElementById('fileInput').click()">
+          <div class="drop-icon">📂</div>
+          <p>Drop CSV file or click to select</p>
+          <input type="file" id="fileInput" accept=".csv" style="display:none">
+        </div>
+
+        <div class="info-box" id="fileInfo"></div>
+
+        <div id="splitOptions" style="display:none">
+          <div class="row-input-wrap">
+            <label for="rowsPerFile">Rows per file:</label>
+            <input type="number" id="rowsPerFile" value="1000" min="1">
+            <span style="color:#64748b;font-size:.85rem;">(excluding header)</span>
+          </div>
+          <button class="btn btn-primary" id="splitBtn" onclick="splitCSV()">Split & Download ZIP</button>
+        </div>
+
+        <div class="result-info" id="resultInfo"></div>
+      </div>
+    </div>
+    <aside class="tool-sidebar">
+      <div class="sidebar-ad">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="1419180025" data-ad-format="auto" data-full-width-responsive="true"></ins>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <p>&copy; 2026 WooaSheet by WooaHouse. All rights reserved.</p>
+  </div>
+</footer>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); gtag('config', 'G-9ZGENFSXWC');
+
+  let csvContent = '', headerLine = '', dataLines = [], fileName = '';
+
+  document.getElementById('fileInput').addEventListener('change', function(e) {
+    const file = e.target.files[0]; if (!file) return;
+    fileName = file.name.replace('.csv','');
+    const reader = new FileReader();
+    reader.onload = ev => {
+      const lines = ev.target.result.trim().split('\n');
+      headerLine = lines[0];
+      dataLines = lines.slice(1);
+      const info = document.getElementById('fileInfo');
+      info.style.display = 'block';
+      info.innerHTML = '<strong>' + file.name + '</strong> — ' + dataLines.length.toLocaleString() + ' data rows · ' + (file.size/1024).toFixed(1) + ' KB';
+      document.getElementById('splitOptions').style.display = 'block';
+    };
+    reader.readAsText(file);
+  });
+
+  async function splitCSV() {
+    const rowsPerFile = parseInt(document.getElementById('rowsPerFile').value) || 1000;
+    const parts = [];
+    for (let i = 0; i < dataLines.length; i += rowsPerFile) {
+      parts.push([headerLine, ...dataLines.slice(i, i + rowsPerFile)].join('\n'));
+    }
+    const zip = new JSZip();
+    parts.forEach((content, i) => {
+      const num = String(i+1).padStart(3,'0');
+      zip.file(`${fileName}_part${num}.csv`, content);
+    });
+    const blob = await zip.generateAsync({ type: 'blob' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = fileName + '_split.zip'; a.click();
+    const info = document.getElementById('resultInfo');
+    info.style.display = 'block';
+    info.textContent = `✅ Split into ${parts.length} files (${rowsPerFile} rows each) · downloaded as ${fileName}_split.zip`;
+  }
+</script>
+<script src="../js/pwa-install.js"></script>
+</body>
+</html>

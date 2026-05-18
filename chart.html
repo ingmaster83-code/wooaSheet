@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-9ZGENFSXWC");</script><meta name="naver-site-verification" content="7396a327607b884b9bef1283dfd3a5c6115a2b50"><meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms"><meta name="viewport" content="width=device-width, initial-scale=1.0"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script><link rel="manifest" href="/manifest.json"><link rel="stylesheet" href="css/style.css">
+<title>CSV 차트 생성기 — 데이터로 그래프 만들기 무료 | WooaSheet</title>
+<meta name="description" content="CSV 또는 Excel 파일을 업로드하면 막대·선·파이·도넛 차트를 자동 생성합니다. PNG 이미지 저장 기능 포함. 설치 없이 브라우저에서 바로 사용하는 무료 온라인 데이터 시각화 도구.">
+<link rel="canonical" href="https://wooasheet.wooahouse.com/chart.html">
+<link rel="alternate" hreflang="ko" href="https://wooasheet.wooahouse.com/chart.html">
+<link rel="alternate" hreflang="en" href="https://wooasheet.wooahouse.com/en/chart.html">
+<link rel="alternate" hreflang="x-default" href="https://wooasheet.wooahouse.com/en/chart.html">
+<meta name="keywords" content="CSV 차트 생성기,데이터 시각화,막대그래프 만들기,파이차트 만들기,무료 차트 도구">
+<meta property="og:title" content="CSV 차트 생성기 - WooaSheet">
+<meta property="og:description" content="CSV 데이터로 막대·꺾은선·파이·도넛 차트를 즉시 생성. PNG 이미지로 저장 가능. 브라우저에서 바로 사용하는 무료 온라인 차트 생성기.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://wooasheet.wooahouse.com/chart.html">
+<meta property="og:locale" content="ko_KR">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"CSV 차트 생성기","url":"https://wooasheet.wooahouse.com/chart.html","applicationCategory":"UtilitiesApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
+<script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head><body>
+<div class="our-sites-bar"><span class="our-sites-label">WooaHouse Services</span><div class="our-sites-links"><a href="https://wooahouse.com/" target="_blank" rel="noopener">🔗 WooaHouse</a><a href="https://pdfkit.wooahouse.com/" target="_blank" rel="noopener">📄 WooaPDF</a><a href="https://imagekit.wooahouse.com/" target="_blank" rel="noopener">🖼️ WooaImage</a><a href="https://colorkit.wooahouse.com/" target="_blank" rel="noopener">🎨 WooaColor</a><a href="https://textkit.wooahouse.com/" target="_blank" rel="noopener">✏️ WooaText</a><a href="https://qrkit.wooahouse.com/" target="_blank" rel="noopener">📱 WooaQR</a><a href="https://calckit.wooahouse.com/" target="_blank" rel="noopener">🧮 WooaCalc</a><a href="https://fontkit.wooahouse.com/" target="_blank" rel="noopener">🔤 WooaFont</a><a href="https://mactools.wooahouse.com/" target="_blank" rel="noopener">🍎 WooaMac</a><a href="https://pctools.wooahouse.com/" target="_blank" rel="noopener">🖥️ WooaPC</a><a href="https://vskit.wooahouse.com/" target="_blank" rel="noopener">💻 WooaVS</a><a href="https://wooaaudio.wooahouse.com/" target="_blank" rel="noopener">🎵 WooaAudio</a><a href="https://wooaviewer.wooahouse.com/" target="_blank" rel="noopener">🔍 WooaViewer</a><a href="https://wooadev.wooahouse.com/" target="_blank" rel="noopener">🛠️ WooaDev</a><a href="https://wooaocr.wooahouse.com/" target="_blank" rel="noopener">🔍 WooaOCR</a><a href="https://wooasheet.wooahouse.com/" rel="noopener" class="active">📊 WooaSheet</a></div></div>
+<header class="header"><div class="header-inner"><a href="/" class="logo">📊 WooaSheet</a><nav class="nav"><a href="/editor.html">📊 편집기</a><a href="/csv-excel.html">🔄 변환</a><a href="/chart.html">📈 차트</a><a href="/deduplicate.html">🧹 정리</a></nav></div></header>
+<div class="mobile-top-ad"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="7080296704" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+<div class="page-with-sidebar"><div class="tool-page">
+  <div class="breadcrumb"><a href="/">홈</a><span>›</span>차트 생성기</div>
+  <div class="tool-header"><div class="tool-icon-lg">📈</div><div><h1>차트 생성기</h1><p>CSV 데이터로 막대·선·파이·도넛 차트를 만들고 PNG로 저장하세요.</p></div></div>
+
+  <div class="panel">
+    <div class="drop-zone" id="dropZone">
+      <span class="drop-zone-icon">📊</span>
+      <h3>CSV 또는 Excel 파일을 여기에 끌어다 놓으세요</h3>
+      <p>.csv .xlsx 파일 | 최대 10MB</p>
+      <label for="fileInput" class="btn-select">파일 선택</label>
+      <input type="file" id="fileInput" accept=".csv,.xlsx,.xls" style="display:none">
+    </div>
+  </div>
+
+  <div id="chartConfig" class="hidden">
+    <div class="panel">
+      <div class="form-row">
+        <div class="form-group">
+          <label>차트 종류</label>
+          <select id="chartType">
+            <option value="bar">막대 차트</option>
+            <option value="line">선 차트</option>
+            <option value="pie">파이 차트</option>
+            <option value="doughnut">도넛 차트</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>차트 제목</label>
+          <input type="text" id="chartTitle" placeholder="차트 제목 입력">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>레이블 열 (X축)</label>
+          <select id="labelCol"></select>
+        </div>
+        <div class="form-group">
+          <label>데이터 열 (Y축)</label>
+          <select id="dataCol"></select>
+        </div>
+      </div>
+      <button class="btn btn-primary btn-full" onclick="renderChart()">📊 차트 생성</button>
+    </div>
+
+    <div id="chartWrap" class="hidden">
+      <div style="background:white;border-radius:12px;padding:20px;margin-bottom:16px;">
+        <canvas id="myChart"></canvas>
+      </div>
+      <button class="btn btn-primary btn-full" id="downloadBtn" onclick="downloadChart()">⬇️ PNG로 저장</button>
+    </div>
+  </div>
+
+  <div class="tips-panel"><h3>💡 사용 팁</h3><ul>
+    <li>첫 행은 헤더(열 이름)로 인식됩니다</li>
+    <li>파이/도넛 차트는 숫자 데이터 열을 선택하세요</li>
+    <li>PNG 저장 시 배경이 흰색으로 저장됩니다</li>
+  </ul></div>
+
+  <div style="margin-top:24px;"><h2 style="font-size:1.1rem;font-weight:700;margin-bottom:16px;">자주 묻는 질문</h2>
+    <div style="display:flex;flex-direction:column;gap:8px;">
+      <details style="border:1px solid var(--border);border-radius:8px;padding:12px 16px;background:var(--bg2);"><summary style="cursor:pointer;font-weight:600;">어떤 파일 형식을 지원하나요?</summary><p style="margin:8px 0 0;color:var(--text-light);font-size:0.88rem;">CSV, XLSX, XLS 파일을 지원합니다. 최대 10MB까지 업로드 가능합니다.</p></details>
+      <details style="border:1px solid var(--border);border-radius:8px;padding:12px 16px;background:var(--bg2);"><summary style="cursor:pointer;font-weight:600;">차트를 어떻게 저장하나요?</summary><p style="margin:8px 0 0;color:var(--text-light);font-size:0.88rem;">PNG로 저장 버튼을 누르면 고해상도 PNG 이미지로 다운로드됩니다.</p></details>
+      <details style="border:1px solid var(--border);border-radius:8px;padding:12px 16px;background:var(--bg2);"><summary style="cursor:pointer;font-weight:600;">데이터가 외부로 전송되나요?</summary><p style="margin:8px 0 0;color:var(--text-light);font-size:0.88rem;">아니요. 모든 처리는 브라우저 내에서만 이루어지며 외부 서버로 전송되지 않습니다.</p></details>
+    </div>
+  </div>
+</div>
+<aside class="tool-sidebar"><div class="ad-card"><ins class="adsbygoogle" style="display:block;width:100%;min-height:250px" data-ad-client="ca-pub-6464921081676309" data-ad-slot="1419180025" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><div class="ad-card"><script src="https://ads-partners.coupang.com/g.js"></script><script>new PartnersCoupang.G({"id":986943,"template":"carousel","trackingCode":"AF5600192","width":"160","height":"200","tsource":""});</script></div></aside>
+</div>
+<footer class="footer"><div class="footer-inner"><div class="footer-top"><div class="footer-col"><h4>📊 WooaSheet</h4><p>CSV·Excel 파일을 브라우저에서 바로 편집·변환·시각화하는 무료 온라인 도구</p></div><div class="footer-col"><h4>도구</h4><a href="/editor.html">스프레드시트 편집기</a><a href="/csv-excel.html">CSV↔Excel 변환</a><a href="/chart.html">차트 생성기</a><a href="/deduplicate.html">중복 행 제거</a><a href="/merge-csv.html">CSV 합치기</a><a href="/split-csv.html">CSV 분할</a></div><div class="footer-col"><h4>WooaHouse</h4><a href="https://pdfkit.wooahouse.com/" target="_blank">📄 WooaPDF</a><a href="https://imagekit.wooahouse.com/" target="_blank">🖼️ WooaImage</a><a href="https://textkit.wooahouse.com/" target="_blank">✏️ WooaText</a></div><div class="footer-col"><h4>정보</h4><a href="/privacy.html">개인정보처리방침</a></div></div><div class="footer-bottom"><p>© 2026 WooaSheet by WooaHouse.</p></div><p class="coupang-notice">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p></div></footer>
+<script src="js/pwa-install.js"></script>
+<script>
+let parsedData = [], headers = [];
+let chartInstance = null;
+
+async function loadFile(file) {
+  const ab = await file.arrayBuffer();
+  const wb = XLSX.read(ab, {type:'array'});
+  const ws = wb.Sheets[wb.SheetNames[0]];
+  const data = XLSX.utils.sheet_to_json(ws, {header:1, defval:''});
+  if(data.length < 2) { alert('데이터가 부족합니다.'); return; }
+  headers = data[0];
+  parsedData = data.slice(1);
+  const labelSel = document.getElementById('labelCol');
+  const dataSel = document.getElementById('dataCol');
+  labelSel.innerHTML = headers.map((h,i) => '<option value="'+i+'">'+h+'</option>').join('');
+  dataSel.innerHTML = headers.map((h,i) => '<option value="'+i+'">'+h+'</option>').join('');
+  if(headers.length > 1) dataSel.value = 1;
+  document.getElementById('chartConfig').classList.remove('hidden');
+}
+
+function renderChart() {
+  const labelIdx = parseInt(document.getElementById('labelCol').value);
+  const dataIdx = parseInt(document.getElementById('dataCol').value);
+  const type = document.getElementById('chartType').value;
+  const title = document.getElementById('chartTitle').value || '차트';
+  const labels = parsedData.map(r => r[labelIdx]);
+  const values = parsedData.map(r => parseFloat(r[dataIdx]) || 0);
+  const colors = labels.map((_,i) => 'hsl('+(i*37%360)+',70%,55%)');
+  const ctx = document.getElementById('myChart').getContext('2d');
+  if(chartInstance) chartInstance.destroy();
+  chartInstance = new Chart(ctx, {
+    type: type,
+    data: { labels, datasets: [{ label: headers[dataIdx], data: values, backgroundColor: colors, borderColor: colors, borderWidth: 1 }] },
+    options: { responsive:true, plugins:{ title:{ display:true, text:title, font:{size:16} }, legend:{position:'top'} } }
+  });
+  document.getElementById('chartWrap').classList.remove('hidden');
+}
+
+function downloadChart() {
+  const a = document.createElement('a');
+  a.download = 'chart.png';
+  a.href = document.getElementById('myChart').toDataURL('image/png');
+  a.click();
+}
+
+const dropZone = document.getElementById('dropZone');
+dropZone.addEventListener('dragover', e => {e.preventDefault();dropZone.classList.add('drag-over');});
+dropZone.addEventListener('dragleave', ()=>dropZone.classList.remove('drag-over'));
+dropZone.addEventListener('drop', e => {e.preventDefault();dropZone.classList.remove('drag-over');if(e.dataTransfer.files[0])loadFile(e.dataTransfer.files[0]);});
+document.getElementById('fileInput').addEventListener('change', e => {if(e.target.files[0])loadFile(e.target.files[0]);});
+</script>
+</body></html>

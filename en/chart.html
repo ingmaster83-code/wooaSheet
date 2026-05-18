@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="naver-site-verification" content="7396a327607b884b9bef1283dfd3a5c6115a2b50">
+<meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSV Chart Generator - Create Bar, Line, Pie Charts Online | WooaSheet</title>
+  <meta name="description" content="Generate beautiful bar, line, pie, and doughnut charts from your CSV data instantly. Download as PNG. Free online chart maker with no upload required.">
+  <meta name="keywords" content="CSV chart generator, online chart maker, bar chart, pie chart, line chart, CSV visualization, free chart tool">
+  <link rel="canonical" href="https://wooasheet.wooahouse.com/en/chart.html">
+  <link rel="alternate" hreflang="ko" href="https://wooasheet.wooahouse.com/chart.html">
+  <link rel="alternate" hreflang="en" href="https://wooasheet.wooahouse.com/en/chart.html">
+  <link rel="alternate" hreflang="x-default" href="https://wooasheet.wooahouse.com/en/chart.html">
+  <meta property="og:title" content="CSV Chart Generator - WooaSheet">
+  <meta property="og:description" content="Create charts from CSV data in your browser. Free and private.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wooasheet.wooahouse.com/en/chart.html">
+  <meta property="og:locale" content="en_US">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <style>
+    .chart-controls{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0;}
+    .ctrl-group label{display:block;color:#94a3b8;font-size:.85rem;margin-bottom:.35rem;}
+    .ctrl-group select{width:100%;background:#1e293b;color:#e2e8f0;border:1px solid #334155;padding:.5rem .75rem;border-radius:.375rem;font-size:.9rem;}
+    .chart-wrap{background:#1e293b;border:1px solid #334155;border-radius:.5rem;padding:1rem;margin-top:1rem;display:none;}
+    #chartCanvas{max-height:420px;}
+    @media(max-width:600px){.chart-controls{grid-template-columns:1fr;}}
+  </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"CSV Chart Generator","url":"https://wooasheet.wooahouse.com/en/chart.html","applicationCategory":"UtilitiesApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">📊 WooaSheet</a>
+    <nav>
+      <a href="editor.html">Spreadsheet</a>
+      <a href="csv-excel.html">CSV↔Excel</a>
+      <a href="chart.html" class="active">Chart</a>
+      <a href="deduplicate.html">Deduplicate</a>
+      <a href="merge-csv.html">Merge</a>
+      <a href="split-csv.html">Split</a>
+    </nav>
+    <div class="header-right">
+      <a href="../chart.html" class="lang-btn">🌐 KO</a>
+    </div>
+  </div>
+</header>
+
+<div class="our-sites-bar">
+  <span class="our-sites-label">WooaHouse Services</span>
+  <div class="our-sites-links">
+    <a href="https://wooahouse.com/" target="_blank" rel="noopener">🔗 WooaHouse</a>
+    <a href="https://pdfkit.wooahouse.com/" target="_blank" rel="noopener">📄 WooaPDF</a>
+    <a href="https://imagekit.wooahouse.com/" target="_blank" rel="noopener">🖼️ WooaImage</a>
+    <a href="https://colorkit.wooahouse.com/" target="_blank" rel="noopener">🎨 WooaColor</a>
+    <a href="https://textkit.wooahouse.com/" target="_blank" rel="noopener">✏️ WooaText</a>
+    <a href="https://qrkit.wooahouse.com/" target="_blank" rel="noopener">📱 WooaQR</a>
+    <a href="https://calckit.wooahouse.com/" target="_blank" rel="noopener">🧮 WooaCalc</a>
+    <a href="https://fontkit.wooahouse.com/" target="_blank" rel="noopener">🔤 WooaFont</a>
+    <a href="https://mactools.wooahouse.com/" target="_blank" rel="noopener">🍎 WooaMac</a>
+    <a href="https://pctools.wooahouse.com/" target="_blank" rel="noopener">🖥️ WooaPC</a>
+    <a href="https://vskit.wooahouse.com/" target="_blank" rel="noopener">💻 WooaVS</a>
+    <a href="https://wooaaudio.wooahouse.com/" target="_blank" rel="noopener">🎵 WooaAudio</a>
+    <a href="https://wooaviewer.wooahouse.com/" target="_blank" rel="noopener">🔍 WooaViewer</a>
+    <a href="https://wooadev.wooahouse.com/" target="_blank" rel="noopener">🛠️ WooaDev</a>
+    <a href="https://wooaocr.wooahouse.com/" target="_blank" rel="noopener">🔍 WooaOCR</a>
+    <a href="https://wooasheet.wooahouse.com/" target="_blank" rel="noopener" class="active">📊 WooaSheet</a>
+  </div>
+</div>
+
+<div class="tool-section">
+  <div class="page-with-sidebar">
+    <div class="tool-main">
+      <div class="panel">
+        <h1 class="panel-title">📊 Chart Generator</h1>
+        <p class="panel-desc">Upload a CSV file, choose columns and chart type, then download as PNG.</p>
+
+        <div class="drop-zone" onclick="document.getElementById('csvFile').click()">
+          <div class="drop-icon">📂</div>
+          <p>Drop CSV / Excel file or click to select</p>
+          <input type="file" id="csvFile" accept=".csv,.xlsx,.xls" style="display:none">
+        </div>
+
+        <div id="chartOptions" style="display:none">
+          <div class="chart-controls">
+            <div class="ctrl-group">
+              <label>Label Column (X axis)</label>
+              <select id="labelCol"></select>
+            </div>
+            <div class="ctrl-group">
+              <label>Value Column (Y axis)</label>
+              <select id="valueCol"></select>
+            </div>
+            <div class="ctrl-group">
+              <label>Chart Type</label>
+              <select id="chartType">
+                <option value="bar">Bar Chart</option>
+                <option value="line">Line Chart</option>
+                <option value="pie">Pie Chart</option>
+                <option value="doughnut">Doughnut Chart</option>
+              </select>
+            </div>
+            <div class="ctrl-group" style="display:flex;align-items:flex-end;">
+              <button class="btn btn-primary" onclick="drawChart()" style="width:100%">Generate Chart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="chart-wrap" id="chartWrap">
+          <canvas id="chartCanvas"></canvas>
+          <div style="margin-top:1rem;text-align:center;">
+            <button class="btn btn-secondary" id="downloadBtn" onclick="downloadChart()">⬇ Download PNG</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <aside class="tool-sidebar">
+      <div class="sidebar-ad">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="1419180025" data-ad-format="auto" data-full-width-responsive="true"></ins>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <p>&copy; 2026 WooaSheet by WooaHouse. All rights reserved.</p>
+  </div>
+</footer>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); gtag('config', 'G-9ZGENFSXWC');
+
+  let parsedData = [], headers = [];
+  let myChart = null;
+  const COLORS = ['#4ade80','#60a5fa','#f472b6','#fb923c','#a78bfa','#34d399','#f87171','#facc15'];
+
+  document.getElementById('csvFile').addEventListener('change', function(e) {
+    const file = e.target.files[0]; if (!file) return;
+    const reader = new FileReader();
+    if (file.name.endsWith('.csv')) {
+      reader.onload = ev => parseCSV(ev.target.result);
+      reader.readAsText(file);
+    } else {
+      reader.onload = ev => {
+        const wb = XLSX.read(ev.target.result, { type: 'array' });
+        const ws = wb.Sheets[wb.SheetNames[0]];
+        const csv = XLSX.utils.sheet_to_csv(ws);
+        parseCSV(csv);
+      };
+      reader.readAsArrayBuffer(file);
+    }
+  });
+
+  function parseCSV(text) {
+    const rows = text.trim().split('\n').map(r => r.split(',').map(c => c.trim().replace(/^"|"$/g,'')));
+    headers = rows[0];
+    parsedData = rows.slice(1);
+    const labelSel = document.getElementById('labelCol');
+    const valueSel = document.getElementById('valueCol');
+    labelSel.innerHTML = valueSel.innerHTML = headers.map((h,i) => `<option value="${i}">${h}</option>`).join('');
+    valueSel.selectedIndex = Math.min(1, headers.length-1);
+    document.getElementById('chartOptions').style.display = 'block';
+  }
+
+  function drawChart() {
+    const li = +document.getElementById('labelCol').value;
+    const vi = +document.getElementById('valueCol').value;
+    const type = document.getElementById('chartType').value;
+    const labels = parsedData.map(r => r[li]);
+    const values = parsedData.map(r => parseFloat(r[vi]) || 0);
+    document.getElementById('chartWrap').style.display = 'block';
+    if (myChart) myChart.destroy();
+    myChart = new Chart(document.getElementById('chartCanvas'), {
+      type,
+      data: { labels, datasets: [{ label: headers[vi], data: values, backgroundColor: COLORS, borderColor: COLORS.map(c=>c+'cc'), borderWidth:2 }] },
+      options: { responsive: true, plugins: { legend: { labels: { color:'#e2e8f0' } } }, scales: type==='bar'||type==='line' ? { x:{ticks:{color:'#94a3b8'},grid:{color:'#334155'}}, y:{ticks:{color:'#94a3b8'},grid:{color:'#334155'}} } : {} }
+    });
+  }
+
+  function downloadChart() {
+    const a = document.createElement('a');
+    a.href = document.getElementById('chartCanvas').toDataURL('image/png');
+    a.download = 'wooasheet-chart.png'; a.click();
+  }
+</script>
+<script src="../js/pwa-install.js"></script>
+</body>
+</html>

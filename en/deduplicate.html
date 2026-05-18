@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="naver-site-verification" content="7396a327607b884b9bef1283dfd3a5c6115a2b50">
+<meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSV Duplicate Remover - Remove Duplicate Rows Online | WooaSheet</title>
+  <meta name="description" content="Remove duplicate rows from CSV or Excel files instantly in your browser. Choose specific columns or check all columns. Free and private — no server upload.">
+  <meta name="keywords" content="CSV duplicate remover, remove duplicate rows, Excel deduplicate, online CSV cleaner, free data tool">
+  <link rel="canonical" href="https://wooasheet.wooahouse.com/en/deduplicate.html">
+  <link rel="alternate" hreflang="ko" href="https://wooasheet.wooahouse.com/deduplicate.html">
+  <link rel="alternate" hreflang="en" href="https://wooasheet.wooahouse.com/en/deduplicate.html">
+  <link rel="alternate" hreflang="x-default" href="https://wooasheet.wooahouse.com/en/deduplicate.html">
+  <meta property="og:title" content="CSV Duplicate Remover - WooaSheet">
+  <meta property="og:description" content="Find and remove duplicate rows from CSV/Excel files in your browser.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wooasheet.wooahouse.com/en/deduplicate.html">
+  <meta property="og:locale" content="en_US">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <style>
+    .col-checks{display:flex;flex-wrap:wrap;gap:.5rem;margin:.75rem 0;}
+    .col-check{display:flex;align-items:center;gap:.35rem;background:#1e293b;border:1px solid #334155;border-radius:.375rem;padding:.35rem .75rem;cursor:pointer;}
+    .col-check input{accent-color:#4ade80;}
+    .col-check label{color:#e2e8f0;font-size:.85rem;cursor:pointer;}
+    .result-table{width:100%;border-collapse:collapse;margin-top:1rem;font-size:.85rem;}
+    .result-table th{background:#1e3a2a;color:#4ade80;padding:.5rem .75rem;text-align:left;border-bottom:1px solid #334155;}
+    .result-table td{color:#e2e8f0;padding:.4rem .75rem;border-bottom:1px solid #1e293b;}
+    .result-table tr:hover td{background:#1e293b;}
+    .stat-box{display:flex;gap:1rem;margin:1rem 0;flex-wrap:wrap;}
+    .stat{background:#1e293b;border:1px solid #334155;border-radius:.5rem;padding:.75rem 1rem;text-align:center;flex:1;min-width:100px;}
+    .stat-num{font-size:1.5rem;font-weight:700;color:#4ade80;}
+    .stat-label{font-size:.8rem;color:#64748b;}
+  </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"CSV Duplicate Remover","url":"https://wooasheet.wooahouse.com/en/deduplicate.html","applicationCategory":"UtilitiesApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">📊 WooaSheet</a>
+    <nav>
+      <a href="editor.html">Spreadsheet</a>
+      <a href="csv-excel.html">CSV↔Excel</a>
+      <a href="chart.html">Chart</a>
+      <a href="deduplicate.html" class="active">Deduplicate</a>
+      <a href="merge-csv.html">Merge</a>
+      <a href="split-csv.html">Split</a>
+    </nav>
+    <div class="header-right">
+      <a href="../deduplicate.html" class="lang-btn">🌐 KO</a>
+    </div>
+  </div>
+</header>
+
+<div class="our-sites-bar">
+  <span class="our-sites-label">WooaHouse Services</span>
+  <div class="our-sites-links">
+    <a href="https://wooahouse.com/" target="_blank" rel="noopener">🔗 WooaHouse</a>
+    <a href="https://pdfkit.wooahouse.com/" target="_blank" rel="noopener">📄 WooaPDF</a>
+    <a href="https://imagekit.wooahouse.com/" target="_blank" rel="noopener">🖼️ WooaImage</a>
+    <a href="https://colorkit.wooahouse.com/" target="_blank" rel="noopener">🎨 WooaColor</a>
+    <a href="https://textkit.wooahouse.com/" target="_blank" rel="noopener">✏️ WooaText</a>
+    <a href="https://qrkit.wooahouse.com/" target="_blank" rel="noopener">📱 WooaQR</a>
+    <a href="https://calckit.wooahouse.com/" target="_blank" rel="noopener">🧮 WooaCalc</a>
+    <a href="https://fontkit.wooahouse.com/" target="_blank" rel="noopener">🔤 WooaFont</a>
+    <a href="https://mactools.wooahouse.com/" target="_blank" rel="noopener">🍎 WooaMac</a>
+    <a href="https://pctools.wooahouse.com/" target="_blank" rel="noopener">🖥️ WooaPC</a>
+    <a href="https://vskit.wooahouse.com/" target="_blank" rel="noopener">💻 WooaVS</a>
+    <a href="https://wooaaudio.wooahouse.com/" target="_blank" rel="noopener">🎵 WooaAudio</a>
+    <a href="https://wooaviewer.wooahouse.com/" target="_blank" rel="noopener">🔍 WooaViewer</a>
+    <a href="https://wooadev.wooahouse.com/" target="_blank" rel="noopener">🛠️ WooaDev</a>
+    <a href="https://wooaocr.wooahouse.com/" target="_blank" rel="noopener">🔍 WooaOCR</a>
+    <a href="https://wooasheet.wooahouse.com/" target="_blank" rel="noopener" class="active">📊 WooaSheet</a>
+  </div>
+</div>
+
+<div class="tool-section">
+  <div class="page-with-sidebar">
+    <div class="tool-main">
+      <div class="panel">
+        <h1 class="panel-title">🧹 Duplicate Remover</h1>
+        <p class="panel-desc">Upload a CSV or Excel file, select which columns to check, and remove duplicate rows instantly.</p>
+
+        <div class="drop-zone" onclick="document.getElementById('fileInput').click()">
+          <div class="drop-icon">📂</div>
+          <p>Drop CSV / Excel file or click to select</p>
+          <input type="file" id="fileInput" accept=".csv,.xlsx,.xls" style="display:none">
+        </div>
+
+        <div id="options" style="display:none">
+          <div style="margin:1rem 0;">
+            <label style="color:#94a3b8;font-size:.85rem;">Check columns for duplicates:</label>
+            <div class="col-checks" id="colChecks"></div>
+          </div>
+          <button class="btn btn-primary" id="processBtn" onclick="removeDuplicates()">Remove Duplicates</button>
+        </div>
+
+        <div id="results" style="display:none">
+          <div class="stat-box">
+            <div class="stat"><div class="stat-num" id="totalRows">0</div><div class="stat-label">Total Rows</div></div>
+            <div class="stat"><div class="stat-num" id="removedRows" style="color:#f87171;">0</div><div class="stat-label">Duplicates Removed</div></div>
+            <div class="stat"><div class="stat-num" id="keptRows">0</div><div class="stat-label">Unique Rows</div></div>
+          </div>
+          <div style="display:flex;gap:.75rem;margin-bottom:1rem;">
+            <button class="btn btn-primary" id="downloadBtn" onclick="downloadResult('csv')">⬇ Download CSV</button>
+            <button class="btn btn-secondary" onclick="downloadResult('xlsx')">⬇ Download Excel</button>
+          </div>
+          <div style="overflow-x:auto;max-height:360px;overflow-y:auto;">
+            <table class="result-table" id="previewTable"></table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <aside class="tool-sidebar">
+      <div class="sidebar-ad">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="1419180025" data-ad-format="auto" data-full-width-responsive="true"></ins>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <p>&copy; 2026 WooaSheet by WooaHouse. All rights reserved.</p>
+  </div>
+</footer>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); gtag('config', 'G-9ZGENFSXWC');
+
+  let headers = [], rows = [], cleanedRows = [];
+
+  document.getElementById('fileInput').addEventListener('change', function(e) {
+    const file = e.target.files[0]; if (!file) return;
+    const reader = new FileReader();
+    const handler = (data, isArray) => {
+      const wb = XLSX.read(data, { type: isArray ? 'array' : 'string' });
+      const ws = wb.Sheets[wb.SheetNames[0]];
+      const arr = XLSX.utils.sheet_to_json(ws, { header: 1 });
+      headers = arr[0] || [];
+      rows = arr.slice(1);
+      buildColChecks();
+      document.getElementById('options').style.display = 'block';
+      document.getElementById('results').style.display = 'none';
+    };
+    if (file.name.endsWith('.csv')) { reader.onload = ev => handler(ev.target.result, false); reader.readAsText(file); }
+    else { reader.onload = ev => handler(ev.target.result, true); reader.readAsArrayBuffer(file); }
+  });
+
+  function buildColChecks() {
+    const container = document.getElementById('colChecks');
+    container.innerHTML = headers.map((h,i) => `
+      <div class="col-check">
+        <input type="checkbox" id="col${i}" value="${i}" checked>
+        <label for="col${i}">${h}</label>
+      </div>`).join('');
+  }
+
+  function removeDuplicates() {
+    const checked = [...document.querySelectorAll('#colChecks input:checked')].map(el => +el.value);
+    if (checked.length === 0) { alert('Please select at least one column.'); return; }
+    const seen = new Set();
+    cleanedRows = rows.filter(row => {
+      const key = checked.map(i => row[i] ?? '').join('|||');
+      if (seen.has(key)) return false;
+      seen.add(key); return true;
+    });
+    document.getElementById('totalRows').textContent = rows.length;
+    document.getElementById('removedRows').textContent = rows.length - cleanedRows.length;
+    document.getElementById('keptRows').textContent = cleanedRows.length;
+    buildPreview();
+    document.getElementById('results').style.display = 'block';
+  }
+
+  function buildPreview() {
+    const t = document.getElementById('previewTable');
+    t.innerHTML = '<tr>' + headers.map(h => `<th>${h}</th>`).join('') + '</tr>' +
+      cleanedRows.slice(0, 100).map(r => '<tr>' + headers.map((_,i) => `<td>${r[i]??''}</td>`).join('') + '</tr>').join('');
+  }
+
+  function downloadResult(fmt) {
+    const data = [headers, ...cleanedRows];
+    const ws = XLSX.utils.aoa_to_sheet(data);
+    if (fmt === 'csv') {
+      const csv = XLSX.utils.sheet_to_csv(ws);
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(new Blob([csv], {type:'text/csv;charset=utf-8;'}));
+      a.download = 'deduplicated.csv'; a.click();
+    } else {
+      const wb = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
+      XLSX.writeFile(wb, 'deduplicated.xlsx');
+    }
+  }
+</script>
+<script src="../js/pwa-install.js"></script>
+</body>
+</html>
