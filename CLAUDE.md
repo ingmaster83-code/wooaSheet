@@ -32,3 +32,66 @@
 - 다운로드 버튼 id: `downloadBtn`, `convertBtn`, `processBtn`, `mergeBtn`, `splitBtn`
 - CSS/JS 변경 시 sw.js CACHE_NAME 버전 올리기 (현재: wooasheet-v1)
 - 영문 페이지는 en/ 폴더, CSS/JS 경로는 `../` 상대경로
+
+## 도구 페이지 레이아웃 (KO/EN 동일 구조 필수)
+
+### 올바른 HTML 구조
+```html
+<!-- 모바일 상단 광고 -->
+<div class="mobile-top-ad">
+  <ins class="adsbygoogle" ... data-ad-slot="7080296704" ...></ins>
+  <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+</div>
+
+<!-- 본문 + 사이드바 -->
+<div class="page-with-sidebar">
+  <div class="tool-page">
+    <div class="breadcrumb"><a href="[../]index.html">Home</a><span>›</span>도구명</div>
+    <div class="tool-header">
+      <div class="tool-icon-lg">🔧</div>
+      <div><h1>도구명</h1><p>설명</p></div>
+    </div>
+    <div class="panel">
+      <div class="drop-zone" id="dropZone">
+        <span class="drop-zone-icon">🔧</span>
+        <h3>파일을 여기에 끌어다 놓으세요</h3>
+        <p>지원 형식 · 최대 크기</p>
+        <label for="fileInput" class="btn-select">파일 선택</label>
+        <input type="file" id="fileInput" ... style="display:none">
+      </div>
+    </div>
+    <div id="configPanel" class="hidden">
+      <div class="panel">
+        <!-- 설정 옵션 -->
+        <button class="btn btn-primary btn-full" id="downloadBtn">⬇️ 다운로드</button>
+      </div>
+    </div>
+    <div class="tips-panel"><h3>💡 Tips</h3><ul><li>...</li></ul></div>
+    <!-- FAQ (details/summary) -->
+  </div>
+  <aside class="tool-sidebar">
+    <div class="ad-card">
+      <ins class="adsbygoogle" style="display:block;width:100%;min-height:250px"
+        data-ad-client="ca-pub-6464921081676309" data-ad-slot="1419180025"
+        data-ad-format="auto" data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+    </div>
+    <div class="ad-card">
+      <script src="https://ads-partners.coupang.com/g.js"></script>
+      <script>new PartnersCoupang.G({"id":986943,"template":"carousel","trackingCode":"AF5600192","width":"160","height":"200","tsource":""});</script>
+    </div>
+  </aside>
+</div>
+```
+
+### 버튼 클래스 (WooaSheet style.css 기준)
+- `btn btn-primary` — 주요 액션 버튼 (초록)
+- `btn btn-secondary` — 보조 버튼 (회색)
+- `btn-full` — 전체 너비
+- `btn-select` — 파일 선택 label
+
+### EN 페이지 주의사항
+- KO 페이지와 **완전히 동일한 HTML 구조** 사용 (클래스, JS 아이디 동일)
+- 텍스트(label, placeholder, 안내문, Tips, FAQ)만 영문으로 번역
+- CSS 경로: `../css/style.css`, JS 경로: `../js/pwa-install.js`
+- lang-switcher: KO 링크 = `../파일명.html`, EN 링크 = `파일명.html`
