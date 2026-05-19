@@ -1,0 +1,323 @@
+<!DOCTYPE html><html lang="ko"><head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9ZGENFSXWC');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="naver-site-verification" content="7396a327607b884b9bef1283dfd3a5c6115a2b50">
+<meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSV HTML 테이블 변환 무료 온라인 — CSV를 HTML 표로 즉시 변환 | WooaSheet</title>
+<meta name="description" content="CSV 파일 또는 텍스트를 HTML 테이블 코드로 즉시 변환. 스타일·헤더·클래스 설정 가능. 웹 개발자·블로거 필수 도구. 무료, 서버 업로드 없음.">
+<meta name="keywords" content="CSV HTML 변환,CSV to HTML table,CSV 테이블 변환,HTML 표 만들기,CSV HTML 코드,온라인 무료,WooaSheet">
+<link rel="canonical" href="https://wooasheet.wooahouse.com/csv-html.html">
+<link rel="alternate" hreflang="ko" href="https://wooasheet.wooahouse.com/csv-html.html">
+<link rel="alternate" hreflang="en" href="https://wooasheet.wooahouse.com/en/csv-html.html">
+<link rel="alternate" hreflang="x-default" href="https://wooasheet.wooahouse.com/en/csv-html.html">
+<meta property="og:title" content="CSV → HTML 테이블 변환기 - WooaSheet">
+<meta property="og:description" content="CSV를 HTML 테이블 코드로 즉시 변환. 스타일 선택, 헤더 설정, 클래스 지정 가능.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://wooasheet.wooahouse.com/csv-html.html">
+<meta property="og:locale" content="ko_KR">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"CSV HTML 테이블 변환기","url":"https://wooasheet.wooahouse.com/csv-html.html","applicationCategory":"UtilitiesApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
+<style>
+  .lang-switcher{display:flex;align-items:center;gap:4px;}
+  .lang-switcher a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.8rem;font-weight:600;padding:3px 8px;border-radius:12px;transition:background 0.15s;}
+  .lang-switcher a.active{color:white;background:rgba(255,255,255,0.25);}
+  .lang-switcher a:hover{color:white;background:rgba(255,255,255,0.18);}
+  .lang-switcher span{color:rgba(255,255,255,0.3);font-size:0.75rem;}
+  .input-tabs{display:flex;gap:0;border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:16px;}
+  .input-tab{flex:1;padding:9px 0;text-align:center;font-size:0.85rem;font-weight:600;cursor:pointer;background:var(--bg2);color:var(--text-light);border:none;font-family:inherit;transition:background 0.15s;}
+  .input-tab.active{background:var(--primary);color:white;}
+  textarea.csv-input{width:100%;min-height:160px;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:12px;font-family:monospace;font-size:0.82rem;color:var(--text);resize:vertical;box-sizing:border-box;outline:none;}
+  .options-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0;}
+  @media(max-width:600px){.options-grid{grid-template-columns:1fr;}}
+  .option-group label{display:block;font-size:0.82rem;font-weight:600;color:var(--text-light);margin-bottom:6px;}
+  .option-group select,.option-group input[type=text]{width:100%;padding:8px 10px;border:1px solid var(--border);border-radius:6px;font-size:0.85rem;font-family:inherit;background:var(--bg2);color:var(--text);box-sizing:border-box;outline:none;}
+  .checkbox-row{display:flex;align-items:center;gap:8px;font-size:0.88rem;cursor:pointer;margin:12px 0;}
+  .checkbox-row input{width:16px;height:16px;accent-color:var(--primary);cursor:pointer;}
+  .result-tabs{display:flex;border-bottom:2px solid var(--border);margin-bottom:0;}
+  .result-tab{padding:10px 20px;font-size:0.88rem;font-weight:600;cursor:pointer;border:none;background:#F9FAFB;color:var(--text-light);font-family:inherit;border-bottom:2px solid transparent;margin-bottom:-2px;transition:all 0.15s;}
+  .result-tab.active{color:var(--primary);border-bottom-color:var(--primary);background:white;}
+  .preview-wrap{overflow:auto;max-height:360px;border:1px solid var(--border);border-radius:0 0 8px 8px;padding:16px;background:white;}
+  .preview-wrap table{border-collapse:collapse;width:100%;font-size:0.85rem;}
+  textarea.code-output{width:100%;min-height:200px;background:#1E1E1E;color:#D4D4D4;border:1px solid var(--border);border-radius:0 0 8px 8px;padding:14px;font-family:monospace;font-size:0.78rem;line-height:1.6;resize:vertical;box-sizing:border-box;outline:none;}
+  .action-bar{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap;}
+</style>
+</head><body>
+<header class="header"><div class="header-inner"><a href="index.html" class="logo">📊 WooaSheet</a><nav class="nav"><a href="editor.html">📊 편집기</a><a href="csv-excel.html">🔄 변환</a><a href="chart.html">📈 차트</a><a href="deduplicate.html">🧹 정리</a></nav><div class="header-right"><div class="lang-switcher"><a href="csv-html.html" class="active">KO</a><span>|</span><a href="en/csv-html.html">EN</a></div></div></div></header>
+<div class="our-sites-bar"><span class="our-sites-label">WooaHouse Services</span><div class="our-sites-links"><a href="https://wooahouse.com/" target="_blank" rel="noopener">🔗 WooaHouse</a><a href="https://pdfkit.wooahouse.com/" target="_blank" rel="noopener">📄 WooaPDF</a><a href="https://imagekit.wooahouse.com/" target="_blank" rel="noopener">🖼️ WooaImage</a><a href="https://colorkit.wooahouse.com/" target="_blank" rel="noopener">🎨 WooaColor</a><a href="https://textkit.wooahouse.com/" target="_blank" rel="noopener">✏️ WooaText</a><a href="https://qrkit.wooahouse.com/" target="_blank" rel="noopener">📱 WooaQR</a><a href="https://calckit.wooahouse.com/" target="_blank" rel="noopener">🧮 WooaCalc</a><a href="https://fontkit.wooahouse.com/" target="_blank" rel="noopener">🔤 WooaFont</a><a href="https://mactools.wooahouse.com/" target="_blank" rel="noopener">🍎 WooaMac</a><a href="https://pctools.wooahouse.com/" target="_blank" rel="noopener">🖥️ WooaPC</a><a href="https://vskit.wooahouse.com/" target="_blank" rel="noopener">💻 WooaVS</a><a href="https://wooaaudio.wooahouse.com/" target="_blank" rel="noopener">🎵 WooaAudio</a><a href="https://wooaviewer.wooahouse.com/" target="_blank" rel="noopener">🔍 WooaViewer</a><a href="https://wooadev.wooahouse.com/" target="_blank" rel="noopener">🛠️ WooaDev</a><a href="https://wooaocr.wooahouse.com/" target="_blank" rel="noopener">🔍 WooaOCR</a><a href="https://wooasheet.wooahouse.com/" target="_blank" rel="noopener" class="active">📊 WooaSheet</a></div></div>
+<div class="mobile-top-ad"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="7080296704" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+
+<div class="page-with-sidebar"><div class="tool-page">
+  <div class="breadcrumb"><a href="index.html">홈</a><span>›</span>CSV → HTML 테이블</div>
+  <div class="tool-header"><div class="tool-icon-lg">🌐</div><div><h1>CSV → HTML 테이블 변환기</h1><p>CSV 파일 또는 텍스트를 HTML 테이블 코드로 즉시 변환. 스타일·헤더 설정 후 코드를 복사하세요.</p></div></div>
+
+  <!-- 입력 탭 -->
+  <div class="input-tabs">
+    <button class="input-tab active" id="tabFile" onclick="switchInput('file')">📁 파일 업로드</button>
+    <button class="input-tab" id="tabText" onclick="switchInput('text')">✏️ 텍스트 입력</button>
+  </div>
+
+  <!-- 파일 업로드 -->
+  <div id="inputFile">
+    <div class="panel">
+      <div class="drop-zone" id="dropZone">
+        <span class="drop-zone-icon">🌐</span>
+        <h3>CSV 파일을 여기에 놓으세요</h3>
+        <p>.csv .xlsx .xls 파일 | 최대 20MB</p>
+        <label for="fileInput" class="btn-select">파일 선택</label>
+        <input type="file" id="fileInput" accept=".csv,.xlsx,.xls" style="display:none">
+      </div>
+    </div>
+  </div>
+
+  <!-- 텍스트 입력 -->
+  <div id="inputText" style="display:none;">
+    <div class="panel">
+      <textarea class="csv-input" id="csvTextarea" placeholder="이름,나이,직업
+홍길동,30,개발자
+김철수,25,디자이너
+이영희,28,마케터"></textarea>
+      <button class="btn btn-primary btn-full" style="margin-top:10px;" onclick="parseFromText()">🔄 변환</button>
+    </div>
+  </div>
+
+  <!-- 옵션 (파일 로드 후 또는 텍스트 탭에서 항상 표시) -->
+  <div id="optionsPanel" class="panel" style="margin-top:0;">
+    <div class="options-grid">
+      <div class="option-group">
+        <label>테이블 스타일</label>
+        <select id="styleSelect" onchange="regenerate()">
+          <option value="basic">기본 (테두리)</option>
+          <option value="striped">줄무늬 (Striped)</option>
+          <option value="minimal">미니멀 (하단 선만)</option>
+          <option value="none">스타일 없음</option>
+        </select>
+      </div>
+      <div class="option-group">
+        <label>테이블 class 이름 (선택)</label>
+        <input type="text" id="classInput" placeholder="예: my-table" oninput="regenerate()">
+      </div>
+    </div>
+    <label class="checkbox-row">
+      <input type="checkbox" id="hasHeader" checked onchange="regenerate()">
+      첫 번째 행을 헤더(&lt;thead&gt;)로 사용
+    </label>
+    <label class="checkbox-row">
+      <input type="checkbox" id="includeStyle" checked onchange="regenerate()">
+      인라인 스타일 포함 (복붙 즉시 적용)
+    </label>
+  </div>
+
+  <!-- 결과 -->
+  <div id="resultArea" style="display:none;margin-top:8px;">
+    <div class="result-tabs">
+      <button class="result-tab active" id="rtab1" onclick="switchRTab(1)">👁️ 미리보기</button>
+      <button class="result-tab" id="rtab2" onclick="switchRTab(2)">💻 HTML 코드</button>
+    </div>
+    <div id="rpanel1" class="preview-wrap"></div>
+    <textarea id="rpanel2" class="code-output" style="display:none;" readonly spellcheck="false"></textarea>
+    <div class="action-bar">
+      <button class="btn btn-primary" onclick="copyCode()">📋 코드 복사</button>
+      <button class="btn btn-secondary" onclick="downloadHTML()">⬇️ HTML 저장</button>
+      <button class="btn btn-secondary" onclick="resetAll()">🔄 초기화</button>
+    </div>
+    <p id="statInfo" style="font-size:0.8rem;color:var(--text-light);margin-top:8px;"></p>
+  </div>
+
+  <div class="tips-panel"><h3>💡 사용 팁</h3><ul>
+    <li>첫 번째 행이 헤더라면 <strong>헤더 사용</strong> 옵션을 켜면 &lt;thead&gt;로 분리됩니다</li>
+    <li><strong>인라인 스타일 포함</strong>을 켜면 외부 CSS 없이도 바로 적용됩니다</li>
+    <li>블로그·노션·워드프레스 등에 HTML 코드를 그대로 붙여넣을 수 있습니다</li>
+    <li>Excel(.xlsx) 파일도 직접 업로드 가능합니다</li>
+  </ul></div>
+
+  <div style="margin-top:24px;"><h2 style="font-size:1.1rem;font-weight:700;margin-bottom:16px;">FAQ</h2>
+    <div style="display:flex;flex-direction:column;gap:8px;">
+      <details style="border:1px solid var(--border);border-radius:8px;padding:12px 16px;background:var(--bg2);"><summary style="cursor:pointer;font-weight:600;">생성된 HTML을 어디에 쓸 수 있나요?</summary><p style="margin:8px 0 0;color:var(--text-light);font-size:0.88rem;">블로그, 워드프레스, 노션, 티스토리 등 HTML 편집이 가능한 곳 어디서나 붙여넣으면 바로 표가 표시됩니다.</p></details>
+      <details style="border:1px solid var(--border);border-radius:8px;padding:12px 16px;background:var(--bg2);"><summary style="cursor:pointer;font-weight:600;">Excel 파일도 변환되나요?</summary><p style="margin:8px 0 0;color:var(--text-light);font-size:0.88rem;">네, .xlsx / .xls 파일을 업로드하면 첫 번째 시트를 자동으로 읽어 변환합니다.</p></details>
+      <details style="border:1px solid var(--border);border-radius:8px;padding:12px 16px;background:var(--bg2);"><summary style="cursor:pointer;font-weight:600;">파일이 서버에 저장되나요?</summary><p style="margin:8px 0 0;color:var(--text-light);font-size:0.88rem;">아니요. 모든 변환은 브라우저에서만 처리됩니다. 파일은 서버로 전송되지 않습니다.</p></details>
+      <details style="border:1px solid var(--border);border-radius:8px;padding:12px 16px;background:var(--bg2);"><summary style="cursor:pointer;font-weight:600;">한글이 깨져 보이면 어떻게 하나요?</summary><p style="margin:8px 0 0;color:var(--text-light);font-size:0.88rem;">CSV 파일의 인코딩을 UTF-8로 변환한 후 업로드해 보세요. 인코딩 변환 도구를 사용하시면 편리합니다.</p></details>
+    </div>
+  </div>
+</div>
+
+<aside class="tool-sidebar"><div class="ad-card"><ins class="adsbygoogle" style="display:block;width:100%;min-height:250px" data-ad-client="ca-pub-6464921081676309" data-ad-slot="1419180025" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><div class="ad-card"><script src="https://ads-partners.coupang.com/g.js"></script><script>new PartnersCoupang.G({"id":986943,"template":"carousel","trackingCode":"AF5600192","width":"160","height":"200","tsource":""});</script></div></aside>
+</div>
+
+<footer class="footer"><div class="footer-inner"><div class="footer-top"><div class="footer-col"><h4>📊 WooaSheet</h4><p>CSV·Excel 파일을 브라우저에서 바로 편집·변환·시각화하는 무료 온라인 도구</p></div><div class="footer-col"><h4>도구</h4><a href="editor.html">스프레드시트 편집기</a><a href="csv-excel.html">CSV↔Excel 변환</a><a href="chart.html">차트 생성기</a><a href="deduplicate.html">중복 행 제거</a><a href="merge-csv.html">CSV 합치기</a><a href="split-csv.html">CSV 분할</a><a href="csv-json.html">CSV↔JSON</a><a href="csv-html.html">CSV→HTML 테이블</a><a href="filter-csv.html">CSV 필터</a><a href="sort-csv.html">CSV 정렬</a><a href="trim-csv.html">빈 행 제거</a><a href="column-picker.html">열 선택</a><a href="csv-stats.html">CSV 통계</a><a href="encoding-csv.html">인코딩 변환</a></div><div class="footer-col"><h4>WooaHouse Services</h4><a href="https://wooahouse.com/" target="_blank" rel="noopener">🔗 WooaHouse</a><a href="https://pdfkit.wooahouse.com/" target="_blank" rel="noopener">📄 WooaPDF</a><a href="https://imagekit.wooahouse.com/" target="_blank" rel="noopener">🖼️ WooaImage</a><a href="https://colorkit.wooahouse.com/" target="_blank" rel="noopener">🎨 WooaColor</a><a href="https://textkit.wooahouse.com/" target="_blank" rel="noopener">✏️ WooaText</a><a href="https://qrkit.wooahouse.com/" target="_blank" rel="noopener">📱 WooaQR</a><a href="https://calckit.wooahouse.com/" target="_blank" rel="noopener">🧮 WooaCalc</a><a href="https://fontkit.wooahouse.com/" target="_blank" rel="noopener">🔤 WooaFont</a><a href="https://wooaaudio.wooahouse.com/" target="_blank" rel="noopener">🎵 WooaAudio</a><a href="https://wooaviewer.wooahouse.com/" target="_blank" rel="noopener">🔍 WooaViewer</a><a href="https://wooadev.wooahouse.com/" target="_blank" rel="noopener">🛠️ WooaDev</a></div><div class="footer-col"><h4>정보</h4><a href="about.html">서비스 소개</a><a href="privacy.html">개인정보처리방침</a></div></div><div class="footer-bottom"><p>© 2026 WooaSheet by WooaHouse. 모든 권리 보유.</p></div><p class="coupang-notice">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p></div></footer>
+<script src="js/pwa-install.js"></script>
+<script>
+let parsedData = []; // 2D array
+let fileName = 'table';
+
+/* ── 입력 탭 전환 ── */
+function switchInput(mode) {
+  const isFile = mode === 'file';
+  document.getElementById('tabFile').classList.toggle('active', isFile);
+  document.getElementById('tabText').classList.toggle('active', !isFile);
+  document.getElementById('inputFile').style.display = isFile ? '' : 'none';
+  document.getElementById('inputText').style.display = isFile ? 'none' : '';
+}
+
+/* ── 파일 업로드 ── */
+const dropZone = document.getElementById('dropZone');
+dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('drag-over'); });
+dropZone.addEventListener('dragleave', () => dropZone.classList.remove('drag-over'));
+dropZone.addEventListener('drop', e => { e.preventDefault(); dropZone.classList.remove('drag-over'); if (e.dataTransfer.files[0]) readFile(e.dataTransfer.files[0]); });
+dropZone.addEventListener('click', () => document.getElementById('fileInput').click());
+document.getElementById('fileInput').addEventListener('change', e => { if (e.target.files[0]) readFile(e.target.files[0]); });
+
+async function readFile(file) {
+  fileName = file.name.replace(/\.[^.]+$/, '');
+  const ab = await file.arrayBuffer();
+  const wb = XLSX.read(ab, { type: 'array' });
+  const ws = wb.Sheets[wb.SheetNames[0]];
+  parsedData = XLSX.utils.sheet_to_json(ws, { header: 1, defval: '' });
+  regenerate();
+}
+
+/* ── 텍스트 입력 파싱 ── */
+function parseFromText() {
+  const raw = document.getElementById('csvTextarea').value.trim();
+  if (!raw) return;
+  fileName = 'table';
+  // 간단한 CSV 파서 (XLSX 활용)
+  const wb = XLSX.read(raw, { type: 'string' });
+  const ws = wb.Sheets[wb.SheetNames[0]];
+  parsedData = XLSX.utils.sheet_to_json(ws, { header: 1, defval: '' });
+  regenerate();
+}
+
+/* ── 결과 탭 전환 ── */
+function switchRTab(n) {
+  document.getElementById('rtab1').classList.toggle('active', n === 1);
+  document.getElementById('rtab2').classList.toggle('active', n === 2);
+  document.getElementById('rpanel1').style.display = n === 1 ? '' : 'none';
+  document.getElementById('rpanel2').style.display = n === 2 ? '' : 'none';
+}
+
+/* ── HTML 생성 ── */
+function buildTableHTML(forPreview) {
+  if (!parsedData.length) return '';
+  const hasHeader = document.getElementById('hasHeader').checked;
+  const style = document.getElementById('styleSelect').value;
+  const cls = document.getElementById('classInput').value.trim();
+  const includeStyle = document.getElementById('includeStyle').checked;
+
+  // 스타일 정의
+  const styles = {
+    table: '',
+    th: '',
+    td: '',
+    trEven: ''
+  };
+
+  if (includeStyle || forPreview) {
+    if (style === 'basic') {
+      styles.table = 'border-collapse:collapse;width:100%;';
+      styles.th = 'border:1px solid #D1D5DB;padding:8px 12px;background:#F3F4F6;text-align:left;font-weight:600;';
+      styles.td = 'border:1px solid #D1D5DB;padding:8px 12px;';
+    } else if (style === 'striped') {
+      styles.table = 'border-collapse:collapse;width:100%;';
+      styles.th = 'border:1px solid #D1D5DB;padding:8px 12px;background:#16A34A;color:white;text-align:left;font-weight:600;';
+      styles.td = 'border:1px solid #E5E7EB;padding:8px 12px;';
+      styles.trEven = 'background:#F0FDF4;';
+    } else if (style === 'minimal') {
+      styles.table = 'border-collapse:collapse;width:100%;';
+      styles.th = 'border-bottom:2px solid #16A34A;padding:8px 12px;text-align:left;font-weight:600;';
+      styles.td = 'border-bottom:1px solid #E5E7EB;padding:8px 12px;';
+    }
+  }
+
+  const clsAttr = cls ? ` class="${cls}"` : '';
+  const tableStyle = styles.table ? ` style="${styles.table}"` : '';
+  const thStyle = styles.th ? ` style="${styles.th}"` : '';
+  const tdStyle = styles.td ? ` style="${styles.td}"` : '';
+
+  let html = `<table${clsAttr}${tableStyle}>\n`;
+
+  const rows = parsedData.filter(r => r.some(c => String(c).trim() !== ''));
+  let dataStart = 0;
+
+  if (hasHeader && rows.length > 0) {
+    html += '  <thead>\n    <tr>\n';
+    rows[0].forEach(cell => {
+      html += `      <th${thStyle}>${escapeHTML(String(cell))}</th>\n`;
+    });
+    html += '    </tr>\n  </thead>\n';
+    dataStart = 1;
+  }
+
+  html += '  <tbody>\n';
+  rows.slice(dataStart).forEach((row, i) => {
+    const evenStyle = (styles.trEven && i % 2 === 1) ? ` style="${styles.trEven}"` : '';
+    html += `    <tr${evenStyle}>\n`;
+    row.forEach(cell => {
+      html += `      <td${tdStyle}>${escapeHTML(String(cell))}</td>\n`;
+    });
+    html += '    </tr>\n';
+  });
+  html += '  </tbody>\n</table>';
+  return html;
+}
+
+function escapeHTML(str) {
+  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+/* ── 재생성 (옵션 변경 시) ── */
+function regenerate() {
+  if (!parsedData.length) return;
+  const tableHTML = buildTableHTML(false);
+  const previewHTML = buildTableHTML(true);
+
+  document.getElementById('rpanel1').innerHTML = previewHTML;
+  document.getElementById('rpanel2').value = tableHTML;
+
+  const rows = parsedData.filter(r => r.some(c => String(c).trim() !== ''));
+  const hasHeader = document.getElementById('hasHeader').checked;
+  const dataRows = hasHeader ? rows.length - 1 : rows.length;
+  document.getElementById('statInfo').textContent = `총 ${rows.length}행 × ${(rows[0]||[]).length}열 (데이터 ${dataRows}행)`;
+
+  document.getElementById('resultArea').style.display = '';
+}
+
+/* ── 코드 복사 ── */
+function copyCode() {
+  const code = document.getElementById('rpanel2').value;
+  navigator.clipboard.writeText(code).then(() => {
+    const btn = event.target;
+    btn.textContent = '✅ 복사됨!';
+    setTimeout(() => btn.textContent = '📋 코드 복사', 2000);
+  });
+}
+
+/* ── HTML 저장 ── */
+function downloadHTML() {
+  const tableHTML = buildTableHTML(false);
+  const full = `<!DOCTYPE html>\n<html lang="ko">\n<head>\n<meta charset="UTF-8">\n<title>Table</title>\n</head>\n<body>\n${tableHTML}\n</body>\n</html>`;
+  const blob = new Blob([full], { type: 'text/html;charset=utf-8' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = fileName + '-table.html';
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+/* ── 초기화 ── */
+function resetAll() {
+  parsedData = [];
+  document.getElementById('resultArea').style.display = 'none';
+  document.getElementById('csvTextarea').value = '';
+  document.getElementById('fileInput').value = '';
+  document.getElementById('classInput').value = '';
+  document.getElementById('hasHeader').checked = true;
+  document.getElementById('includeStyle').checked = true;
+  document.getElementById('styleSelect').value = 'basic';
+}
+</script>
+</body></html>
