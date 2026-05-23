@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="../css/style.css">
   <link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
   <link rel="manifest" href="../manifest.json">
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"WooaSheet","url":"https://wooasheet.wooahouse.com/en/","description":"Free browser-based spreadsheet and CSV tools","inLanguage":"en"},{"@type":"ItemList","name":"WooaSheet Tools","itemListElement":[{"@type":"ListItem","position":1,"name":"Spreadsheet Editor","url":"https://wooasheet.wooahouse.com/en/editor.html"},{"@type":"ListItem","position":2,"name":"CSV to Excel Converter","url":"https://wooasheet.wooahouse.com/en/csv-excel.html"},{"@type":"ListItem","position":3,"name":"Chart Generator","url":"https://wooasheet.wooahouse.com/en/chart.html"},{"@type":"ListItem","position":4,"name":"Duplicate Remover","url":"https://wooasheet.wooahouse.com/en/deduplicate.html"},{"@type":"ListItem","position":5,"name":"CSV Merger","url":"https://wooasheet.wooahouse.com/en/merge-csv.html"},{"@type":"ListItem","position":6,"name":"CSV Splitter","url":"https://wooasheet.wooahouse.com/en/split-csv.html"},{"@type":"ListItem","position":7,"name":"CSV to JSON Converter","url":"https://wooasheet.wooahouse.com/en/csv-json.html"},{"@type":"ListItem","position":8,"name":"CSV Row Filter","url":"https://wooasheet.wooahouse.com/en/filter-csv.html"},{"@type":"ListItem","position":9,"name":"Sort CSV","url":"https://wooasheet.wooahouse.com/en/sort-csv.html"},{"@type":"ListItem","position":10,"name":"Trim Empty Rows","url":"https://wooasheet.wooahouse.com/en/trim-csv.html"},{"@type":"ListItem","position":11,"name":"Column Picker","url":"https://wooasheet.wooahouse.com/en/column-picker.html"},{"@type":"ListItem","position":12,"name":"CSV Statistics","url":"https://wooasheet.wooahouse.com/en/csv-stats.html"},{"@type":"ListItem","position":13,"name":"Encoding Converter","url":"https://wooasheet.wooahouse.com/en/encoding-csv.html"},{"@type":"ListItem","position":14,"name":"CSV to HTML Table","url":"https://wooasheet.wooahouse.com/en/csv-html.html"}]}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"WooaSheet","url":"https://wooasheet.wooahouse.com/en/","description":"Free browser-based spreadsheet and CSV tools","inLanguage":"en"},{"@type":"ItemList","name":"WooaSheet Tools","itemListElement":[{"@type":"ListItem","position":1,"name":"Spreadsheet Editor","url":"https://wooasheet.wooahouse.com/en/editor.html"},{"@type":"ListItem","position":2,"name":"CSV to Excel Converter","url":"https://wooasheet.wooahouse.com/en/csv-excel.html"},{"@type":"ListItem","position":3,"name":"Chart Generator","url":"https://wooasheet.wooahouse.com/en/chart.html"},{"@type":"ListItem","position":4,"name":"Duplicate Remover","url":"https://wooasheet.wooahouse.com/en/deduplicate.html"},{"@type":"ListItem","position":5,"name":"CSV Merger","url":"https://wooasheet.wooahouse.com/en/merge-csv.html"},{"@type":"ListItem","position":6,"name":"CSV Splitter","url":"https://wooasheet.wooahouse.com/en/split-csv.html"},{"@type":"ListItem","position":7,"name":"CSV to JSON Converter","url":"https://wooasheet.wooahouse.com/en/csv-json.html"},{"@type":"ListItem","position":8,"name":"CSV Row Filter","url":"https://wooasheet.wooahouse.com/en/filter-csv.html"},{"@type":"ListItem","position":9,"name":"Sort CSV","url":"https://wooasheet.wooahouse.com/en/sort-csv.html"},{"@type":"ListItem","position":10,"name":"Trim Empty Rows","url":"https://wooasheet.wooahouse.com/en/trim-csv.html"},{"@type":"ListItem","position":11,"name":"Column Picker","url":"https://wooasheet.wooahouse.com/en/column-picker.html"},{"@type":"ListItem","position":12,"name":"CSV Statistics","url":"https://wooasheet.wooahouse.com/en/csv-stats.html"},{"@type":"ListItem","position":13,"name":"Encoding Converter","url":"https://wooasheet.wooahouse.com/en/encoding-csv.html"},{"@type":"ListItem","position":14,"name":"CSV to HTML Table","url":"https://wooasheet.wooahouse.com/en/csv-html.html"},{"@type":"ListItem","position":15,"name":"CSV to SQL","url":"https://wooasheet.wooahouse.com/en/csv-sql.html"},{"@type":"ListItem","position":16,"name":"CSV to Markdown Table","url":"https://wooasheet.wooahouse.com/en/csv-markdown.html"},{"@type":"ListItem","position":17,"name":"CSV Validator","url":"https://wooasheet.wooahouse.com/en/csv-validator.html"}]}]}</script>
 </head>
 <body>
 <header class="header">
@@ -60,17 +60,54 @@
 
 <div class="index-with-sidebar">
   <div class="tools-section">
+
+    <!-- Edit & Visualize -->
     <div class="category-block">
-      <h2 class="category-title"><span class="category-dot"></span>Spreadsheet Tools</h2>
+      <div class="category-header">
+        <div class="category-dot" style="background:#16A34A"></div>
+        <div>
+          <h2 class="category-title">Edit &amp; Visualize</h2>
+          <p class="category-desc">Edit CSV/Excel files directly and analyze data visually</p>
+        </div>
+      </div>
       <div class="tools-grid">
         <a href="editor.html" class="tool-card">
-          <div class="tool-icon">📝</div>
+          <div class="tool-icon">📊</div>
           <div class="tool-info">
             <div class="tool-name">Spreadsheet Editor</div>
             <div class="tool-desc">Excel-like editor with formula support (SUM, IF, VLOOKUP…)</div>
           </div>
           <span class="free-badge">FREE</span>
         </a>
+        <a href="chart.html" class="tool-card">
+          <div class="tool-icon">📈</div>
+          <div class="tool-info">
+            <div class="tool-name">Chart Generator</div>
+            <div class="tool-desc">Create bar, line, pie, and doughnut charts from CSV data</div>
+          </div>
+          <span class="free-badge">FREE</span>
+        </a>
+        <a href="csv-stats.html" class="tool-card">
+          <div class="tool-icon">📉</div>
+          <div class="tool-info">
+            <div class="tool-name">CSV Statistics</div>
+            <div class="tool-desc">Auto-analyze sum, average, min, max, and unique values per column</div>
+          </div>
+          <span class="free-badge">FREE</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Format Conversion -->
+    <div class="category-block">
+      <div class="category-header">
+        <div class="category-dot" style="background:#2563EB"></div>
+        <div>
+          <h2 class="category-title">Format Conversion</h2>
+          <p class="category-desc">Convert CSV to Excel, JSON, HTML, SQL, Markdown, and more</p>
+        </div>
+      </div>
+      <div class="tools-grid">
         <a href="csv-excel.html" class="tool-card">
           <div class="tool-icon">🔄</div>
           <div class="tool-info">
@@ -79,14 +116,61 @@
           </div>
           <span class="free-badge">FREE</span>
         </a>
-        <a href="chart.html" class="tool-card">
-          <div class="tool-icon">📊</div>
+        <a href="csv-json.html" class="tool-card">
+          <div class="tool-icon">📋</div>
           <div class="tool-info">
-            <div class="tool-name">Chart Generator</div>
-            <div class="tool-desc">Create bar, line, pie, and doughnut charts from CSV data</div>
+            <div class="tool-name">CSV ↔ JSON</div>
+            <div class="tool-desc">Convert CSV to JSON or JSON to CSV instantly — developer essential</div>
           </div>
           <span class="free-badge">FREE</span>
         </a>
+        <a href="csv-html.html" class="tool-card">
+          <div class="tool-icon">🌐</div>
+          <div class="tool-info">
+            <div class="tool-name">CSV → HTML Table</div>
+            <div class="tool-desc">Convert CSV to HTML table code instantly. Paste directly into any blog or website</div>
+          </div>
+          <span class="free-badge">FREE</span>
+        </a>
+        <a href="csv-sql.html" class="tool-card">
+          <span class="new-badge">NEW</span>
+          <div class="tool-icon">🗄️</div>
+          <div class="tool-info">
+            <div class="tool-name">CSV → SQL</div>
+            <div class="tool-desc">Convert CSV to INSERT SQL statements. Choose table name, batch size, and NULL handling</div>
+          </div>
+          <span class="free-badge">FREE</span>
+        </a>
+        <a href="csv-markdown.html" class="tool-card">
+          <span class="new-badge">NEW</span>
+          <div class="tool-icon">📝</div>
+          <div class="tool-info">
+            <div class="tool-name">CSV → Markdown Table</div>
+            <div class="tool-desc">Convert CSV to Markdown table format with alignment options and live preview</div>
+          </div>
+          <span class="free-badge">FREE</span>
+        </a>
+        <a href="encoding-csv.html" class="tool-card">
+          <div class="tool-icon">🔤</div>
+          <div class="tool-info">
+            <div class="tool-name">Encoding Converter</div>
+            <div class="tool-desc">Fix garbled text by converting EUC-KR ↔ UTF-8 / CP949 / Shift-JIS</div>
+          </div>
+          <span class="free-badge">FREE</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Clean & Filter -->
+    <div class="category-block">
+      <div class="category-header">
+        <div class="category-dot" style="background:#DC2626"></div>
+        <div>
+          <h2 class="category-title">Clean &amp; Filter</h2>
+          <p class="category-desc">Remove unwanted data, filter rows, sort, and validate your CSV</p>
+        </div>
+      </div>
+      <div class="tools-grid">
         <a href="deduplicate.html" class="tool-card">
           <div class="tool-icon">🧹</div>
           <div class="tool-info">
@@ -95,8 +179,62 @@
           </div>
           <span class="free-badge">FREE</span>
         </a>
+        <a href="trim-csv.html" class="tool-card">
+          <div class="tool-icon">✨</div>
+          <div class="tool-info">
+            <div class="tool-name">Trim Empty Rows</div>
+            <div class="tool-desc">Remove empty rows, columns, and leading/trailing whitespace</div>
+          </div>
+          <span class="free-badge">FREE</span>
+        </a>
+        <a href="filter-csv.html" class="tool-card">
+          <div class="tool-icon">🔍</div>
+          <div class="tool-info">
+            <div class="tool-name">CSV Row Filter</div>
+            <div class="tool-desc">Extract rows matching conditions: contains, equals, greater than, and more</div>
+          </div>
+          <span class="free-badge">FREE</span>
+        </a>
+        <a href="sort-csv.html" class="tool-card">
+          <div class="tool-icon">🔀</div>
+          <div class="tool-info">
+            <div class="tool-name">Sort CSV</div>
+            <div class="tool-desc">Sort by any column ascending or descending — text or numeric</div>
+          </div>
+          <span class="free-badge">FREE</span>
+        </a>
+        <a href="column-picker.html" class="tool-card">
+          <div class="tool-icon">🗂️</div>
+          <div class="tool-info">
+            <div class="tool-name">Column Picker</div>
+            <div class="tool-desc">Select columns and reorder by drag-and-drop, then download</div>
+          </div>
+          <span class="free-badge">FREE</span>
+        </a>
+        <a href="csv-validator.html" class="tool-card">
+          <span class="new-badge">NEW</span>
+          <div class="tool-icon">✅</div>
+          <div class="tool-info">
+            <div class="tool-name">CSV Validator</div>
+            <div class="tool-desc">Detect blank headers, column mismatches, empty rows, duplicates, and missing values</div>
+          </div>
+          <span class="free-badge">FREE</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- File Management -->
+    <div class="category-block">
+      <div class="category-header">
+        <div class="category-dot" style="background:#D97706"></div>
+        <div>
+          <h2 class="category-title">File Management</h2>
+          <p class="category-desc">Merge multiple CSV files into one or split large files into chunks</p>
+        </div>
+      </div>
+      <div class="tools-grid">
         <a href="merge-csv.html" class="tool-card">
-          <div class="tool-icon">📎</div>
+          <div class="tool-icon">📂</div>
           <div class="tool-info">
             <div class="tool-name">CSV Merger</div>
             <div class="tool-desc">Combine multiple CSV files into one</div>
@@ -111,80 +249,9 @@
           </div>
           <span class="free-badge">FREE</span>
         </a>
-        <a href="filter-csv.html" class="tool-card">
-          <span class="new-badge">NEW</span>
-          <div class="tool-icon">🔍</div>
-          <div class="tool-info">
-            <div class="tool-name">CSV Row Filter</div>
-            <div class="tool-desc">Extract rows matching conditions: contains, equals, greater than, and more</div>
-          </div>
-          <span class="free-badge">FREE</span>
-        </a>
-        <a href="sort-csv.html" class="tool-card">
-          <span class="new-badge">NEW</span>
-          <div class="tool-icon">🔀</div>
-          <div class="tool-info">
-            <div class="tool-name">Sort CSV</div>
-            <div class="tool-desc">Sort by any column ascending or descending — text or numeric</div>
-          </div>
-          <span class="free-badge">FREE</span>
-        </a>
-        <a href="trim-csv.html" class="tool-card">
-          <span class="new-badge">NEW</span>
-          <div class="tool-icon">✨</div>
-          <div class="tool-info">
-            <div class="tool-name">Trim Empty Rows</div>
-            <div class="tool-desc">Remove empty rows, columns, and leading/trailing whitespace</div>
-          </div>
-          <span class="free-badge">FREE</span>
-        </a>
-        <a href="column-picker.html" class="tool-card">
-          <span class="new-badge">NEW</span>
-          <div class="tool-icon">🗂️</div>
-          <div class="tool-info">
-            <div class="tool-name">Column Picker</div>
-            <div class="tool-desc">Select columns and reorder by drag-and-drop, then download</div>
-          </div>
-          <span class="free-badge">FREE</span>
-        </a>
-        <a href="csv-json.html" class="tool-card">
-          <span class="new-badge">NEW</span>
-          <div class="tool-icon">📋</div>
-          <div class="tool-info">
-            <div class="tool-name">CSV ↔ JSON</div>
-            <div class="tool-desc">Convert CSV to JSON or JSON to CSV instantly — developer essential</div>
-          </div>
-          <span class="free-badge">FREE</span>
-        </a>
-        <a href="csv-stats.html" class="tool-card">
-          <span class="new-badge">NEW</span>
-          <div class="tool-icon">📊</div>
-          <div class="tool-info">
-            <div class="tool-name">CSV Statistics</div>
-            <div class="tool-desc">Auto-analyze sum, average, min, max, and unique values per column</div>
-          </div>
-          <span class="free-badge">FREE</span>
-        </a>
-        <a href="encoding-csv.html" class="tool-card">
-          <span class="new-badge">NEW</span>
-          <div class="tool-icon">🔤</div>
-          <div class="tool-info">
-            <div class="tool-name">Encoding Converter</div>
-            <div class="tool-desc">Fix garbled text by converting EUC-KR ↔ UTF-8 / CP949 / Shift-JIS</div>
-          </div>
-          <span class="free-badge">FREE</span>
-        </a>
-        <a href="csv-html.html" class="tool-card">
-          <span class="new-badge">NEW</span>
-          <div class="tool-icon">🌐</div>
-          <div class="tool-info">
-            <div class="tool-name">CSV → HTML Table</div>
-            <div class="tool-desc">Convert CSV to HTML table code instantly. Paste directly into any blog or website</div>
-          </div>
-          <span class="free-badge">FREE</span>
-        </a>
       </div>
     </div>
+
   </div>
   <aside class="index-sidebar">
     <div class="index-ad-card">
@@ -223,6 +290,9 @@
         <a href="csv-stats.html">CSV Statistics</a>
         <a href="encoding-csv.html">Encoding Converter</a>
         <a href="csv-html.html">CSV → HTML Table</a>
+        <a href="csv-sql.html">CSV → SQL</a>
+        <a href="csv-markdown.html">CSV → Markdown</a>
+        <a href="csv-validator.html">CSV Validator</a>
       </div>
       <div class="footer-link-col">
         <h4>Site</h4>

@@ -1,0 +1,206 @@
+<!DOCTYPE html><html lang="ko"><head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9ZGENFSXWC');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="naver-site-verification" content="0f10684c15b4af3e36aa66c4fab0c0c24e80f03f">
+<meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSV SQL 변환 무료 온라인 — CSV를 INSERT SQL문으로 즉시 변환 | WooaSheet</title>
+<meta name="description" content="CSV 파일을 SQL INSERT문으로 즉시 변환. 테이블명·INSERT 종류·배치 크기 설정 가능. 브라우저에서 바로, 서버 업로드 없음.">
+<meta name="keywords" content="CSV SQL 변환,CSV to SQL,CSV INSERT SQL,CSV SQL 변환기,CSV SQL 무료,SQL 변환 온라인,CSV 데이터베이스 삽입">
+<link rel="canonical" href="https://wooasheet.wooahouse.com/csv-sql.html">
+<link rel="alternate" hreflang="ko" href="https://wooasheet.wooahouse.com/csv-sql.html">
+<link rel="alternate" hreflang="en" href="https://wooasheet.wooahouse.com/en/csv-sql.html">
+<link rel="alternate" hreflang="x-default" href="https://wooasheet.wooahouse.com/en/csv-sql.html">
+<meta property="og:title" content="CSV → SQL 변환기 - WooaSheet">
+<meta property="og:description" content="CSV를 SQL INSERT문으로 즉시 변환. 브라우저에서 바로, 서버 업로드 없음.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://wooasheet.wooahouse.com/csv-sql.html">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://wooasheet.wooahouse.com/og-image.png">
+<meta property="og:site_name" content="WooaSheet">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"CSV → SQL 변환기","url":"https://wooasheet.wooahouse.com/csv-sql.html","applicationCategory":"UtilitiesApplication","operatingSystem":"All","inLanguage":"ko","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
+<style>
+  .lang-switcher{display:flex;align-items:center;gap:4px;}
+  .lang-switcher a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.8rem;font-weight:600;padding:3px 8px;border-radius:12px;transition:background 0.15s;}
+  .lang-switcher a.active{color:white;background:rgba(255,255,255,0.25);}
+  .lang-switcher a:hover{color:white;background:rgba(255,255,255,0.18);}
+  .lang-switcher span{color:rgba(255,255,255,0.3);font-size:0.75rem;}
+  .sql-output{background:#1E293B;color:#E2E8F0;border-radius:10px;padding:14px;font-family:'Consolas','Monaco',monospace;font-size:0.8rem;white-space:pre;overflow:auto;max-height:400px;line-height:1.6;margin-top:12px;}
+  .option-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;}
+  @media(max-width:600px){.option-grid{grid-template-columns:1fr;}}
+  .form-group label{display:block;font-size:0.82rem;font-weight:600;color:var(--text-light);margin-bottom:4px;}
+  .form-group input,.form-group select{width:100%;padding:8px 10px;border:1px solid var(--border);border-radius:7px;background:var(--bg2);color:var(--text);font-size:0.88rem;box-sizing:border-box;}
+  .sql-stats{font-size:0.78rem;color:var(--text-light);margin-top:6px;}
+  .output-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;}
+</style>
+</head><body>
+<header class="header"><div class="header-inner"><a href="index.html" class="logo">📊 WooaSheet</a><nav class="nav"><a href="editor.html">📊 편집기</a><a href="csv-excel.html">🔄 변환</a><a href="chart.html">📈 차트</a><a href="deduplicate.html">🧹 정리</a></nav><div class="header-right"><div class="lang-switcher"><a href="csv-sql.html" class="active">KO</a><span>|</span><a href="en/csv-sql.html">EN</a></div></div></div></header>
+<div class="our-sites-bar"><span class="our-sites-label">WooaHouse Services</span><div class="our-sites-links"><a href="https://wooahouse.com/" target="_blank" rel="noopener">🔗 WooaHouse</a><a href="https://pdfkit.wooahouse.com/" target="_blank" rel="noopener">📄 WooaPDF</a><a href="https://imagekit.wooahouse.com/" target="_blank" rel="noopener">🖼️ WooaImage</a><a href="https://colorkit.wooahouse.com/" target="_blank" rel="noopener">🎨 WooaColor</a><a href="https://textkit.wooahouse.com/" target="_blank" rel="noopener">✏️ WooaText</a><a href="https://qrkit.wooahouse.com/" target="_blank" rel="noopener">📱 WooaQR</a><a href="https://calckit.wooahouse.com/" target="_blank" rel="noopener">🧮 WooaCalc</a><a href="https://fontkit.wooahouse.com/" target="_blank" rel="noopener">🔤 WooaFont</a><a href="https://mactools.wooahouse.com/" target="_blank" rel="noopener">🍎 WooaMac</a><a href="https://pctools.wooahouse.com/" target="_blank" rel="noopener">🖥️ WooaPC</a><a href="https://vskit.wooahouse.com/" target="_blank" rel="noopener">💻 WooaVS</a><a href="https://wooaaudio.wooahouse.com/" target="_blank" rel="noopener">🎵 WooaAudio</a><a href="https://wooaviewer.wooahouse.com/" target="_blank" rel="noopener">🔍 WooaViewer</a><a href="https://wooadev.wooahouse.com/" target="_blank" rel="noopener">🛠️ WooaDev</a><a href="https://wooaocr.wooahouse.com/" target="_blank" rel="noopener">🔍 WooaOCR</a><a href="https://wooasheet.wooahouse.com/" target="_blank" rel="noopener" class="active">📊 WooaSheet</a><a href="https://wooaseo.wooahouse.com/" target="_blank" rel="noopener">🔎 WooaSEO</a></div></div>
+<div class="mobile-top-ad"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="7080296704" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+<div class="page-with-sidebar"><div class="tool-page">
+  <div class="breadcrumb"><a href="index.html">홈</a><span>›</span>CSV → SQL</div>
+  <div class="tool-header"><div class="tool-icon-lg">🗄️</div><div><h1>CSV → SQL 변환기</h1><p>CSV 파일을 SQL INSERT문으로 즉시 변환합니다. 테이블명과 INSERT 종류를 설정할 수 있습니다.</p></div></div>
+
+  <div class="panel">
+    <div class="drop-zone" id="dropZone">
+      <span class="drop-zone-icon">📄</span>
+      <h3>CSV 파일을 여기에 놓으세요</h3>
+      <p>.csv .xlsx 파일 | 최대 20MB</p>
+      <label for="fileInput" class="btn-select">파일 선택</label>
+      <input type="file" id="fileInput" accept=".csv,.xlsx,.xls" style="display:none">
+    </div>
+  </div>
+
+  <div id="configPanel" class="hidden">
+    <div class="panel">
+      <div class="option-grid">
+        <div class="form-group">
+          <label>테이블명</label>
+          <input type="text" id="tableName" value="my_table" placeholder="테이블명 입력">
+        </div>
+        <div class="form-group">
+          <label>INSERT 종류</label>
+          <select id="insertType">
+            <option value="INSERT INTO">INSERT INTO</option>
+            <option value="INSERT OR IGNORE INTO">INSERT OR IGNORE INTO</option>
+            <option value="INSERT OR REPLACE INTO">INSERT OR REPLACE INTO</option>
+            <option value="INSERT IGNORE INTO">INSERT IGNORE INTO (MySQL)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>NULL 처리 (빈 값)</label>
+          <select id="nullOption">
+            <option value="null">NULL</option>
+            <option value="empty">'' (빈 문자열)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>구분자 (행당 묶음)</label>
+          <select id="batchSize">
+            <option value="1">1행씩</option>
+            <option value="100" selected>100행씩</option>
+            <option value="500">500행씩</option>
+            <option value="0">전체 하나로</option>
+          </select>
+        </div>
+      </div>
+      <div class="output-header">
+        <span style="font-size:0.85rem;font-weight:600;color:var(--text-light)">SQL 미리보기</span>
+        <div style="display:flex;gap:8px;">
+          <button class="btn btn-secondary" onclick="copySql()">복사</button>
+          <button class="btn btn-primary" id="downloadBtn" onclick="downloadSql()">⬇️ SQL 다운로드</button>
+        </div>
+      </div>
+      <div class="sql-output" id="sqlOutput"></div>
+      <div class="sql-stats" id="sqlStats"></div>
+    </div>
+  </div>
+
+  <div class="tips-panel"><h3>💡 사용 팁</h3><ul>
+    <li>첫 행이 열 이름(컬럼명)으로 사용됩니다. 영문 컬럼명을 권장합니다.</li>
+    <li>숫자 값은 따옴표 없이, 문자열 값은 작은따옴표로 감싸집니다.</li>
+    <li><strong>INSERT OR IGNORE</strong>: 중복 키 충돌 시 해당 행을 건너뜁니다 (SQLite).</li>
+    <li><strong>INSERT OR REPLACE</strong>: 중복 키 충돌 시 기존 행을 덮어씁니다 (SQLite).</li>
+    <li>값 안의 작은따옴표(<code>'</code>)는 자동으로 이스케이프(<code>''</code>)됩니다.</li>
+  </ul></div>
+
+  <div style="margin-top:24px;"><h2 style="font-size:1.1rem;font-weight:700;margin-bottom:16px;">FAQ</h2>
+    <div style="display:flex;flex-direction:column;gap:8px;">
+      <details style="border:1px solid var(--border);border-radius:8px;padding:12px 16px;background:var(--bg2);"><summary style="cursor:pointer;font-weight:600;">숫자와 문자열을 어떻게 구분하나요?</summary><p style="margin:8px 0 0;color:var(--text-light);font-size:0.88rem;">CSV 셀 값이 숫자로만 이루어진 경우 숫자로 처리하고, 그 외에는 문자열(작은따옴표)로 처리합니다.</p></details>
+      <details style="border:1px solid var(--border);border-radius:8px;padding:12px 16px;background:var(--bg2);"><summary style="cursor:pointer;font-weight:600;">대용량 CSV도 처리되나요?</summary><p style="margin:8px 0 0;color:var(--text-light);font-size:0.88rem;">브라우저 메모리 내에서 처리되므로 수만 행도 가능하지만, 매우 큰 파일은 브라우저 성능에 따라 다를 수 있습니다.</p></details>
+      <details style="border:1px solid var(--border);border-radius:8px;padding:12px 16px;background:var(--bg2);"><summary style="cursor:pointer;font-weight:600;">파일이 서버에 전송되나요?</summary><p style="margin:8px 0 0;color:var(--text-light);font-size:0.88rem;">아니요. 모든 변환은 브라우저에서만 처리됩니다.</p></details>
+    </div>
+  </div>
+</div>
+<aside class="tool-sidebar"><div class="ad-card"><ins class="adsbygoogle" style="display:block;width:100%;min-height:250px" data-ad-client="ca-pub-6464921081676309" data-ad-slot="1419180025" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><div class="ad-card"><script src="https://ads-partners.coupang.com/g.js"></script><script>new PartnersCoupang.G({"id":986943,"template":"carousel","trackingCode":"AF5600192","width":"160","height":"200","tsource":""});</script></div></aside>
+</div>
+
+<footer class="footer"><div class="footer-inner"><div class="footer-top"><div class="footer-col"><h4>📊 WooaSheet</h4><p>CSV·Excel 파일을 브라우저에서 바로 편집·변환·시각화하는 무료 온라인 도구</p></div><div class="footer-col"><h4>도구</h4><a href="editor.html">스프레드시트 편집기</a><a href="csv-excel.html">CSV↔Excel 변환</a><a href="csv-json.html">CSV↔JSON</a><a href="csv-sql.html">CSV→SQL</a><a href="csv-markdown.html">CSV→Markdown</a><a href="csv-validator.html">CSV 유효성 검사</a><a href="chart.html">차트 생성기</a><a href="deduplicate.html">중복 행 제거</a><a href="merge-csv.html">CSV 합치기</a><a href="csv-html.html">CSV→HTML 테이블</a></div><div class="footer-col"><h4>WooaHouse Services</h4><a href="https://wooahouse.com/" target="_blank" rel="noopener">🔗 WooaHouse</a><a href="https://pdfkit.wooahouse.com/" target="_blank" rel="noopener">📄 WooaPDF</a><a href="https://wooadev.wooahouse.com/" target="_blank" rel="noopener">🛠️ WooaDev</a><a href="https://wooaseo.wooahouse.com/" target="_blank" rel="noopener">🔎 WooaSEO</a></div><div class="footer-col"><h4>정보</h4><a href="about.html">서비스 소개</a><a href="privacy.html">개인정보처리방침</a></div></div><div class="footer-bottom"><p>© 2026 WooaSheet by WooaHouse. 모든 권리 보유.</p></div><p class="coupang-notice">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p></div></footer>
+<script src="js/pwa-install.js"></script>
+<script>
+let csvData = [], csvHeaders = [], fileName = '';
+
+function escSql(v) { return String(v).replace(/'/g, "''"); }
+function isNum(v) { return v !== '' && !isNaN(v) && isFinite(v); }
+
+function buildSql() {
+  const table = document.getElementById('tableName').value.trim() || 'my_table';
+  const type = document.getElementById('insertType').value;
+  const nullOpt = document.getElementById('nullOption').value;
+  const batch = parseInt(document.getElementById('batchSize').value);
+  const cols = '(' + csvHeaders.map(h => '`' + h + '`').join(', ') + ')';
+  const lines = [];
+  const rows = batch === 0 ? [csvData] : [];
+  if (batch > 0) { for (let i = 0; i < csvData.length; i += batch) rows.push(csvData.slice(i, i + batch)); }
+
+  rows.forEach(function(chunk) {
+    const vals = chunk.map(function(row) {
+      const rowVals = csvHeaders.map(function(h) {
+        const v = row[h];
+        if (v === '' || v === null || v === undefined) return nullOpt === 'null' ? 'NULL' : "''";
+        if (isNum(v)) return v;
+        return "'" + escSql(v) + "'";
+      });
+      return '  (' + rowVals.join(', ') + ')';
+    }).join(',\n');
+    lines.push(type + ' `' + table + '` ' + cols + ' VALUES\n' + vals + ';');
+  });
+  return lines.join('\n\n');
+}
+
+function renderSql() {
+  const sql = buildSql();
+  document.getElementById('sqlOutput').textContent = sql.length > 5000 ? sql.slice(0, 5000) + '\n... (미리보기 5000자 제한, 다운로드로 전체 확인)' : sql;
+  document.getElementById('sqlStats').textContent = csvData.length + '행 · ' + csvHeaders.length + '열 · INSERT문 생성 완료';
+}
+
+function readFile(file) {
+  fileName = file.name.replace(/\.[^.]+$/, '');
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    const wb = XLSX.read(e.target.result, {type:'binary'});
+    const ws = wb.Sheets[wb.SheetNames[0]];
+    const raw = XLSX.utils.sheet_to_json(ws, {header:1, defval:''});
+    csvHeaders = raw[0] || [];
+    csvData = raw.slice(1).map(function(row) {
+      const obj = {};
+      csvHeaders.forEach(function(h, i) { obj[h] = row[i] !== undefined ? row[i] : ''; });
+      return obj;
+    });
+    document.getElementById('configPanel').classList.remove('hidden');
+    renderSql();
+  };
+  reader.readAsBinaryString(file);
+}
+
+['tableName','insertType','nullOption','batchSize'].forEach(function(id) {
+  document.getElementById(id).addEventListener('change', function() { if(csvData.length) renderSql(); });
+});
+document.getElementById('tableName').addEventListener('input', function() { if(csvData.length) renderSql(); });
+
+function copySql() {
+  navigator.clipboard.writeText(buildSql()).then(function() {
+    const btn = document.querySelector('.btn.btn-secondary[onclick="copySql()"]');
+    btn.textContent = '복사됨!'; setTimeout(() => btn.textContent = '복사', 1500);
+  });
+}
+
+function downloadSql() {
+  if (!csvData.length) return;
+  const sql = buildSql();
+  const blob = new Blob([sql], {type:'text/plain;charset=utf-8'});
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = fileName + '.sql'; a.click();
+}
+
+const dz = document.getElementById('dropZone');
+dz.addEventListener('dragover', e => { e.preventDefault(); dz.classList.add('drag-over'); });
+dz.addEventListener('dragleave', () => dz.classList.remove('drag-over'));
+dz.addEventListener('drop', e => { e.preventDefault(); dz.classList.remove('drag-over'); if(e.dataTransfer.files[0]) readFile(e.dataTransfer.files[0]); });
+document.getElementById('fileInput').addEventListener('change', e => { if(e.target.files[0]) readFile(e.target.files[0]); });
+</script>
+</body></html>

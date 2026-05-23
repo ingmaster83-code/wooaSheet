@@ -1,0 +1,141 @@
+<!DOCTYPE html><html lang="en"><head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9ZGENFSXWC');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="naver-site-verification" content="0f10684c15b4af3e36aa66c4fab0c0c24e80f03f">
+<meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free CSV Validator — Check CSV Errors, Empty Rows & Duplicates Online | WooaSheet</title>
+<meta name="description" content="Validate CSV files for errors instantly. Detects column count mismatches, empty rows, duplicate rows, and blank headers. Browser-based, no server upload.">
+<meta name="keywords" content="CSV validator, CSV error checker, validate CSV, CSV quality check, CSV empty rows, CSV duplicates, CSV column mismatch, free CSV validator">
+<link rel="canonical" href="https://wooasheet.wooahouse.com/en/csv-validator.html">
+<link rel="alternate" hreflang="ko" href="https://wooasheet.wooahouse.com/csv-validator.html">
+<link rel="alternate" hreflang="en" href="https://wooasheet.wooahouse.com/en/csv-validator.html">
+<link rel="alternate" hreflang="x-default" href="https://wooasheet.wooahouse.com/en/csv-validator.html">
+<meta property="og:title" content="Free CSV Validator — WooaSheet">
+<meta property="og:description" content="Validate CSV files for errors, empty rows, duplicates, and column mismatches. Browser-based, no server upload.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://wooasheet.wooahouse.com/en/csv-validator.html">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://wooasheet.wooahouse.com/og-image.png">
+<meta property="og:site_name" content="WooaSheet">
+<link rel="manifest" href="../manifest.json">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"CSV Validator","url":"https://wooasheet.wooahouse.com/en/csv-validator.html","applicationCategory":"UtilitiesApplication","operatingSystem":"All","inLanguage":"en","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<style>
+  .lang-switcher{display:flex;align-items:center;gap:4px;}
+  .lang-switcher a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.8rem;font-weight:600;padding:3px 8px;border-radius:12px;transition:background 0.15s;}
+  .lang-switcher a.active{color:white;background:rgba(255,255,255,0.25);}
+  .lang-switcher a:hover{color:white;background:rgba(255,255,255,0.18);}
+  .lang-switcher span{color:rgba(255,255,255,0.3);font-size:0.75rem;}
+  .summary-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:16px;}
+  .summary-card{border-radius:10px;padding:14px;text-align:center;}
+  .summary-card.ok{background:#F0FDF4;border:1px solid #86EFAC;}
+  .summary-card.warn{background:#FFFBEB;border:1px solid #FCD34D;}
+  .summary-card.error{background:#FEF2F2;border:1px solid #FCA5A5;}
+  .summary-num{font-size:1.8rem;font-weight:800;line-height:1;}
+  .summary-num.ok{color:#16A34A;}
+  .summary-num.warn{color:#D97706;}
+  .summary-num.error{color:#DC2626;}
+  .summary-label{font-size:0.75rem;color:#64748B;margin-top:4px;}
+  .issue-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;}
+  .issue-item{border-radius:8px;padding:10px 14px;font-size:0.85rem;display:flex;align-items:flex-start;gap:8px;}
+  .issue-item.error{background:#FEF2F2;border-left:3px solid #DC2626;color:#7F1D1D;}
+  .issue-item.warn{background:#FFFBEB;border-left:3px solid #F59E0B;color:#78350F;}
+  .issue-item.info{background:#EFF6FF;border-left:3px solid #3B82F6;color:#1E3A5F;}
+  .issue-icon{flex-shrink:0;font-size:1rem;}
+  .success-banner{background:#F0FDF4;border:1px solid #86EFAC;border-radius:10px;padding:16px;text-align:center;color:#166534;font-weight:700;font-size:1rem;}
+</style>
+</head><body>
+<header class="header"><div class="header-inner"><a href="../index.html" class="logo">📊 WooaSheet</a><nav class="nav"><a href="editor.html">📊 Editor</a><a href="csv-excel.html">🔄 Convert</a><a href="chart.html">📈 Chart</a><a href="deduplicate.html">🧹 Clean</a></nav><div class="header-right"><div class="lang-switcher"><a href="../csv-validator.html">KO</a><span>|</span><a href="csv-validator.html" class="active">EN</a></div></div></div></header>
+<div class="our-sites-bar"><span class="our-sites-label">WooaHouse Services</span><div class="our-sites-links"><a href="https://wooahouse.com/" target="_blank" rel="noopener">🔗 WooaHouse</a><a href="https://pdfkit.wooahouse.com/" target="_blank" rel="noopener">📄 WooaPDF</a><a href="https://imagekit.wooahouse.com/" target="_blank" rel="noopener">🖼️ WooaImage</a><a href="https://colorkit.wooahouse.com/" target="_blank" rel="noopener">🎨 WooaColor</a><a href="https://textkit.wooahouse.com/" target="_blank" rel="noopener">✏️ WooaText</a><a href="https://qrkit.wooahouse.com/" target="_blank" rel="noopener">📱 WooaQR</a><a href="https://calckit.wooahouse.com/" target="_blank" rel="noopener">🧮 WooaCalc</a><a href="https://fontkit.wooahouse.com/" target="_blank" rel="noopener">🔤 WooaFont</a><a href="https://mactools.wooahouse.com/" target="_blank" rel="noopener">🍎 WooaMac</a><a href="https://pctools.wooahouse.com/" target="_blank" rel="noopener">🖥️ WooaPC</a><a href="https://vskit.wooahouse.com/" target="_blank" rel="noopener">💻 WooaVS</a><a href="https://wooaaudio.wooahouse.com/" target="_blank" rel="noopener">🎵 WooaAudio</a><a href="https://wooaviewer.wooahouse.com/" target="_blank" rel="noopener">🔍 WooaViewer</a><a href="https://wooadev.wooahouse.com/" target="_blank" rel="noopener">🛠️ WooaDev</a><a href="https://wooaocr.wooahouse.com/" target="_blank" rel="noopener">🔍 WooaOCR</a><a href="https://wooasheet.wooahouse.com/" target="_blank" rel="noopener" class="active">📊 WooaSheet</a><a href="https://wooaseo.wooahouse.com/" target="_blank" rel="noopener">🔎 WooaSEO</a></div></div>
+<div class="mobile-top-ad"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="7080296704" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+<div class="page-with-sidebar"><div class="tool-page">
+  <div class="breadcrumb"><a href="index.html">🏠 Home</a><span>›</span>CSV Validator</div>
+  <div class="tool-header"><div class="tool-icon-lg">✅</div><div><h1>CSV Validator</h1><p>Automatically detect errors in your CSV files: column mismatches, empty rows, duplicate rows, and blank headers — all at once.</p></div></div>
+
+  <div class="panel">
+    <div class="drop-zone" id="dropZone">
+      <span class="drop-zone-icon">📄</span>
+      <h3>Drop your CSV file here</h3>
+      <p>.csv .xlsx files | Max 20MB</p>
+      <label for="fileInput" class="btn-select">Select File</label>
+      <input type="file" id="fileInput" accept=".csv,.xlsx,.xls" style="display:none">
+    </div>
+  </div>
+
+  <div id="resultPanel" class="hidden">
+    <div class="panel">
+      <div style="font-size:0.85rem;font-weight:600;color:var(--text-light);margin-bottom:10px" id="fileInfo"></div>
+      <div class="summary-grid" id="summaryGrid"></div>
+      <div id="successBanner" class="success-banner hidden">✅ No issues found. Your CSV looks valid!</div>
+      <ul class="issue-list" id="issueList"></ul>
+    </div>
+  </div>
+
+  <div class="tips-panel"><h3>💡 What Gets Checked</h3><ul>
+    <li><strong>Blank headers</strong>: Detects empty column names in the header row</li>
+    <li><strong>Column count mismatch</strong>: Flags rows with fewer or more columns than the header</li>
+    <li><strong>Completely empty rows</strong>: Shows row numbers of fully empty rows</li>
+    <li><strong>Duplicate rows</strong>: Detects rows where all column values are identical</li>
+    <li><strong>Empty value summary</strong>: Reports how many empty values exist per column</li>
+  </ul></div>
+
+  <div style="margin-top:24px;"><h2 style="font-size:1.1rem;font-weight:700;margin-bottom:16px;">FAQ</h2>
+    <div style="display:flex;flex-direction:column;gap:8px;">
+      <details style="border:1px solid var(--border);border-radius:8px;padding:12px 16px;background:var(--bg2);"><summary style="cursor:pointer;font-weight:600;">How do I fix the errors found?</summary><p style="margin:8px 0 0;color:var(--text-light);font-size:0.88rem;">Use the <a href="trim-csv.html" style="color:var(--primary)">Trim tool</a> to remove empty rows, and the <a href="deduplicate.html" style="color:var(--primary)">Deduplication tool</a> to remove duplicate rows.</p></details>
+      <details style="border:1px solid var(--border);border-radius:8px;padding:12px 16px;background:var(--bg2);"><summary style="cursor:pointer;font-weight:600;">Can I validate large CSV files?</summary><p style="margin:8px 0 0;color:var(--text-light);font-size:0.88rem;">Yes. Processing happens in your browser's memory, supporting tens of thousands of rows. Duplicate detection on very large files may take a moment.</p></details>
+      <details style="border:1px solid var(--border);border-radius:8px;padding:12px 16px;background:var(--bg2);"><summary style="cursor:pointer;font-weight:600;">Is my file uploaded to a server?</summary><p style="margin:8px 0 0;color:var(--text-light);font-size:0.88rem;">No. All validation happens entirely in your browser.</p></details>
+    </div>
+  </div>
+</div>
+<aside class="tool-sidebar"><div class="ad-card"><ins class="adsbygoogle" style="display:block;width:100%;min-height:250px" data-ad-client="ca-pub-6464921081676309" data-ad-slot="1419180025" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><div class="ad-card"><script src="https://ads-partners.coupang.com/g.js"></script><script>new PartnersCoupang.G({"id":986943,"template":"carousel","trackingCode":"AF5600192","width":"160","height":"200","tsource":""});</script></div></aside>
+</div>
+<footer class="footer"><div class="footer-inner"><div class="footer-top"><div class="footer-col"><h4>📊 WooaSheet</h4><p>Free online tools to edit, convert, and visualize CSV & Excel files in your browser.</p></div><div class="footer-col"><h4>Tools</h4><a href="editor.html">Spreadsheet Editor</a><a href="csv-excel.html">CSV↔Excel</a><a href="csv-json.html">CSV↔JSON</a><a href="csv-sql.html">CSV→SQL</a><a href="csv-markdown.html">CSV→Markdown</a><a href="csv-validator.html">CSV Validator</a><a href="chart.html">Chart Generator</a><a href="deduplicate.html">Remove Duplicates</a><a href="merge-csv.html">Merge CSV</a><a href="csv-html.html">CSV→HTML Table</a></div><div class="footer-col"><h4>WooaHouse Services</h4><a href="https://wooahouse.com/" target="_blank" rel="noopener">🔗 WooaHouse</a><a href="https://pdfkit.wooahouse.com/" target="_blank" rel="noopener">📄 WooaPDF</a><a href="https://wooadev.wooahouse.com/" target="_blank" rel="noopener">🛠️ WooaDev</a><a href="https://wooaseo.wooahouse.com/" target="_blank" rel="noopener">🔎 WooaSEO</a></div><div class="footer-col"><h4>Info</h4><a href="about.html">About</a><a href="privacy.html">Privacy Policy</a></div></div><div class="footer-bottom"><p>© 2026 WooaSheet by WooaHouse. All rights reserved.</p></div><p class="coupang-notice">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p></div></footer>
+<script src="../js/pwa-install.js"></script>
+<script>
+function validate(file){
+  const reader=new FileReader();
+  reader.onload=function(e){
+    const wb=XLSX.read(e.target.result,{type:'binary'});
+    const ws=wb.Sheets[wb.SheetNames[0]];
+    const raw=XLSX.utils.sheet_to_json(ws,{header:1,defval:''});
+    if(!raw.length){alert('The file is empty.');return;}
+    const headers=raw[0];
+    const dataRows=raw.slice(1);
+    const issues=[];
+    let errCount=0,warnCount=0;
+    const emptyHeaders=headers.map((h,i)=>({h,i})).filter(x=>String(x.h).trim()==='');
+    if(emptyHeaders.length){emptyHeaders.forEach(x=>{issues.push({type:'error',icon:'❌',msg:'Column '+(x.i+1)+' has a blank header.'});errCount++;});}
+    const expectedCols=headers.length;
+    dataRows.forEach(function(row,i){if(row.length!==expectedCols){issues.push({type:'error',icon:'❌',msg:'Row '+(i+2)+': column count mismatch (header: '+expectedCols+', row: '+row.length+')'});errCount++;}});
+    const emptyRows=[];
+    dataRows.forEach(function(row,i){if(row.every(c=>String(c).trim()===''))emptyRows.push(i+2);});
+    if(emptyRows.length){const preview=emptyRows.slice(0,10).join(', ')+(emptyRows.length>10?' ...':'');issues.push({type:'warn',icon:'⚠️',msg:emptyRows.length+' completely empty row(s) found: rows '+preview});warnCount++;}
+    const seen=new Map();let dupCount=0;
+    dataRows.forEach(function(row,i){const key=row.join('\x00');if(seen.has(key)){dupCount++;}else seen.set(key,i+2);});
+    if(dupCount){issues.push({type:'warn',icon:'⚠️',msg:dupCount+' duplicate row(s) found. Use the Deduplication tool to clean them.'});warnCount++;}
+    const emptyCols=[];
+    headers.forEach(function(h,ci){const empties=dataRows.filter(r=>String(r[ci]!==undefined?r[ci]:'').trim()==='').length;if(empties>0)emptyCols.push('"'+h+'" ('+empties+')');});
+    if(emptyCols.length){issues.push({type:'info',icon:'ℹ️',msg:'Columns with empty values: '+emptyCols.join(', ')});}
+    document.getElementById('fileInfo').textContent=file.name+' · '+dataRows.length+' rows · '+headers.length+' columns';
+    const sg=document.getElementById('summaryGrid');
+    sg.innerHTML=card(errCount,'Errors',errCount>0?'error':'ok')+card(warnCount,'Warnings',warnCount>0?'warn':'ok')+card(emptyRows.length,'Empty Rows',emptyRows.length>0?'warn':'ok')+card(dupCount,'Duplicates',dupCount>0?'warn':'ok')+card(dataRows.length,'Total Rows','ok')+card(headers.length,'Columns','ok');
+    const il=document.getElementById('issueList');
+    il.innerHTML=issues.map(x=>'<li class="issue-item '+x.type+'"><span class="issue-icon">'+x.icon+'</span><span>'+x.msg+'</span></li>').join('');
+    const sb=document.getElementById('successBanner');
+    if(issues.length===0)sb.classList.remove('hidden');else sb.classList.add('hidden');
+    document.getElementById('resultPanel').classList.remove('hidden');
+  };
+  reader.readAsBinaryString(file);
+}
+function card(n,label,type){return '<div class="summary-card '+type+'"><div class="summary-num '+type+'">'+n+'</div><div class="summary-label">'+label+'</div></div>';}
+const dz=document.getElementById('dropZone');
+dz.addEventListener('dragover',e=>{e.preventDefault();dz.classList.add('drag-over');});
+dz.addEventListener('dragleave',()=>dz.classList.remove('drag-over'));
+dz.addEventListener('drop',e=>{e.preventDefault();dz.classList.remove('drag-over');if(e.dataTransfer.files[0])validate(e.dataTransfer.files[0]);});
+document.getElementById('fileInput').addEventListener('change',e=>{if(e.target.files[0])validate(e.target.files[0]);});
+</script>
+</body></html>
