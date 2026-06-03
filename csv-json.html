@@ -80,7 +80,16 @@
     <button class="btn btn-primary btn-full" onclick="downloadCSV()">📄 CSV 다운로드</button>
   </div>
 
-  <div class="wooa-orig-anchor"></div>
+  <div class="related-tools">
+  <h2>함께 쓰면 좋은 도구</h2>
+  <div class="related-grid">
+    <a href="csv-excel.html" class="related-card"><span class="related-icon">🔄</span><span>CSV ↔ Excel 변환</span></a>
+    <a href="csv-html.html" class="related-card"><span class="related-icon">🌐</span><span>CSV → HTML 테이블</span></a>
+    <a href="csv-sql.html" class="related-card"><span class="related-icon">🗄️</span><span>CSV → SQL</span></a>
+    <a href="csv-markdown.html" class="related-card"><span class="related-icon">📝</span><span>CSV → 마크다운 테이블</span></a>
+  </div>
+</div>
+<div class="wooa-orig-anchor"></div>
 <div class="faq-section"><h2>자주 묻는 질문</h2><details><summary>CSV의 첫 행이 키로 인식되나요?</summary><p>네. 첫 행이 헤더로 처리되어 JSON 키가 됩니다.</p></details><details><summary>JSON → CSV 변환 시 배열 형식이어야 하나요?</summary><p>객체 배열([{...}, {...}]) 형식만 지원합니다.</p></details><details><summary>파일이 서버에 저장되나요?</summary><p>아니요. 모든 처리는 브라우저 안에서만 이루어지며 파일은 서버로 전송되지 않습니다. 완전히 안전합니다.</p></details></div>
   <div class="tips-panel"><h3>💡 사용 팁</h3><ul>
     <li>CSV → JSON: 첫 행이 헤더로 사용되어 JSON 키가 됩니다</li>
