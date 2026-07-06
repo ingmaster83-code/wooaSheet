@@ -54,6 +54,38 @@
   .issue-icon{flex-shrink:0;font-size:1rem;}
   .success-banner{background:#F0FDF4;border:1px solid #86EFAC;border-radius:10px;padding:16px;text-align:center;color:#166534;font-weight:700;font-size:1rem;}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "유효성 검사 기준을 직접 설정할 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "열 타입(숫자, 날짜, 이메일 등), 필수 여부, 범위 등을 지정할 수 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "오류가 있는 행을 별도 파일로 내보낼 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "네. 오류 행만 분리해 CSV로 저장할 수 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "파일이 서버에 저장되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "아니요. 모든 처리는 브라우저 안에서만 이루어지며 파일은 서버로 전송되지 않습니다. 개인정보와 민감한 데이터가 외부로 유출될 걱정이 없으며, 기업 보안 환경에서도 안심하고 사용할 수 있습니다."
+      }
+    }
+  ]
+}
+</script>
 </head><body>
 <header class="header"><div class="header-inner"><a href="index.html" class="logo">📊 WooaSheet</a><nav class="nav"><a href="editor.html">📊 편집기</a><a href="csv-excel.html">🔄 변환</a><a href="chart.html">📈 차트</a><a href="deduplicate.html">🧹 정리</a></nav><div class="header-right"><div class="lang-switcher"><a href="csv-validator.html" class="active">KO</a><span>|</span><a href="en/csv-validator.html">EN</a></div><a href="about.html" style="color:rgba(255,255,255,0.85); font-size:0.85rem; text-decoration:none; margin-left:8px;">소개</a></div></div></header>
 <script src="js/wooa-sites-bar.js"></script>
