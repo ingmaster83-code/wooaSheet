@@ -1,0 +1,296 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-9ZGENFSXWC");</script><meta name="naver-site-verification" content="0f10684c15b4af3e36aa66c4fab0c0c24e80f03f"><meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms"><meta name="viewport" content="width=device-width, initial-scale=1.0"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script><link rel="manifest" href="/manifest.json"><link rel="stylesheet" href="css/style.css">
+<title>CSV 매칭·조인 — 두 CSV 공통 열 기준 결합 VLOOKUP 대체 무료 | WooaSheet</title>
+<meta name="description" content="두 CSV 파일을 공통 열(키) 기준으로 매칭해 하나로 결합. 엑셀 VLOOKUP·INDEX-MATCH를 대체하는 무료 온라인 도구. Left·Inner·Right·Full Join 지원, 서버 업로드 없음.">
+<link rel="canonical" href="https://wooasheet.wooahouse.com/csv-join.html">
+<link rel="alternate" hreflang="ko" href="https://wooasheet.wooahouse.com/csv-join.html">
+<link rel="alternate" hreflang="en" href="https://wooasheet.wooahouse.com/en/csv-join.html">
+<link rel="alternate" hreflang="x-default" href="https://wooasheet.wooahouse.com/en/csv-join.html">
+<meta name="keywords" content="CSV 매칭,CSV 조인,VLOOKUP 대체,엑셀 브이룩업,INDEX MATCH 대체,CSV 결합,두 CSV 합치기,키 값 매칭">
+<meta property="og:title" content="CSV 매칭·조인 — 두 CSV 공통 열 기준 결합 VLOOKUP 대체 무료 | WooaSheet">
+<meta property="og:description" content="두 CSV 파일을 공통 열(키) 기준으로 매칭해 하나로 결합. 엑셀 VLOOKUP·INDEX-MATCH를 대체하는 무료 온라인 도구. Left·Inner·Right·Full Join 지원, 서버 업로드 없음.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://wooasheet.wooahouse.com/csv-join.html">
+<meta property="og:locale" content="ko_KR">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"CSV 매칭·조인","url":"https://wooasheet.wooahouse.com/csv-join.html","applicationCategory":"UtilitiesApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <style>
+    .lang-switcher { display:flex; align-items:center; gap:4px; }
+    .lang-switcher a { color:rgba(255,255,255,0.7); text-decoration:none; font-size:0.8rem; font-weight:600; padding:3px 8px; border-radius:12px; transition:background 0.15s; }
+    .lang-switcher a.active { color:white; background:rgba(255,255,255,0.25); }
+    .lang-switcher a:hover { color:white; background:rgba(255,255,255,0.18); }
+    .lang-switcher span { color:rgba(255,255,255,0.3); font-size:0.75rem; }
+  </style>
+  <meta property="og:site_name" content="WooaSheet">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CSV 매칭·조인 — 두 CSV 공통 열 기준 결합 VLOOKUP 대체 무료 | WooaSheet">
+  <meta name="twitter:description" content="두 CSV 파일을 공통 열(키) 기준으로 매칭해 하나로 결합. 엑셀 VLOOKUP·INDEX-MATCH를 대체하는 무료 온라인 도구. Left·Inner·Right·Full Join 지원, 서버 업로드 없음.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "컬럼명이 달라도 매칭할 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "네. 기준 파일과 조인 파일에서 매칭 기준이 될 열을 각각 따로 선택할 수 있어, 컬럼명이 달라도 매칭됩니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "키 값이 중복되면 결과가 어떻게 되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "기준 파일 또는 조인 파일의 키 값이 중복되면, 매칭되는 모든 조합이 각각 결과 행으로 생성되어 최종 행 수가 늘어날 수 있습니다. 업로드 후 중복 여부를 자동으로 확인해 안내합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "파일이 인터넷에 업로드되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "아니요. 모든 처리는 브라우저 안에서만 이루어지며 파일은 서버로 전송되지 않습니다. 개인정보와 민감한 데이터가 외부로 유출될 걱정이 없으며, 기업 보안 환경에서도 안심하고 사용할 수 있습니다."
+      }
+    }
+  ]
+}
+</script>
+</head><body>
+<header class="header"><div class="header-inner"><a href="/" class="logo">📊 WooaSheet</a><nav class="nav"><a href="/editor.html">📊 편집기</a><a href="/csv-excel.html">🔄 변환</a><a href="/chart.html">📈 차트</a><a href="/deduplicate.html">🧹 정리</a></nav><div class="header-right"><div class="lang-switcher"><a href="csv-join.html" class="active">KO</a><span>|</span><a href="en/csv-join.html">EN</a></div><a href="about.html" style="color:rgba(255,255,255,0.85); font-size:0.85rem; text-decoration:none; margin-left:8px;">소개</a></div></div></header>
+<script src="js/wooa-sites-bar.js"></script></div>
+<div class="mobile-top-ad"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="7080296704" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+<div class="page-with-sidebar"><div class="tool-page">
+  <div class="breadcrumb"><a href="/">홈</a><span>›</span>CSV 매칭·조인</div>
+  <div class="tool-header"><div class="tool-icon-lg">🔗</div><div><h1>CSV 매칭·조인</h1><p>두 CSV 파일을 공통 열(키) 기준으로 매칭해서 옆으로 결합합니다. 엑셀 VLOOKUP·INDEX-MATCH를 대체합니다.</p></div></div>
+
+  <div class="panel" style="background:var(--bg);border-color:var(--primary);display:flex;gap:10px;align-items:flex-start;">
+    <span style="font-size:1.2rem;">💡</span>
+    <p style="font-size:0.85rem;color:var(--text-light);line-height:1.6;margin:0;">
+      여러 CSV를 <b>위아래로 이어 붙이려면</b> → <a href="merge-csv.html" style="color:var(--primary);font-weight:700;">CSV 합치기</a>를 이용하세요.<br>
+      이 도구는 두 CSV를 <b>공통 열(키) 기준으로 옆으로 결합</b>하는 매칭·조인 전용 도구입니다 (열 구조가 같은 파일을 이어붙이는 것과는 다른 기능입니다).
+    </p>
+  </div>
+
+  <div class="panel">
+    <div class="form-row">
+      <div>
+        <label style="font-weight:700;font-size:0.88rem;display:block;margin-bottom:8px;">① 기준 파일 (Base)</label>
+        <div class="drop-zone" id="baseDropZone" style="padding:24px 14px;">
+          <span class="drop-zone-icon">📄</span>
+          <h3 style="font-size:0.9rem;">기준 CSV·Excel 파일</h3>
+          <p>.csv .xlsx | 최대 20MB</p>
+          <label for="baseFileInput" class="btn-select">파일 선택</label>
+          <input type="file" id="baseFileInput" accept=".csv,.xlsx,.xls" style="display:none">
+          <p id="baseFileName" style="margin-top:8px;color:var(--primary);font-weight:700;"></p>
+        </div>
+      </div>
+      <div>
+        <label style="font-weight:700;font-size:0.88rem;display:block;margin-bottom:8px;">② 조인할 파일 (Join)</label>
+        <div class="drop-zone" id="otherDropZone" style="padding:24px 14px;">
+          <span class="drop-zone-icon">📄</span>
+          <h3 style="font-size:0.9rem;">조인 CSV·Excel 파일</h3>
+          <p>.csv .xlsx | 최대 20MB</p>
+          <label for="otherFileInput" class="btn-select">파일 선택</label>
+          <input type="file" id="otherFileInput" accept=".csv,.xlsx,.xls" style="display:none">
+          <p id="otherFileName" style="margin-top:8px;color:var(--primary);font-weight:700;"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="configPanel" class="hidden">
+    <div class="panel">
+      <div class="form-row">
+        <div class="form-group">
+          <label>기준 파일 매칭 열 (키)</label>
+          <select id="baseKeyCol"></select>
+        </div>
+        <div class="form-group">
+          <label>조인 파일 매칭 열 (키)</label>
+          <select id="otherKeyCol"></select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>조인 방식</label>
+        <select id="joinType">
+          <option value="left">Left Join — 기준 파일 전체 유지 (매칭 안 되면 빈 값)</option>
+          <option value="inner">Inner Join — 양쪽 다 매칭되는 행만</option>
+          <option value="right">Right Join — 조인 파일 전체 유지 (매칭 안 되면 빈 값)</option>
+          <option value="full">Full Join — 양쪽 모든 행 유지 (매칭 안 되면 빈 값)</option>
+        </select>
+      </div>
+      <div id="dupWarning" class="hidden" style="background:#7C2D12;border:1px solid #EA580C;border-radius:8px;padding:10px 14px;margin-bottom:16px;font-size:0.82rem;color:#FED7AA;line-height:1.6;"></div>
+      <button class="btn btn-primary btn-full" id="runJoinBtn" onclick="runJoin()">🔗 매칭·조인 실행</button>
+    </div>
+
+    <div id="resultPanel" class="hidden">
+      <div class="result-box">
+        <div class="stat-row"><span class="stat-label">기준 파일 행 수</span><span class="stat-value" id="totalBaseCount"></span></div>
+        <div class="stat-row"><span class="stat-label">매칭된 행 수</span><span class="stat-value" id="matchedBaseCount" style="color:#86EFAC;"></span></div>
+        <div class="stat-row"><span class="stat-label">미매칭 행 수</span><span class="stat-value" id="unmatchedBaseCount" style="color:#FCA5A5;"></span></div>
+        <div class="stat-row"><span class="stat-label">결과 행 수</span><span class="stat-value" id="resultRowCount"></span></div>
+      </div>
+      <div style="margin-top:12px;">
+        <p style="font-size:0.85rem;color:var(--text-light);margin-bottom:8px;">미리보기 (상위 10행)</p>
+        <div style="overflow-x:auto;"><table class="preview-table" id="previewTable"></table></div>
+      </div>
+      <div style="display:flex;gap:8px;margin-top:12px;">
+        <button class="btn btn-primary" id="downloadBtn" onclick="downloadResult('csv')" style="flex:1;">📄 CSV 저장</button>
+        <button class="btn btn-secondary" onclick="downloadResult('xlsx')" style="flex:1;">📗 Excel 저장</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="related-tools">
+  <h2>함께 쓰면 좋은 도구</h2>
+  <div class="related-grid">
+    <a href="merge-csv.html" class="related-card"><span class="related-icon">📂</span><span>CSV 합치기 (위아래 병합)</span></a>
+    <a href="csv-stats.html" class="related-card"><span class="related-icon">📉</span><span>CSV 통계 분석</span></a>
+    <a href="deduplicate.html" class="related-card"><span class="related-icon">🧹</span><span>중복 행 제거</span></a>
+    <a href="editor.html" class="related-card"><span class="related-icon">📊</span><span>스프레드시트 편집기</span></a>
+  </div>
+</div>
+<div class="wooa-orig-anchor"></div>
+<div class="faq-section"><h2>자주 묻는 질문</h2><details><summary>컬럼명이 달라도 매칭할 수 있나요?</summary><p>네. 기준 파일과 조인 파일에서 매칭 기준이 될 열을 각각 따로 선택할 수 있어, 컬럼명이 달라도 매칭됩니다.</p></details><details><summary>키 값이 중복되면 결과가 어떻게 되나요?</summary><p>기준 파일 또는 조인 파일의 키 값이 중복되면, 매칭되는 모든 조합이 각각 결과 행으로 생성되어 최종 행 수가 늘어날 수 있습니다. 업로드 후 중복 여부를 자동으로 확인해 안내합니다.</p></details><details><summary>파일이 인터넷에 업로드되나요?</summary><p>아니요. 모든 처리는 브라우저 안에서만 이루어지며 파일은 서버로 전송되지 않습니다. 개인정보와 민감한 데이터가 외부로 유출될 걱정이 없으며, 기업 보안 환경에서도 안심하고 사용할 수 있습니다.</p></details></div>
+  <div class="tips-panel"><h3>💡 사용 팁</h3><ul>
+    <li>CSV 합치기(여러 파일을 위아래로 잇기)와는 다른 기능입니다 — 이 도구는 두 파일을 공통 열 기준으로 옆으로 결합합니다</li>
+    <li>Left Join은 기준 파일 행을 모두 유지하고, Inner Join은 양쪽에서 매칭된 행만 남깁니다</li>
+    <li>수만 행의 대용량 파일도 Web Worker에서 처리되어 화면이 멈추지 않습니다</li>
+  </ul></div>
+</div>
+<aside class="tool-sidebar"></aside>
+</div>
+<footer class="footer"></footer>
+<script src="js/wooahouse-originals-tool.js"></script>
+<script src="js/pwa-install.js"></script>
+<script>
+let baseHeaders = [], baseRows = [], baseFileName = '';
+let otherHeaders = [], otherRows = [], otherFileName = '';
+let resultHeaders = [], resultRows = [], resultFileName = 'join_result';
+let joinWorker = null;
+
+async function loadFile(file, side) {
+  const ab = await file.arrayBuffer();
+  const wb = XLSX.read(ab, {type:'array'});
+  const ws = wb.Sheets[wb.SheetNames[0]];
+  const data = XLSX.utils.sheet_to_json(ws, {header:1, defval:''});
+  const headers = data[0] || [];
+  const rows = data.slice(1);
+  const name = file.name.replace(/\.[^.]+$/, '');
+
+  if (side === 'base') {
+    baseHeaders = headers; baseRows = rows; baseFileName = name;
+    document.getElementById('baseFileName').textContent = file.name + ' (' + rows.length + '행)';
+    fillKeySelect('baseKeyCol', headers);
+  } else {
+    otherHeaders = headers; otherRows = rows; otherFileName = name;
+    document.getElementById('otherFileName').textContent = file.name + ' (' + rows.length + '행)';
+    fillKeySelect('otherKeyCol', headers);
+  }
+
+  document.getElementById('resultPanel').classList.add('hidden');
+  if (baseRows.length && otherRows.length) {
+    document.getElementById('configPanel').classList.remove('hidden');
+    checkDuplicateKeys();
+  }
+}
+
+function fillKeySelect(id, headers) {
+  document.getElementById(id).innerHTML = headers.map((h,i)=>'<option value="'+i+'">'+h+'</option>').join('');
+}
+
+// 두 파일의 선택된 키 열에 중복 값이 있으면 결과 행이 늘어날 수 있음을 미리 안내
+function checkDuplicateKeys() {
+  const baseKeyIdx = parseInt(document.getElementById('baseKeyCol').value);
+  const otherKeyIdx = parseInt(document.getElementById('otherKeyCol').value);
+  const countDup = (rows, idx) => {
+    const seen = new Map();
+    rows.forEach(r => { const k = String(r[idx] ?? '').trim(); seen.set(k, (seen.get(k)||0)+1); });
+    let groups = 0, extra = 0;
+    seen.forEach(c => { if (c > 1) { groups++; extra += c - 1; } });
+    return { groups, extra };
+  };
+  const baseDup = countDup(baseRows, baseKeyIdx);
+  const otherDup = countDup(otherRows, otherKeyIdx);
+  const box = document.getElementById('dupWarning');
+  if (baseDup.groups || otherDup.groups) {
+    let msg = '⚠️ 키 값 중복 감지: ';
+    const parts = [];
+    if (baseDup.groups) parts.push('기준 파일에 중복 키 ' + baseDup.groups + '개');
+    if (otherDup.groups) parts.push('조인 파일에 중복 키 ' + otherDup.groups + '개');
+    msg += parts.join(', ') + '. 중복된 키는 매칭되는 모든 조합과 각각 결합되어 결과 행 수가 늘어날 수 있습니다.';
+    box.textContent = msg;
+    box.classList.remove('hidden');
+  } else {
+    box.classList.add('hidden');
+  }
+}
+
+document.getElementById('baseKeyCol').addEventListener('change', checkDuplicateKeys);
+document.getElementById('otherKeyCol').addEventListener('change', checkDuplicateKeys);
+
+function runJoin() {
+  if (!baseRows.length || !otherRows.length) return;
+  const btn = document.getElementById('runJoinBtn');
+  btn.disabled = true; btn.textContent = '⏳ 매칭 중...';
+
+  if (!joinWorker) joinWorker = new Worker('js/csv-join-worker.js');
+  joinWorker.onmessage = function(e) {
+    const { headers, rows, totalBase, matchedBase, unmatchedBase } = e.data;
+    resultHeaders = headers; resultRows = rows;
+    resultFileName = baseFileName + '_' + otherFileName + '_join';
+
+    document.getElementById('totalBaseCount').textContent = totalBase + '행';
+    document.getElementById('matchedBaseCount').textContent = matchedBase + '행';
+    document.getElementById('unmatchedBaseCount').textContent = unmatchedBase + '행';
+    document.getElementById('resultRowCount').textContent = rows.length + '행';
+
+    const preview = [headers, ...rows.slice(0,10)];
+    const tbl = document.getElementById('previewTable');
+    tbl.innerHTML = preview.map((row,i) => '<tr>'+ row.map(c=>(i===0?'<th>':'<td>')+c+(i===0?'</th>':'</td>')).join('') +'</tr>').join('');
+
+    document.getElementById('resultPanel').classList.remove('hidden');
+    btn.disabled = false; btn.textContent = '🔗 매칭·조인 실행';
+  };
+  joinWorker.postMessage({
+    baseHeaders, baseRows, otherHeaders, otherRows,
+    baseKeyIdx: parseInt(document.getElementById('baseKeyCol').value),
+    otherKeyIdx: parseInt(document.getElementById('otherKeyCol').value),
+    joinType: document.getElementById('joinType').value,
+    collisionSuffix: ' (조인)',
+  });
+}
+
+function downloadResult(fmt) {
+  const data = [resultHeaders, ...resultRows];
+  const ws = XLSX.utils.aoa_to_sheet(data);
+  if (fmt === 'csv') {
+    const csv = XLSX.utils.sheet_to_csv(ws);
+    const blob = new Blob(['﻿' + csv], {type:'text/csv;charset=utf-8'});
+    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = resultFileName + '.csv'; a.click();
+  } else {
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
+    XLSX.writeFile(wb, resultFileName + '.xlsx');
+  }
+}
+
+function setupDropZone(zoneId, inputId, side) {
+  const dz = document.getElementById(zoneId);
+  dz.addEventListener('dragover', e=>{e.preventDefault();dz.classList.add('drag-over');});
+  dz.addEventListener('dragleave', ()=>dz.classList.remove('drag-over'));
+  dz.addEventListener('drop', e=>{e.preventDefault();dz.classList.remove('drag-over');if(e.dataTransfer.files[0])loadFile(e.dataTransfer.files[0], side);});
+  document.getElementById(inputId).addEventListener('change', e=>{if(e.target.files[0])loadFile(e.target.files[0], side);});
+}
+setupDropZone('baseDropZone', 'baseFileInput', 'base');
+setupDropZone('otherDropZone', 'otherFileInput', 'other');
+</script>
+<script src="js/wooa-sidebar.js"></script>
+<script src="js/wooa-footer.js"></script>
+</body></html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-9ZGENFSXWC");</script><meta name="naver-site-verification" content="0f10684c15b4af3e36aa66c4fab0c0c24e80f03f"><meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms"><meta name="viewport" content="width=device-width, initial-scale=1.0"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script><link rel="manifest" href="/manifest.json"><link rel="stylesheet" href="css/style.css">
+<title>CSV → PDF 표 변환 — 인쇄용 PDF 표 자동 생성 무료 | WooaSheet</title>
+<meta name="description" content="CSV 파일을 인쇄·보고서용 PDF 표로 즉시 변환. 스트라이프·테두리 스타일, 세로·가로 방향, A4 용지 지원. 행이 많으면 자동으로 여러 페이지에 헤더 반복 출력. 서버 업로드 없음.">
+<link rel="canonical" href="https://wooasheet.wooahouse.com/csv-pdf.html">
+<link rel="alternate" hreflang="ko" href="https://wooasheet.wooahouse.com/csv-pdf.html">
+<link rel="alternate" hreflang="en" href="https://wooasheet.wooahouse.com/en/csv-pdf.html">
+<link rel="alternate" hreflang="x-default" href="https://wooasheet.wooahouse.com/en/csv-pdf.html">
+<meta name="keywords" content="CSV PDF 변환,CSV를 PDF로,CSV PDF 표,인쇄용 표 만들기,CSV 보고서 변환,무료 CSV PDF 도구">
+<meta property="og:title" content="CSV → PDF 표 변환 — 인쇄용 PDF 표 자동 생성 무료 | WooaSheet">
+<meta property="og:description" content="CSV 파일을 인쇄·보고서용 PDF 표로 즉시 변환. 스트라이프·테두리 스타일, 세로·가로 방향, A4 용지 지원. 행이 많으면 자동으로 여러 페이지에 헤더 반복 출력. 서버 업로드 없음.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://wooasheet.wooahouse.com/csv-pdf.html">
+<meta property="og:locale" content="ko_KR">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"CSV → PDF 표 변환","url":"https://wooasheet.wooahouse.com/csv-pdf.html","applicationCategory":"UtilitiesApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+<script src="https://unpkg.com/@pdf-lib/fontkit@1.1.1/dist/fontkit.umd.min.js"></script>
+  <style>
+    .lang-switcher { display:flex; align-items:center; gap:4px; }
+    .lang-switcher a { color:rgba(255,255,255,0.7); text-decoration:none; font-size:0.8rem; font-weight:600; padding:3px 8px; border-radius:12px; transition:background 0.15s; }
+    .lang-switcher a.active { color:white; background:rgba(255,255,255,0.25); }
+    .lang-switcher a:hover { color:white; background:rgba(255,255,255,0.18); }
+    .lang-switcher span { color:rgba(255,255,255,0.3); font-size:0.75rem; }
+    .option-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+    .option-row label{font-size:0.82rem;font-weight:600;color:var(--text-light);}
+    .option-row select{padding:7px 10px;border:1px solid var(--border);border-radius:7px;background:var(--bg2);color:var(--text);font-size:0.85rem;}
+    .pdf-preview-box{border:1px solid var(--border);border-radius:10px;padding:16px;background:var(--bg2);margin-top:4px;overflow:auto;max-height:340px;}
+    .pdf-preview-box table{border-collapse:collapse;width:100%;font-size:0.82rem;}
+    .pdf-preview-box.style-basic th,.pdf-preview-box.style-basic td{border:1px solid var(--border);padding:6px 10px;}
+    .pdf-preview-box.style-striped th,.pdf-preview-box.style-striped td{padding:6px 10px;border:none;}
+    .pdf-preview-box.style-striped tbody tr:nth-child(even){background:rgba(22,163,74,0.08);}
+    .pdf-preview-box.style-none th,.pdf-preview-box.style-none td{padding:6px 10px;border:none;}
+    .pdf-preview-box th{background:var(--primary);color:#fff;font-weight:700;}
+  </style>
+  <meta property="og:site_name" content="WooaSheet">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CSV → PDF 표 변환 — 인쇄용 PDF 표 자동 생성 무료 | WooaSheet">
+  <meta name="twitter:description" content="CSV 파일을 인쇄·보고서용 PDF 표로 즉시 변환. 스트라이프·테두리 스타일, 세로·가로 방향, A4 용지 지원. 행이 많으면 자동으로 여러 페이지에 헤더 반복 출력. 서버 업로드 없음.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "행이 많아서 한 페이지에 안 들어가면 어떻게 되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "자동으로 다음 페이지로 넘어가며, 표 헤더가 페이지마다 반복 출력되어 어느 페이지를 봐도 열 제목을 알 수 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "한글이 깨지지 않나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "네. 한글 글꼴이 PDF에 포함되어 어떤 기기에서 열어도 한글이 그대로 표시됩니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "파일이 인터넷에 업로드되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "아니요. 모든 처리는 브라우저 안에서만 이루어지며 파일은 서버로 전송되지 않습니다. 개인정보와 민감한 데이터가 외부로 유출될 걱정이 없으며, 기업 보안 환경에서도 안심하고 사용할 수 있습니다."
+      }
+    }
+  ]
+}
+</script>
+</head><body>
+<header class="header"><div class="header-inner"><a href="/" class="logo">📊 WooaSheet</a><nav class="nav"><a href="/editor.html">📊 편집기</a><a href="/csv-excel.html">🔄 변환</a><a href="/chart.html">📈 차트</a><a href="/deduplicate.html">🧹 정리</a></nav><div class="header-right"><div class="lang-switcher"><a href="csv-pdf.html" class="active">KO</a><span>|</span><a href="en/csv-pdf.html">EN</a></div><a href="about.html" style="color:rgba(255,255,255,0.85); font-size:0.85rem; text-decoration:none; margin-left:8px;">소개</a></div></div></header>
+<script src="js/wooa-sites-bar.js"></script></div>
+<div class="mobile-top-ad"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="7080296704" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+<div class="page-with-sidebar"><div class="tool-page">
+  <div class="breadcrumb"><a href="/">홈</a><span>›</span>CSV → PDF</div>
+  <div class="tool-header"><div class="tool-icon-lg">🖨️</div><div><h1>CSV → PDF 표 변환</h1><p>CSV 데이터를 인쇄·보고서용 PDF 표로 변환합니다. 행이 많으면 자동으로 페이지를 나누고 헤더를 반복합니다.</p></div></div>
+
+  <div class="panel">
+    <div class="drop-zone" id="dropZone">
+      <span class="drop-zone-icon">📄</span>
+      <h3>CSV 또는 Excel 파일을 여기에 놓으세요</h3>
+      <p>.csv .xlsx 파일 | 최대 20MB</p>
+      <label for="fileInput" class="btn-select">파일 선택</label>
+      <input type="file" id="fileInput" accept=".csv,.xlsx,.xls" style="display:none">
+    </div>
+  </div>
+
+  <div id="configPanel" class="hidden">
+    <div class="panel">
+      <div class="option-row">
+        <label>표 스타일:</label>
+        <select id="tableStyle">
+          <option value="basic">기본 (테두리)</option>
+          <option value="striped">스트라이프</option>
+          <option value="none">테두리 없음</option>
+        </select>
+        <label>페이지 방향:</label>
+        <select id="orientation">
+          <option value="portrait">세로</option>
+          <option value="landscape">가로</option>
+        </select>
+        <label>용지 크기:</label>
+        <select id="paperSize">
+          <option value="a4">A4</option>
+          <option value="letter">Letter</option>
+        </select>
+      </div>
+      <div class="option-row" style="margin-top:-8px;">
+        <label style="display:flex;align-items:center;gap:6px;"><input type="checkbox" id="hasHeaderChk" checked style="width:auto;">첫 행을 헤더로 사용</label>
+      </div>
+
+      <p style="font-size:0.85rem;color:var(--text-light);margin-bottom:8px;">미리보기</p>
+      <div class="pdf-preview-box style-basic" id="pdfPreview"></div>
+      <p class="md-stats" id="pdfStats" style="font-size:0.78rem;color:var(--text-light);margin-top:6px;"></p>
+
+      <button class="btn btn-primary btn-full" id="generateBtn" onclick="generatePdf()" style="margin-top:14px;">🖨️ PDF 생성 및 다운로드</button>
+
+      <div class="panel" style="background:var(--bg);border-color:var(--primary);display:flex;gap:10px;align-items:flex-start;margin-top:16px;margin-bottom:0;">
+        <span style="font-size:1.2rem;">✏️</span>
+        <p style="font-size:0.85rem;color:var(--text-light);line-height:1.6;margin:0;">
+          생성된 PDF를 더 편집하고 싶다면 → <a href="https://pdfkit.wooahouse.com/pdf-edit.html" target="_blank" style="color:var(--primary);font-weight:700;">WooaPDF 편집 도구</a>에서 텍스트·이미지 추가, 페이지 편집이 가능합니다.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="related-tools">
+  <h2>함께 쓰면 좋은 도구</h2>
+  <div class="related-grid">
+    <a href="csv-html.html" class="related-card"><span class="related-icon">🌐</span><span>CSV → HTML 테이블</span></a>
+    <a href="csv-markdown.html" class="related-card"><span class="related-icon">📝</span><span>CSV → Markdown 테이블</span></a>
+    <a href="csv-excel.html" class="related-card"><span class="related-icon">🔄</span><span>CSV ↔ Excel 변환</span></a>
+    <a href="csv-stats.html" class="related-card"><span class="related-icon">📉</span><span>CSV 통계 분석</span></a>
+  </div>
+</div>
+<div class="wooa-orig-anchor"></div>
+<div class="faq-section"><h2>자주 묻는 질문</h2><details><summary>행이 많아서 한 페이지에 안 들어가면 어떻게 되나요?</summary><p>자동으로 다음 페이지로 넘어가며, 표 헤더가 페이지마다 반복 출력되어 어느 페이지를 봐도 열 제목을 알 수 있습니다.</p></details><details><summary>한글이 깨지지 않나요?</summary><p>네. 한글 글꼴이 PDF에 포함되어 어떤 기기에서 열어도 한글이 그대로 표시됩니다.</p></details><details><summary>파일이 인터넷에 업로드되나요?</summary><p>아니요. 모든 처리는 브라우저 안에서만 이루어지며 파일은 서버로 전송되지 않습니다. 개인정보와 민감한 데이터가 외부로 유출될 걱정이 없으며, 기업 보안 환경에서도 안심하고 사용할 수 있습니다.</p></details></div>
+  <div class="tips-panel"><h3>💡 사용 팁</h3><ul>
+    <li>열 너비는 데이터 길이에 맞춰 자동으로 배분됩니다. 너무 긴 값은 말줄임(…)으로 표시됩니다</li>
+    <li>열이 많은 표는 "가로" 방향을 선택하면 더 넓게 표시됩니다</li>
+    <li>첫 PDF 생성 시 한글 글꼴을 내려받아 삽입하므로 몇 초 정도 걸릴 수 있습니다</li>
+  </ul></div>
+</div>
+<aside class="tool-sidebar"></aside>
+</div>
+<footer class="footer"></footer>
+<script src="js/wooahouse-originals-tool.js"></script>
+<script src="js/pwa-install.js"></script>
+<script>
+const FONT_REGULAR_URL = 'https://cdn.jsdelivr.net/gh/google/fonts@main/ofl/nanumgothic/NanumGothic-Regular.ttf';
+const FONT_BOLD_URL = 'https://cdn.jsdelivr.net/gh/google/fonts@main/ofl/nanumgothic/NanumGothic-Bold.ttf';
+const PAPER_SIZES = { a4: [595.28, 841.89], letter: [612, 792] };
+
+let rawData = [], fileName = '';
+let fontBytesCache = null;
+
+async function loadFile(file) {
+  fileName = file.name.replace(/\.[^.]+$/, '');
+  const ab = await file.arrayBuffer();
+  const wb = XLSX.read(ab, {type:'array'});
+  const ws = wb.Sheets[wb.SheetNames[0]];
+  rawData = XLSX.utils.sheet_to_json(ws, {header:1, defval:''});
+  document.getElementById('configPanel').classList.remove('hidden');
+  updatePreview();
+}
+
+// 헤더 사용 여부 옵션에 따라 실제 표 데이터(헤더/본문)를 구성
+function getTableData() {
+  const hasHeader = document.getElementById('hasHeaderChk').checked;
+  if (hasHeader) {
+    return { headers: (rawData[0] || []).map(String), rows: rawData.slice(1) };
+  }
+  const colCount = (rawData[0] || []).length;
+  const headers = Array.from({length: colCount}, (_, i) => '열' + (i + 1));
+  return { headers, rows: rawData };
+}
+
+function getPageDims() {
+  const paper = document.getElementById('paperSize').value;
+  const orientation = document.getElementById('orientation').value;
+  let [w, h] = PAPER_SIZES[paper];
+  return orientation === 'landscape' ? [h, w] : [w, h];
+}
+
+// 화면 미리보기 + 예상 페이지 수 계산 (PDF와 동일한 고정 행 높이 기준이라 정확히 일치)
+function updatePreview() {
+  if (!rawData.length) return;
+  const { headers, rows } = getTableData();
+  const style = document.getElementById('tableStyle').value;
+  const box = document.getElementById('pdfPreview');
+  box.className = 'pdf-preview-box style-' + style;
+  const previewRows = rows.slice(0, 15);
+  let html = '<table><thead><tr>' + headers.map(h => '<th>' + h + '</th>').join('') + '</tr></thead><tbody>';
+  previewRows.forEach(r => {
+    html += '<tr>' + headers.map((h, i) => '<td>' + (r[i] !== undefined ? r[i] : '') + '</td>').join('') + '</tr>';
+  });
+  html += '</tbody></table>';
+  if (rows.length > 15) html += '<p style="font-size:0.78rem;color:var(--text-light);margin-top:8px;">… 외 ' + (rows.length - 15) + '행 (미리보기는 상위 15행만 표시)</p>';
+  box.innerHTML = html;
+
+  const [pageW, pageH] = getPageDims();
+  const margin = 36, fontSize = 9, rowH = fontSize + 9;
+  const dataRowsPerPage = Math.max(1, Math.floor((pageH - margin*2 - rowH) / rowH));
+  const totalPages = Math.max(1, Math.ceil(rows.length / dataRowsPerPage));
+  document.getElementById('pdfStats').textContent = rows.length + '행 · ' + headers.length + '열 · 예상 ' + totalPages + '페이지';
+}
+
+['tableStyle','orientation','paperSize','hasHeaderChk'].forEach(id => {
+  document.getElementById(id).addEventListener('change', () => { if (rawData.length) updatePreview(); });
+});
+
+async function getFontBytes() {
+  if (fontBytesCache) return fontBytesCache;
+  const [reg, bold] = await Promise.all([
+    fetch(FONT_REGULAR_URL).then(r => r.arrayBuffer()),
+    fetch(FONT_BOLD_URL).then(r => r.arrayBuffer()),
+  ]);
+  fontBytesCache = { reg, bold };
+  return fontBytesCache;
+}
+
+// 텍스트가 셀 너비를 넘으면 말줄임(…) 처리 — 폰트 실측 너비 기준이라 실제 렌더링과 정확히 일치
+function truncateToWidth(text, font, size, maxWidth) {
+  text = String(text == null ? '' : text);
+  const pad = 8;
+  if (font.widthOfTextAtSize(text, size) <= maxWidth - pad) return text;
+  let t = text;
+  while (t.length > 1 && font.widthOfTextAtSize(t + '…', size) > maxWidth - pad) t = t.slice(0, -1);
+  return t + '…';
+}
+
+async function generatePdf() {
+  if (!rawData.length) return;
+  const btn = document.getElementById('generateBtn');
+  const origText = btn.textContent;
+  btn.disabled = true; btn.textContent = '⏳ PDF 생성 중...';
+
+  try {
+    const { PDFDocument, rgb } = PDFLib;
+    const { headers, rows } = getTableData();
+    const style = document.getElementById('tableStyle').value;
+    const [pageW, pageH] = getPageDims();
+    const margin = 36;
+    const fontSize = 9;
+    const rowH = fontSize + 9;
+
+    const { reg, bold } = await getFontBytes();
+    const pdfDoc = await PDFDocument.create();
+    pdfDoc.registerFontkit(fontkit);
+    const font = await pdfDoc.embedFont(reg, { subset: true });
+    const fontBold = await pdfDoc.embedFont(bold, { subset: true });
+
+    // 열 너비: 열별 최대 글자 수에 비례 배분 (너무 짧거나 긴 열이 극단적으로 쏠리지 않도록 4~40자로 제한)
+    const usableW = pageW - margin * 2;
+    const colWeights = headers.map((h, i) => {
+      let maxLen = String(h).length;
+      for (const r of rows) maxLen = Math.max(maxLen, String(r[i] == null ? '' : r[i]).length);
+      return Math.min(Math.max(maxLen, 4), 40);
+    });
+    const totalWeight = colWeights.reduce((a, b) => a + b, 0) || 1;
+    const colWidths = colWeights.map(w => usableW * w / totalWeight);
+
+    let page = pdfDoc.addPage([pageW, pageH]);
+    let y = pageH - margin;
+
+    function drawHeaderRow() {
+      let x = margin;
+      page.drawRectangle({ x: margin, y: y - rowH, width: usableW, height: rowH, color: rgb(0.086, 0.639, 0.290) });
+      headers.forEach((h, i) => {
+        const w = colWidths[i];
+        const t = truncateToWidth(h, fontBold, fontSize, w);
+        page.drawText(t, { x: x + 4, y: y - rowH + (rowH - fontSize) / 2, size: fontSize, font: fontBold, color: rgb(1, 1, 1) });
+        x += w;
+      });
+      y -= rowH;
+    }
+
+    function drawDataRow(row, idx) {
+      let x = margin;
+      if (style === 'striped' && idx % 2 === 1) {
+        page.drawRectangle({ x: margin, y: y - rowH, width: usableW, height: rowH, color: rgb(0.910, 0.961, 0.914) });
+      }
+      headers.forEach((h, i) => {
+        const w = colWidths[i];
+        const t = truncateToWidth(row[i], font, fontSize, w);
+        page.drawText(t, { x: x + 4, y: y - rowH + (rowH - fontSize) / 2, size: fontSize, font, color: rgb(0.15, 0.15, 0.15) });
+        if (style === 'basic') {
+          page.drawRectangle({ x, y: y - rowH, width: w, height: rowH, borderColor: rgb(0.8, 0.8, 0.8), borderWidth: 0.5 });
+        }
+        x += w;
+      });
+      y -= rowH;
+    }
+
+    drawHeaderRow();
+    rows.forEach((row, idx) => {
+      // 다음 행이 페이지를 넘어가면 행이 잘리기 전에 새 페이지로 이동 + 헤더 반복
+      if (y - rowH < margin) {
+        page = pdfDoc.addPage([pageW, pageH]);
+        y = pageH - margin;
+        drawHeaderRow();
+      }
+      drawDataRow(row, idx);
+    });
+
+    const pdfBytes = await pdfDoc.save();
+    const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = fileName + '.pdf';
+    a.click();
+  } catch (err) {
+    alert('PDF 생성 중 오류가 발생했습니다: ' + err.message);
+  } finally {
+    btn.disabled = false; btn.textContent = origText;
+  }
+}
+
+const dz = document.getElementById('dropZone');
+dz.addEventListener('dragover', e => { e.preventDefault(); dz.classList.add('drag-over'); });
+dz.addEventListener('dragleave', () => dz.classList.remove('drag-over'));
+dz.addEventListener('drop', e => { e.preventDefault(); dz.classList.remove('drag-over'); if (e.dataTransfer.files[0]) loadFile(e.dataTransfer.files[0]); });
+document.getElementById('fileInput').addEventListener('change', e => { if (e.target.files[0]) loadFile(e.target.files[0]); });
+</script>
+<script src="js/wooa-sidebar.js"></script>
+<script src="js/wooa-footer.js"></script>
+</body></html>

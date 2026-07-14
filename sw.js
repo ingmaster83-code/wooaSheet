@@ -1,4 +1,4 @@
-const CACHE_NAME = 'wooasheet-v1';
+const CACHE_NAME = 'wooasheet-v2';
 const ASSETS = ['/', '/index.html', '/css/style.css', '/js/pwa-install.js', '/manifest.json'];
 self.addEventListener('install', e => e.waitUntil(caches.open(CACHE_NAME).then(c => c.addAll(ASSETS))));
 self.addEventListener('activate', e => e.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(k=>k!==CACHE_NAME).map(k=>caches.delete(k))))));
